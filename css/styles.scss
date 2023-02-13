@@ -4,8 +4,11 @@
 }
 
 @function rem($px){
-  @return ($px/16) *1rem;
+  @return ($px / 16) *1rem;
 }
+
+$textColor: #232323;
+$orange: #FF9900;
 
 
 body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,figure,input,textarea {
@@ -20,8 +23,12 @@ body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,figure,input,textarea {
 }
 
 body {
-  font-family:sans-serif;
-  font-size: rem(14);
+  font-size: rem(16);
+  color: $textColor;
+  line-height: 1.5;
+  position: relative;
+  background-color: #fff;
+  font-family:"ヒラギノ角ゴ pro", sans-serif;
 }
 
 a { 
@@ -70,8 +77,8 @@ select::-ms-expand {
 }
 
 header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
-  background-color: rgba(0,200,100,0.1);
-  border: 1px solid rgba(0,0,0,0.1);
+  // background-color: rgba(0,200,100,0.1);
+  // border: 1px solid rgba(0,0,0,0.1);
 }
 
 .inner{
@@ -82,7 +89,366 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   padding: 0 4%;
 }
 
+a{
+  &:hover{
+    color: #c1c1c1;
+  }
+}
+/* -------------------------------------------- */
+/* header */
+/* -------------------------------------------- */
+.header{
+  padding: 0.5rem 0;
+  background-color: #000;
+  color: #fff;
+  // position: fixed;
+  width: 100%;
+  min-height: 77px;
 
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+
+    justify-content: flex-end;
+    justify-content: space-between;
+
+    align-items: center;
+    // border: 1px solid #fff;
+    padding: 0 5rem;
+  }
+}
+
+.con{
+  display: flex;
+  align-items: center;
+  // border: 1px solid #fff;
+}
+
+.site-logo{
+  background-color: #000;
+  min-height: 3.8rem;
+  
+  &__link{
+    display: inline-block;
+    height: 100%;
+  }
+  &__image{
+    width: 165px;
+  }
+}
+
+.nav{
+  // display: none;
+  font-weight: 500;
+  font-family: "noto sans jp";
+  &__list{
+    display: flex;
+    align-items: center;
+    // border: 1px solid #fff;
+  }
+}
+
+.header-nav{
+  // border: 1px solid #fff;
+  max-height: 80vh;
+  // max-height: 93.5vh;
+
+  &__list{
+    text-align: center;
+    line-height: 1;
+  }
+
+  &__link{
+    padding: 0.7em 0;
+    margin: 0 0.65rem;
+    display: inline-block;
+    font-weight: 500;
+    transition: color .2s ease-in-out;
+    // border: 1px solid #fff;
+  }
+}
+
+.btn{
+  background-color: $orange;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0.4rem auto 1rem;
+  margin: 0;
+  font-size: rem(12);
+  border-radius: 100px;
+  font-family: "noto sans jp";
+  // border: 1px solid #fff;
+  // padding: 0.4rem 1.5rem;
+
+  &:hover{
+    opacity: .7;
+  }
+
+  &--amazon{
+    width: 160px;
+    font-size: rem(12);
+    font-size: rem(16);
+  }
+
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 100px;
+    padding: 0.4rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-bottom: 0;
+    line-height: 1.2;
+    
+    &::before{
+      content: "\f017";
+      font-weight: 400;
+      font-family: "Font Awesome 5 Free";
+      margin-right: 0.5rem;
+      font-size: rem(16);
+      font-size: rem(26);
+    }
+  }
+}
+
+.btn--sm{
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+  margin: 0.4rem 0.8rem;
+}
+
+
+
+
+
+/* bodyにactiveクラスが着いた時 */
+body.active{
+  overflow-y: hidden;
+}
+
+/* ハンバーガーメニュー */
+.burger{
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  color: #000;
+  cursor: pointer;
+  top: 2%;
+  right: 2%;
+  z-index: 3;
+
+  display: none;
+}
+
+/* ハンバーガーメニューのバー */
+.bar{
+  width: 100%;
+  height: 2px;
+  border-radius: 6px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,0);
+  transition: all .2s;
+}
+    
+.bar:nth-of-type(1){
+  transform:translate(-50%,8px);
+}
+
+.bar:nth-of-type(3){
+  transform:translate(-50%,-8px);
+}
+
+/* バーガーメニューにactiveクラスが着いた時 */
+.burger.active .bar:nth-of-type(2){
+  opacity: 0;
+}
+
+.burger.active .bar:nth-of-type(1){
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.burger.active .bar:nth-of-type(3){
+  transform:  translateX(-50%) rotate(45deg);
+}
+
+/* ナビメニュー */
+#nav{
+  background-color: #ddd;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  left: -150%;
+  transition: .5s;
+  overflow-y: scroll;
+}
+
+#nav .nav-menu{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 300px;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nav .nav-menu .nav-title{
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding-top: 2em;
+}
+
+#nav .nav-menu li{
+  margin: 0;
+  padding: 1em;
+}
+
+#nav .nav-menu li a{
+  display: inline-block;
+  text-decoration: underline;
+  text-align: center;
+  transition: .4s;
+}
+
+#nav .nav-menu li a:hover{
+  opacity: .6;
+}
+
+/* ナビメニューにactiveクラスが着いた時 */
+#nav.active{
+  left: 0;
+}
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */

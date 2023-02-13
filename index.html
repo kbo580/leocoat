@@ -3,23 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/styles.css">
+
   <link rel="stylesheet" href="css/styles.scss">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3/css/all.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
 <title></title>
 </head>
 
 <body>
   <header id="header" class="header">
-    LEO COAT
-    最上級3層コート
-    ポリマースプレー
-    誕生物語
-    試験結果
-    Q&A
-    会社概要
-    Amazon.jp
-    
+
+    <div class="header__wrap">
+      <h1 class="site-logo">
+        <a href="index.html" class="site-logo__link">
+          <img src="images/lion-logo-2.svg" alt="" class="site-logo__image">
+        </a>
+      </h1>
+
+      <div class="burger" id="show">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      
+
+      <div class="con">
+        <nav class="nav header-nav">
+          <ul class="nav__list  header-nav__list">
+            <li class="nav__item"><a href="triple.html" class="nav__link header-nav__link">最上級3層コート</a></li>
+            <li class="nav__item"><a href="polymer.html" class="nav__link header-nav__link">ポリマースプレー</a></li>
+            <li class="nav__item"><a href="history.html" class="nav__link header-nav__link">誕生物語</a></li>
+            <li class="nav__item"><a href="inspection.html" class="nav__link header-nav__link">試験結果</a></li>
+            <li class="nav__item"><a href="qaa.html" class="nav__link header-nav__link">Q&A</a></li>
+            <li class="nav__item"><a href="about.html" class="nav__link header-nav__link">会社概要</a></li>
+          </ul>
+        </nav>
+
+        <div class="btn btn--amazon btn--sm">
+          <a href="https://www.amazon.co.jp/stores/page/6DF7E7BC-F501-4EA4-821D-E3AF0D70736E?&linkCode=sl2&tag=amazon0ad3-22&linkId=ca0c4ec9efc5e3ada1d4f2881d07fa6d&language=ja_JP&ref_=as_li_ss_tl" class="">Amazon.jp</a>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- header__wrap -->
   </header>
 
   <main>
@@ -490,16 +521,19 @@ LEO COAT製品はリンクの公式ストアか、Amazonのみ公式に販売し
   </main>
 
   <footer id="footer" class="footer">
+    <nav class="nav footer-nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="triple.html" class="nav__link">最上級3層コート</a></li>
+        <li class="nav__item"><a href="polymer.html" class="nav__link">ポリマースプレー</a></li>
+        <li class="nav__item"><a href="history.html" class="nav__link">誕生物語</a></li>
+        <li class="nav__item"><a href="inspection.html" class="nav__link">試験結果</a></li>
+        <li class="nav__item"><a href="qaa.html" class="nav__link">Q&A</a></li>
+        <li class="nav__item"><a href="about.html" class="nav__link">会社概要</a></li>
+        <li class="nav__item"><a href="https://www.amazon.co.jp/stores/page/6DF7E7BC-F501-4EA4-821D-E3AF0D70736E?&linkCode=sl2&tag=amazon0ad3-22&linkId=ca0c4ec9efc5e3ada1d4f2881d07fa6d&language=ja_JP&ref_=as_li_ss_tl" class="nav__link">Amazon.jp</a></li>
+      </ul>
+    </nav>
     LEO COAT
 New Generation Super Glass Coating
-最上級3層コート
-ポリマースプレー
-誕生物語
-試験結果
-
-Q&A
-
-会社概要
 © 2018, LEO COAT - All Rights Reserved
     
   </footer>
