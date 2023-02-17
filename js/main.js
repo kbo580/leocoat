@@ -1,4 +1,5 @@
 $(function(){
+
   $('#show').on('click', function(){
     $(this).toggleClass('active');
     $('.header__bottom').toggleClass('active');
@@ -10,4 +11,12 @@ $(function(){
       $('#nav').removeClass('active');
       // $('body').removeClass('active');
   });
+  $('.doukonhin-btn').on('click', function () {
+      $(this).next('.doukonhin').slideToggle();
+      $(this).toggleClass("active");
+
+      return false;
+  });
+
+
 });
