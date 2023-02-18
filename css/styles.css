@@ -120,7 +120,6 @@ a:hover {
 .amznbtn.--w300 {
   max-width: 300px;
   font-size: 16px;
-  font-size: 18px;
   line-height: 1.4;
 }
 .amznbtn.--w300 a {
@@ -129,8 +128,7 @@ a:hover {
 .amznbtn.--w400 {
   max-width: 400px;
   font-size: 18px;
-  font-size: 24px;
-  line-height: 1.65;
+  line-height: 1.4;
 }
 .amznbtn.--w400 a {
   padding: 20px 20px 15px;
@@ -143,8 +141,8 @@ a:hover {
 }
 .amznbtn a::before {
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-top: 3px solid #fff;
   border-right: 3px solid #fff;
   position: absolute;
@@ -168,6 +166,13 @@ a:hover {
   }
   .dn {
     display: inline-block;
+  }
+  .amznbtn.--w300 {
+    font-size: 18px;
+  }
+  .amznbtn.--w400 {
+    font-size: 24px;
+    line-height: 1.65;
   }
 }
 @media (min-width: 992px) {
@@ -769,6 +774,103 @@ a:hover {
   }
   .refund .font--l {
     font-size: 22px;
+  }
+}
+/* Hover Event */
+/* -------------------------------------------- */
+/* usage */
+/* -------------------------------------------- */
+.usage {
+  text-align: center;
+  padding: 45px 0 35px;
+}
+.usage__youtube {
+  margin-top: 30px;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+.usage__youtube iframe {
+  width: 100%;
+}
+.usage__about-sns {
+  margin-top: 15px;
+}
+.usage__instructions {
+  margin-top: 15px;
+}
+
+.usage-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-top: 15px;
+}
+.usage-list__item {
+  padding: 0 5px;
+}
+.usage-list__link {
+  background-color: #000;
+  color: #fff;
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+  width: 102px;
+}
+
+@media (min-width: 765px) {
+  .usage {
+    padding: 120px 0 60px;
+  }
+  .usage__youtube {
+    margin-top: 60px;
+  }
+  .usage__about-sns {
+    margin-top: 60px;
+  }
+  .usage__instructions {
+    margin-top: 45px;
+  }
+  .usage-list {
+    margin-top: 30px;
+  }
+}
+/* Hover Event */
+/* -------------------------------------------- */
+/* exam */
+/* -------------------------------------------- */
+.exam {
+  background-color: #000;
+  padding: 120px 0;
+  padding: 45px 0;
+}
+.exam .db {
+  display: block;
+  text-align: center;
+}
+.exam__exam-image {
+  margin-top: 30px;
+}
+.exam__arrow {
+  margin-top: 15px;
+}
+.exam__date-image {
+  margin-top: 15px;
+}
+
+@media (min-width: 765px) {
+  .exam {
+    padding: 120px 0;
+  }
+  .exam__exam-image {
+    margin-top: 60px;
+  }
+  .exam__arrow {
+    margin-top: 0px;
+  }
+  .exam__date-image {
+    margin-top: 30px;
   }
 }
 /* Hover Event */
