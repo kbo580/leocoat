@@ -1182,8 +1182,343 @@ a{
 }
 
 /* -------------------------------------------- */
+/* baseCoat */
+/* -------------------------------------------- */
+.baseCoat{
+  background: #cdcdcd;
+  padding: 45px 0 60px;
+  font-size: 16px;
+
+  &__cont{
+    background: rgba(255,255,255,.6);
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  &__image{
+    text-align: center;
+  }
+}
+
+.baseCoat-body{
+  margin-top: 15px;
+
+  &__title{
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+
+  &__desc{
+    margin-top: 15px;
+  }
+
+  &__subtitle{
+    margin-bottom: -15px;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 765px) {
+  .baseCoat{
+    padding: 120px 0;
+    font-size: 18px;
+  
+    &__cont{
+      padding: 45px;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    &__image{
+      width: 33.3%;
+      padding: 0 15px;
+    }
+  }
+  
+  .baseCoat-body{
+    width: 66.6%;
+    padding: 15px;
+
+    &__title{
+      padding-bottom: 20px;
+      font-size: 30px;
+    }
+  
+    &__desc{
+      margin-top: 30px;
+    }
+  
+    &__subtitle{
+      margin-bottom: -30px;
+      margin-top: 30px;
+    }
+  }
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+
+/* -------------------------------------------- */
+/* protect */
+/* -------------------------------------------- */
+.protect{
+  padding: 45px 0;
+  background-color: #eee;
+  font-size: 16px;
+
+  &__text{
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.protect-desc{
+  &__wrap{
+    margin-top: 15px;
+  }
+  
+  &__image{
+    text-align: center;
+  }
+
+  &__image-complement{
+    margin-top: 15px;
+  }
+}
+
+.protect-arrow{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.protect-bottom{
+  background-color: #000;
+  color: #fff;
+  padding:  15px;
+  margin-top: 15px;
+
+  img{
+    margin-top: -15px;
+  }
+}
+
+@media (min-width: 765px) {
+  .protect{
+    padding: 120px 0;
+    font-size: 18px;
+  
+    &__text{
+      margin-top: 45px;
+    }
+
+    &-top{
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+
+      .protect-desc__wrap{
+        width: 410px;
+        padding: 0 15px;
+      }
+    }
+  }
+
+  .protect-arrow{
+    margin-top: 30px;
+  }
+  
+  .protect-bottom{
+    padding:  30px;
+    margin: 30px auto 0;
+    max-width: 790px;
+  
+    img{
+      margin-top: auto;
+    }
+
+    .protect-desc__image{
+      width: calc((100% - 30px) /2);
+    }
+
+    .protect-desc__wrap{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0;
+    }
+
+    .protect-desc__image-complement{
+      margin-top: 0;
+    }
+
+    &__image-complement-wrap{
+      width: calc((100% - 30px) /2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+
+/* -------------------------------------------- */
+/* workability */
+/* -------------------------------------------- */
+.workability{
+  background: url(../images/pc-workability-bg.png) center/cover no-repeat;
+  padding: 45px 0;
+
+  &__wrap{
+    background-color: rgba(255,255,255,.3);
+    margin-top: 30px;
+  }
+
+  &__text-wrap{
+    color: #fff;
+    padding: 15px;
+  }
+
+  &__text{
+
+    &.yellow{
+      font-size: 21px;
+      margin-top: 20px;
+    }
+  }
+
+  &__image{
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 765px) {
+  .workability{
+    padding: 120px 0;
+  
+    &__wrap{
+      margin-top: 60px;
+      display: flex;
+      padding: 45px;
+    }
+  
+    &__text-wrap{
+      font-size: 18px;
+      padding: 15px;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    &__text{
+  
+      &.yellow{
+        font-size: 24px;
+        margin-top: 20px;
+      }
+    }
+  
+    &__image{
+      width: 40%;
+      margin-top: 0px;
+    }
+  }
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+
+/* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+
+/* -------------------------------------------- */
+/* qaa */
+/* -------------------------------------------- */
+.qaa{
+  background-color: #fc2;
+  padding: 45px 0;
+
+  &__wrap{
+    margin-top: 30px;
+  }
+
+  &__common{
+    padding: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon{
+    margin-right: 15px;
+    min-width: 32px;
+    width: 32px;
+  }
+}
+
+.question__wrap{
+  background-color: #000;
+  color: #fff;
+  position: relative;
+
+  &::after{
+    content: "\f078";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 15px;
+    top: 15px;
+    border-radius: 5px;
+    transition: transform .3s;
+  }
+  &.active::after{
+    transform: rotate(180deg);
+  }
+}
+
+.question__body{
+  padding-right: 30px;
+}
+
+.answer__wrap{
+  background-color: #fff;
+  margin-top: 8px;
+  display: none;
+}
+
 
 
 @media (min-width: 765px) {
