@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/swiper-bundle.css">
   <link rel="stylesheet" href="css/styles.css">
-
   <link rel="stylesheet" href="css/styles.scss">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3/css/all.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-<title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>LEO COAT</title>
 </head>
 
 <body>
@@ -31,26 +30,24 @@
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
-
       </div>
       <!-- header__top -->
       
       <div class="header__bottom">
         <nav class="nav header-nav">
           <ul class="nav__list  header-nav__list">
-            <li class="nav__item"><a href="triple.html" class="nav__link header-nav__link">最上級3層コート</a></li>
-            <li class="nav__item"><a href="polymer.html" class="nav__link header-nav__link">ポリマースプレー</a></li>
-            <li class="nav__item"><a href="history.html" class="nav__link header-nav__link">誕生物語</a></li>
-            <li class="nav__item"><a href="inspection.html" class="nav__link header-nav__link">試験結果</a></li>
-            <li class="nav__item"><a href="qaa.html" class="nav__link header-nav__link">Q&A</a></li>
-            <li class="nav__item"><a href="about.html" class="nav__link header-nav__link">会社概要</a></li>
+            <li class="nav__item"><a href="triple.html" target="_blank" class="nav__link header-nav__link">最上級3層コート</a></li>
+            <li class="nav__item"><a href="polymer.html"  target="_blank" class="nav__link header-nav__link">ポリマースプレー</a></li>
+            <li class="nav__item"><a href="history.html" target="_blank"  class="nav__link header-nav__link">誕生物語</a></li>
+            <li class="nav__item"><a href="inspection.html" target="_blank"  class="nav__link header-nav__link">試験結果</a></li>
+            <li class="nav__item"><a href="qaa.html" target="_blank" class="nav__link header-nav__link">Q&A</a></li>
+            <li class="nav__item"><a href="about.html" target="_blank" class="nav__link header-nav__link">会社概要</a></li>
           </ul>
         </nav>
 
-        <div class="btn btn--amazon btn--sm">
-          <a href="https://www.amazon.co.jp/stores/page/6DF7E7BC-F501-4EA4-821D-E3AF0D70736E?&linkCode=sl2&tag=amazon0ad3-22&linkId=ca0c4ec9efc5e3ada1d4f2881d07fa6d&language=ja_JP&ref_=as_li_ss_tl" class="">Amazon.jp</a>
+        <div class="btn-wrap">
+          <a href="https://www.amazon.co.jp/stores/page/6DF7E7BC-F501-4EA4-821D-E3AF0D70736E?&linkCode=sl2&tag=amazon0ad3-22&linkId=ca0c4ec9efc5e3ada1d4f2881d07fa6d&language=ja_JP&ref_=as_li_ss_tl" class="amznbtn --nav --icon">Amazon.jp</a>
         </div>
-
       </div>
       <!-- header__bottom -->
 
@@ -59,26 +56,24 @@
   </header>
 
   <main>
-    
     <div class="mv">
-      
       <div class="mv-top">
         <div class="inner">
 
-          <div class="mv-top__text-first bold">
-            <p class="mv-top__text">誰でも簡単に<span class="underline">プロ仕様の２層コートをDIY</span></p>
-            <p class="mv-top__text">効果は<span class="underline">公的機関で科学的な試験済み</span></p>
+          <div class="mv-top__copy bold">
+            <p class="mv-top__copy-text">誰でも簡単に<span class="underline">プロ仕様の<span class="mv-top__large">2</span>層コートをDIY</span></p>
+            <p class="mv-top__copy-text">効果は<span class="underline">公的機関で科学的な試験済み</span></p>
           </div>
-    
-          <div class="mv-top__text-second bold">
-            <p class="mv-top__text">お店品質の</p>
-            <p class="mv-top__text">極上DIYコートで</p>
-          </div>
-          
-          <p class="mv-top__text-third bold">この上ない光沢を</p>
+          <!-- mv-top__copy -->
 
-          <div class="amznbtn --w400 btn-margin">
-            <a href="" class="">Amazonで製品を見る</a>
+          <picture class="mv-top__heading heading-image">
+            <source media="(max-width: 767px)" srcset="images/mv-txt-sp.png">
+            <source media="(min-width: 768px)" srcset="images/mv-txt-pc.png">
+            <img src="images/mv-txt-sp.png" alt="お店品質の極上DIYコートでこの上ない光沢を">
+          </picture>
+
+          <div class="">
+            <a href="" class="amznbtn l-amznbtn --arrow btn-mt30 btn-mb45">Amazonで製品を見る</a>
           </div>
 
         </div>
@@ -94,7 +89,6 @@
         </picture>
         
         <div class="inner">
-
           <div class="gentei">
 
             <div class="gentei__wrap">
@@ -108,40 +102,39 @@
 
               <div class="gentei-body">
 
-                <picture class="gentei-handbook">
-                  <source media="(max-width: 767px)" srcset="images/sp-present.png">
-                  <source media="(min-width: 768px)" srcset="images/pc-present.png">
-                  <img src="images/pc-present.png" alt="ガラスコーティングの真実 愛車をキレイに保つハンドブック">
-                </picture>
-                <!-- gentei-handbook -->
+                <div class="gentei-body__left">
+                  <picture class="gentei-handbook">
+                    <source media="(max-width: 767px)" srcset="images/gentei-image-sp.png">
+                    <source media="(min-width: 768px)" srcset="images/gentei-image-pc.png">
+                    <img src="images/gentei-image-sp.png" alt="ガラスコーティングの真実 愛車をキレイに保つハンドブック">
+                  </picture>
+                </div>
+                <!-- gentei-body__left -->
 
                 <div class="gentei-body__right"> 
-                  <div class="gentei-body__heading">
-                    <p class="gentei-body__heading--balloon bold">ガラスコーディングのプロとして正しい知識をまとめた</p>
-                    <p class="gentei-body__heading--red bold red">ガラスコーティングの真実</p>
-                    <p class="gentei-body__heading--red bold red">愛車をキレイに保つハンドブック</p>
-                    <p class="gentei-body__heading--black bold">を<span class="underline">無料でプレゼント！</span></p>
-                  </div>
-                  <!-- gentei__present-heading -->
-
-                  <p class="gentei-body__text">20年間の集大成、1万5千文字以上の大ボリューム！<br>ディーラーコーティングの闇から、ガラスコーティングの基礎知識、楽に綺麗を維持する方法まで！世界中の乗り物を美しくしてオーナーをハッピーにする一冊です。</p>
+                  <h3 class="gentei-body__heading">
+                    <img src="images/gentei-heading.png" alt="ガラスコーティングの真実。愛車をキレイに保つハンドブックを無料でプレゼント！">
+                  </h3>
+                  <p class="gentei-body__desc">20年間の集大成、1万5千文字以上の大ボリューム！<br>ディーラーコーティングの闇から、ガラスコーティングの基礎知識、楽に綺麗を維持する方法まで！世界中の乗り物を美しくしてオーナーをハッピーにする一冊です。</p>
                 </div>
+                <!-- gentei-body__right -->
 
               </div>
-              <!-- gentei__body -->
+              <!-- gentei-body -->
     
             </div>
             <!-- gentei__wrap -->
 
           </div>
           <!-- gentei -->
-
         </div>
         <!-- inner -->
-
-        <div class="amznbtn --w400 btn-margin">
-          <a href="" class="">Amazonでお得に購入</a>
+        <div class="inner">
+          <div class="">
+            <a href="" class="amznbtn l-amznbtn --arrow btn-mt15">Amazonでお得に購入</a>
+          </div>
         </div>
+        <!-- inner -->
 
       </div>
       <!-- mv-bottom -->
@@ -152,57 +145,74 @@
     <section class="reason">
       <div class="inner">
 
-        <p class="reason__copy">仕上がりに差が出る下地処理とガラスとポリマーのWコート</p>
+        <h2 class="reason__heading">
+          <picture class="heading-image">
+            <source media="(max-width: 767px)" srcset="images/reason-h2-sp.png">
+            <source media="(min-width: 768px)" srcset="images/reason-h2-pc.png">
+            <img src="images/reason-h2-sp.png" alt="仕上がりに差が出る下地処理とガラスとポリマーのWコート">
+          </picture>
+        </h2>
   
-        <div class="reason__body">
-          <picture class="reason__beaf">
+        <div class="reason-body">
+          <picture class="reason-body__image">
             <source media="(max-width: 767px)" srcset="images/sp-reason-img.png">
             <source media="(min-width: 768px)" srcset="images/pc-reason-img.png">
-            <img src="images//pc-reason-img.png" alt="ガラスコーティングの真実 愛車をキレイに保つハンドブック">
+            <img src="images//pc-reason-img.png" alt="beforeとafter">
           </picture>
   
-          <div class="reason__body-wrap">
-            <h2 class="reason__heading">LEO COATが選ばれる理由</h2>
+          <div class="reason-body__wrap">
+            <h3 class="reason-body__heading">
+              <picture class="reason-body__heading-image">
+                <source media="(max-width: 767px)" srcset="images/reason-h3-sp.png">
+                <source media="(min-width: 768px)" srcset="images/reason-h3-pc.png">
+                <img src="images/reason-h3-sp.png" alt="LEO COATが選ばれる理由">
+              </picture>
+            </h3>
   
-            <ul class="reason__list bold">
-              <li class="reason__list-con">
+            <ul class="reason-body-list bold">
+              <li class="reason-body-list__con">
                 <ul>
-                  <li class="reason__item checkmark">本物のコーティングを<span class="highlight-yellow">超お得に</span></li>
-                  <li class="reason__item checkmark">透明感のある光沢で<span class="highlight-yellow">新車並みに</span></li>
-                  <li class="reason__item checkmark"><span class="highlight-yellow">汚れ付着が激減</span>する静電気抑制</li>
-                  <li class="reason__item checkmark">気になる<span class="highlight-yellow">小キズを艶でキレイに</span></li>
+                  <li class="reason-body-list__item checkmark">本物のコーティングを<span class="highlight-yellow">超お得に</span></li>
+                  <li class="reason-body-list__item checkmark">透明感のある光沢で<span class="highlight-yellow">新車並みに</span></li>
+                  <li class="reason-body-list__item checkmark"><span class="highlight-yellow">汚れ付着が激減</span>する静電気抑制</li>
+                  <li class="reason-body-list__item checkmark mb0">気になる<span class="highlight-yellow">小キズを艶でキレイに</span></li>
                 </ul>
               </li>
     
-              <li class="reason__list-con">
+              <li class="reason-body-list__con">
                 <ul>
-                  <li class="reason__item checkmark">公的機関で<span class="highlight-yellow">科学的な性能を実証</span></li>
-                  <li class="reason__item checkmark"><span class="highlight-yellow">初めての人でもできる</span>セットに</li>
-                  <li class="reason__item checkmark"><span class="highlight-yellow">速硬化30分</span>で雨天走行も可能</li>
-                  <li class="reason__item checkmark">20年プロの現場で<span class="highlight-yellow">実績の原液</span></li>
+                  <li class="reason-body-list__item checkmark">公的機関で<span class="highlight-yellow">科学的な性能を実証</span></li>
+                  <li class="reason-body-list__item checkmark"><span class="highlight-yellow">初めての人でもできる</span>セットに</li>
+                  <li class="reason-body-list__item checkmark"><span class="highlight-yellow">速硬化30分</span>で雨天走行も可能</li>
+                  <li class="reason-body-list__item checkmark mb0">20年プロの現場で<span class="highlight-yellow">実績の原液</span></li>
                 </ul>
               </li>
             </ul>
           </div>
-          <!-- reason__body-wrap -->
+          <!-- reason-body__wrap -->
     
         </div>
-        <!-- reason__body -->
+        <!-- reason-body -->
       </div>
       <!-- inner -->
-
     </section>
+    <!-- reason -->
 
     <section class="product">
-
       <div class="inner">
-        <h2>製品一覧</h2>
+        <h2 class="product__heading">
+          <picture class="heading-image">
+            <source media="(max-width: 767px)" srcset="images/product-h2-sp.png">
+            <source media="(min-width: 768px)" srcset="images/product-h2-pc.png">
+            <img src="images/product-h2-sp.png" alt="製品一覧">
+          </picture>
+        </h2>
         
         <div class="product-item__cont">
 
           <div class="product-item">
             <figure class="product-item__image">
-              <img src="images/pc-product-bike.png" alt="">
+              <img src="images/pc-product-bike.png" alt="レオコート・バイク用">
             </figure>
   
             <div class="product-item-bg--black"> 
@@ -251,8 +261,8 @@
     
                 <p class="product-item__price bold"><span class="product-item__price--before">定価9,800円→</span><span class="product-item__price--after red">4,980<span class="yen">円！</span></span></p>
     
-                <div class="amznbtn --w300">
-                  <a href="" class="">Amazonでお得に購入</a>
+                <div class="">
+                  <a href="https://www.amazon.co.jp/LEO-COAT-Motorcycle-%E3%83%AC%E3%82%AA%E3%82%B3%E3%83%BC%E3%83%88%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AC%E3%83%A9%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%83%E3%83%88-%E3%83%97%E3%83%AD%E4%BB%95%E6%A7%98%E9%AB%98%E6%A9%9F%E8%83%BD%E8%A6%AA%E6%B0%B4%E3%83%BB%E6%92%A5%E6%B0%B4%EF%BC%92%E5%B1%A4%E3%82%B3%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%EF%BC%88%E3%82%AC%E3%83%A9%E3%82%B9%E3%83%BB%E3%83%9D%E3%83%AA%E3%83%9E%E3%83%BC%E3%83%BB%E7%B2%98%E5%9C%9F%E3%83%90%E3%83%95%EF%BC%89/dp/B08R1G22XN?&linkCode=sl1&tag=amazon0ad3-22&linkId=723a41dd53e39120cc0c3c60debd24d8&language=ja_JP&ref_=as_li_ss_tl" target="_blank" class="amznbtn s-amznbtn --arrow">Amazonでお得に購入</a>
                 </div>
     
               </div>
@@ -265,7 +275,7 @@
 
           <div class="product-item">
             <figure class="product-item__image">
-              <img src="images/pc-product-car.png" alt="">
+              <img src="images/pc-product-car.png" alt="レオコート・車用">
             </figure>
   
             <div class="product-item-bg--black"> 
@@ -279,7 +289,6 @@
               </ul>
 
               <a href="" class="doukonhin-btn" id="doukonhinBtn">同梱品を見る</a>
-        
 
               <div class="doukonhin">
                 <h4 class="doukonhin__name">【レオコート車用】（2層コート）</h4>
@@ -319,8 +328,8 @@
     
                 <p class="product-item__price bold"><span class="product-item__price--before">定価19,800円→</span><span class="product-item__price--after red">9,800<span class="yen">円！</span></span></p>
     
-                <div class="amznbtn --w300">
-                  <a href="" class="">Amazonでお得に購入</a>
+                <div class="">
+                  <a href="https://www.amazon.co.jp/LEO-COAT-COAT-%E3%83%AC%E3%82%AA%E3%82%B3%E3%83%BC%E3%83%88%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AC%E3%83%A9%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%83%E3%83%88-%E8%BB%8A%E3%83%BB%E3%83%90%E3%82%A4%E3%82%AF%E7%94%A8%E3%82%B3%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%EF%BC%88%E3%82%AC%E3%83%A9%E3%82%B9%E3%83%BB%E3%83%9D%E3%83%AA%E3%83%9E%E3%83%BC%E3%83%BB%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC%E3%83%BB%E7%B2%98%E5%9C%9F%E3%83%90%E3%83%95%E3%83%BB%E3%82%AF%E3%83%AD%E3%82%B9%EF%BC%89/dp/B07L2DXTHN?&linkCode=sl1&tag=amazon0ad3-22&linkId=a1d90cf69601390363a4c0d3761101d9&language=ja_JP&ref_=as_li_ss_tl" target="_blank" class="amznbtn s-amznbtn --arrow">Amazonでお得に購入</a>
                 </div>
     
               </div>
@@ -333,7 +342,7 @@
 
           <div class="product-item">
             <figure class="product-item__image">
-              <img src="images/pc-product-super.png" alt="">
+              <img src="images/pc-product-super.png" alt="スーパーレオコート">
             </figure>
   
             <div class="product-item-bg--black"> 
@@ -398,11 +407,11 @@
     
                 <p class="product-item__price bold"><span class="product-item__price--before">定価30,000円→</span><span class="product-item__price--after red">20,000<span class="yen">円！</span></span></p>
     
-                <div class="amznbtn --w300">
-                  <a href="" class="">Amazonでお得に購入</a>
+                <div class="">
+                  <a href="https://www.amazon.co.jp/SUPER-LEO-COAT%E8%BB%8A%EF%BD%A5%E3%83%90%E3%82%A4%E3%82%AF%E7%94%A8-%E4%B8%8B%E5%9C%B0%E5%87%A6%E7%90%86%EF%BC%8B3%E5%B1%A4%E3%82%B3%E3%83%BC%E3%83%88%E3%80%90%E4%B8%8D%E6%BA%80%E8%B6%B3%E3%81%AA%E3%82%89%E5%85%A8%E9%A1%8D%E8%BF%94%E9%87%91%E4%BF%9D%E8%A8%BC%E3%80%91%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%AC%E3%82%AA%E3%82%B3%E3%83%BC%E3%83%88%E3%82%AC%E3%83%A9%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%83%E3%83%88/dp/B09157HPQ1?&linkCode=sl1&tag=amazon0ad3-22&linkId=edb390d892cd2177527b27c6deed3ac3&language=ja_JP&ref_=as_li_ss_tl" target="_blank" class="amznbtn s-amznbtn --arrow">Amazonでお得に購入</a>
                 </div>
 
-                <a href="" class="product-item__detail">詳しく見る</a>
+                <a href="triple.html" class="product-item__detail">詳しく見る</a>
     
               </div>
               <!-- /product-bg--white -->
@@ -414,7 +423,7 @@
           
           <div class="product-item">
             <figure class="product-item__image">
-              <img src="images/pc-product-black.png" alt="">
+              <img src="images/pc-product-black.png" alt="レオコートブラック">
             </figure>
   
             <div class="product-item-bg--black"> 
@@ -458,11 +467,11 @@
     
                 <p class="product-item__price bold"><span class="product-item__price--before">定価3,800円→</span><span class="product-item__price--after red">2,480<span class="yen">円！</span></span></p>
     
-                <div class="amznbtn --w300">
-                  <a href="" class="">Amazonでお得に購入</a>
+                <div class="">
+                  <a href="https://www.amazon.co.jp/LEO-COAT-BLACK-%E6%A8%B9%E8%84%82%E5%BE%A9%E6%B4%BB%E5%89%A4-%E3%83%AC%E3%82%AA%E3%82%B3%E3%83%BC%E3%83%88/dp/B09RMG45SW?&linkCode=sl1&tag=amazon0ad3-22&linkId=08bafc982c4677636e17a7c4fa753212&language=ja_JP&ref_=as_li_ss_tl" target="_blank" class="amznbtn s-amznbtn --arrow">Amazonでお得に購入</a>
                 </div>
 
-                <a href="" class="product-item__detail">詳しく見る</a>
+                <a href="triple.html" class="product-item__detail">詳しく見る</a>
     
               </div>
               <!-- /product-bg--white -->
@@ -528,20 +537,60 @@
     </section>
     <!-- /refund -->
 
-
     <section class="usage">
       <div class="inner">
-        <h2 class="sec-heading">使い方はとっても簡単</h2>
-    
-        <p class="usage__desc">説明書どおりに、塗って拭くだけ。<br>どなたでも簡単にお店並みの仕上がりに。</p>
+
+        <h2>
+          <picture class="heading-image">
+            <source media="(max-width: 767px)" srcset="images/usage-h2-sp.png">
+            <source media="(min-width: 768px)" srcset="images/usage-h2-pc.png">
+            <img src="images/usage-h2-sp.png" alt="使い方はとっても簡単">
+          </picture>
+        </h2>
     
         <div class="usage__youtube">
           <iframe width="560" height="100%" src="https://www.youtube.com/embed/mJ3_U1So7nY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
+        <!-- usage__youtube -->
+
+        <div class="swiper instaSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/slide/slide-01.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-02.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-03.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-04.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-05.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-06.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-07.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-08.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-09.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-10.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-11.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-12.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-13.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-14.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-15.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-16.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-17.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-18.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-19.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-20.jpg" alt="instgramの投稿画像"></div>
+            <div class="swiper-slide"><img src="images/slide/slide-21.jpg" alt="instgramの投稿画像"></div>
+          </div>
+          <!-- /swiper-wrapper -->
+        
+          <div class="swiper-pagination"></div>
+        
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <!-- /instaSwiper -->
 
         <p class="usage__about-sns">YouTubeに100本以上アップロードされている関連動画や、Instagramでチェック可能。<br> LEO COATのセルフコートがどれだけ簡単で、どのような仕上がりになるかを確認できます。</p>
 
-        <p class="usage__instructions bold">取扱説明書</p>
+        <div class="usage__instructions">
+          <img src="images/setumeisyo.png" alt="取扱説明書">
+        </div>
 
         <ul class="usage-list bold">
           <li class="usage-list__item"><a href="" class="usage-list__link">バイク用</a></li>
@@ -557,7 +606,13 @@
     <section class="exam">
       <div class="inner">
         
-        <h2>公的機関で性能を実証済み</h2>
+        <h2>
+          <picture class="heading-image">
+            <source media="(max-width: 767px)" srcset="images/examination-h2-sp.png">
+            <source media="(min-width: 768px)" srcset="images/examination-h2-pc.png">
+            <img src="images/examination-h2-sp.png" alt="公的機関で性能を実証済み">
+          </p>
+        </h2>
 
         <picture class="exam__exam-image db">
           <source media="(max-width: 767px)" srcset="images/sp-examination-img01.png">
@@ -577,8 +632,8 @@
           <img src="images/pc-examination-img02.png" alt="さらに使用しても全額返金">
         </picture>
 
-        <div class="amznbtn --w400 btn-margin">
-          <a href="" class="">Amazonでお得に購入</a>
+        <div class="">
+          <a href="" class="amznbtn l-amznbtn --arrow btn-mt30">Amazonでお得に購入</a>
         </div>
 
       </div>
@@ -589,7 +644,13 @@
 
     <section class="baseCoat">
       <div class="inner">
-        <h2>プロ品質の下地処理とコート剤</h2>
+        <h2>
+          <picture class="heading-image">
+            <source media="(max-width: 767px)" srcset="images/basecoat-h2-sp.png">
+            <source media="(min-width: 768px)" srcset="images/basecoat-h2-pc.png">
+            <img src="images/basecoat-h2-sp.png" alt="プロ品質の下地処理とコート剤">
+          </p>
+        </h2>
   
         <div class="baseCoat__cont">
           <figure class="baseCoat__image">
@@ -636,7 +697,13 @@
 
     <section class="protect">
       <div class="inner">
-        <h2>静電気抑制コートで汚れを予防</h2>
+        <h2>
+          <picture class="heading-image">
+            <source media="(max-width: 767px)" srcset="images/protect-h2-sp.png">
+            <source media="(min-width: 768px)" srcset="images/protect-h2-pc.png">
+            <img src="images/protect-h2-sp.png" alt="静電気抑制コートで汚れを予防">
+          </p>
+        </h2>
 
         <p class="protect__text">LEO COATのポリマーコーティングは、静電気抑制効果によって自浄作用を向上。<br>雨による自浄作用や、高速道路を走行時の虫の付着も低減し、これらの汚れも水洗いで簡単に除去します。</p>
   
@@ -692,7 +759,13 @@
 
     <section class="workability">
       <div class="inner">
-        <h2>高い施工性の理由</h2>
+        <h2>
+          <picture class="heading-image">
+            <source media="(max-width: 767px)" srcset="images/workability-h2-sp.png">
+            <source media="(min-width: 768px)" srcset="images/workability-h2-pc.png">
+            <img src="images/workability-h2-sp.png" alt="高い施工性の理由">
+          </p>
+        </h2>
   
         <div class="workability__wrap">
           <div class="workability__text-wrap">
@@ -709,8 +782,8 @@
         </div>
         <!--/ workability__wrap -->
 
-        <div class="amznbtn --w400">
-          <a href="" class="">Amazonでお得に購入</a>
+        <div class="">
+          <a href="" class="amznbtn l-amznbtn --arrow btn-mt30">Amazonでお得に購入</a>
         </div>
 
       </div>
@@ -721,7 +794,13 @@
 
     <article class="detail">
       <div class="inner">
-        <h2>もっと詳しく</h2>
+        <h2>
+          <picture class="heading-image">
+            <source media="(max-width: 767px)" srcset="images/detail-h2-sp.png">
+            <source media="(min-width: 768px)" srcset="images/detail-h2-pc.png">
+            <img src="images/detail-h2-sp.png" alt="もっと詳しく">
+          </p>
+        </h2>
   
         <section class="hardness detail__wrap-common">
           <h3 class="detail__common-heading">硬度について</h3>
@@ -830,7 +909,6 @@
           </div>
           <!-- /detail-card__wrap -->
 
-
         </section>
         <!-- /combination -->
 
@@ -923,7 +1001,14 @@
 
     <section class="qaa">
       <div class="inner">
-        <h2>レオコートについてよくある質問</h2>
+        <h2></h2>
+        <h2>
+          <picture class="heading-image">
+            <source media="(max-width: 767px)" srcset="images/qaa-h2-sp.png">
+            <source media="(min-width: 768px)" srcset="images/qaa-h2-sp.png">
+            <img src="images/qaa-h2-sp.png" alt="レオコートについてよくある質問">
+          </p>
+        </h2>
   
         <div class="qaa__wrap">
 
@@ -1301,8 +1386,8 @@
 
     <section class="cta">
       <div class="inner">
-        <div class="amznbtn --w400">
-          <a href="" class="">Amazonでお得に購入</a>
+        <div class="">
+          <a href="" class="amznbtn l-amznbtn --arrow">Amazonでお得に購入</a>
         </div>
 
       </div>
@@ -1324,12 +1409,12 @@
       <div class="inner">
         <nav class="nav footer-nav">
           <ul class="nav__list footer-nav__list">
-            <li class="nav__item  footer-nav__item"><a href="triple.html" class="nav__link">最上級3層コート</a></li>
-            <li class="nav__item  footer-nav__item"><a href="polymer.html" class="nav__link">ポリマースプレー</a></li>
-            <li class="nav__item  footer-nav__item"><a href="history.html" class="nav__link">誕生物語</a></li>
-            <li class="nav__item  footer-nav__item"><a href="inspection.html" class="nav__link">試験結果</a></li>
-            <li class="nav__item  footer-nav__item"><a href="qaa.html" class="nav__link">Q&A</a></li>
-            <li class="nav__item  footer-nav__item"><a href="about.html" class="nav__link">会社概要</a></li>
+            <li class="nav__item  footer-nav__item"><a href="triple.html" target="_blank"  class="nav__link">最上級3層コート</a></li>
+            <li class="nav__item  footer-nav__item"><a href="polymer.html" target="_blank"  class="nav__link">ポリマースプレー</a></li>
+            <li class="nav__item  footer-nav__item"><a href="history.html" target="_blank"  class="nav__link">誕生物語</a></li>
+            <li class="nav__item  footer-nav__item"><a href="inspection.html" target="_blank"  class="nav__link">試験結果</a></li>
+            <li class="nav__item  footer-nav__item"><a href="qaa.html" target="_blank"  class="nav__link">Q&A</a></li>
+            <li class="nav__item  footer-nav__item"><a href="about.html" target="_blank"  class="nav__link">会社概要</a></li>
           </ul>
         </nav>
   
@@ -1344,6 +1429,7 @@
     
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

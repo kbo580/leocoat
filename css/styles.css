@@ -82,12 +82,8 @@ body {
   padding: 0 15px;
 }
 
-a:hover {
-  color: #c1c1c1;
-}
-
 .underline {
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .bold {
@@ -117,36 +113,68 @@ a:hover {
   display: none;
 }
 
+.page-mv {
+  padding: 120px 0 90px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ----- ボタン関連----- */
+/* amazonボタン */
 .amznbtn {
   color: #fff;
   font-weight: 700;
-  width: 100%;
   text-align: center;
-  margin: 0 auto;
-}
-.amznbtn.--w300 {
-  max-width: 300px;
-  font-size: 16px;
-  line-height: 1.4;
-}
-.amznbtn.--w300 a {
-  padding: 15px 20px 10px;
-}
-.amznbtn.--w400 {
-  max-width: 400px;
-  font-size: 18px;
-  line-height: 1.4;
-}
-.amznbtn.--w400 a {
-  padding: 20px 20px 15px;
-}
-.amznbtn a {
+  margin-left: auto;
+  margin-right: auto;
   background: #FF9900;
+  border-radius: 100px;
+  letter-spacing: 1px;
+  line-height: 1;
+  display: block;
+  /* nav内 */
+  /* amazonアイコン付きボタン */
+  /* 幅広 */
+  /* 小さめ */
+}
+.amznbtn.--nav {
+  font-size: 0.75rem;
+  padding: 0.4rem 1.5rem;
+  margin: 0.4rem 0 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-family: "noto sans jp", sans-serif;
+}
+.amznbtn.--icon::before {
+  content: "\f270";
+  font-weight: 400;
+  font-family: "Font Awesome 5 Brands";
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+.amznbtn.l-amznbtn {
+  font-size: 1.125rem;
+  font-weight: 700;
   border-radius: 45px;
+  max-width: 400px;
+  padding: 20px 20px 15px;
+  line-height: 1.65;
+}
+.amznbtn.s-amznbtn {
+  padding: 15px 20px 10px;
+  max-width: 300px;
+  font-size: 1rem;
+  line-height: 1.4em;
+}
+
+/* アロー付きボタン */
+.--arrow {
   display: block;
   position: relative;
 }
-.amznbtn a::before {
+.--arrow::before {
   content: "";
   width: 8px;
   height: 8px;
@@ -158,8 +186,17 @@ a:hover {
   transform: rotate(45deg) translateX(-50%);
 }
 
-.btn-margin {
-  padding: 30px 0 60px;
+/* ボタン用margin */
+.btn-mt15 {
+  margin-top: 15px;
+}
+
+.btn-mt30 {
+  margin-top: 30px;
+}
+
+.btn-mb45 {
+  margin-bottom: 45px;
 }
 
 @media (min-width: 576px) {
@@ -167,6 +204,10 @@ a:hover {
     max-width: 540px;
   }
 }
+.mt30 {
+  margin-top: 30px;
+}
+
 @media (min-width: 768px) {
   .inner {
     max-width: 720px;
@@ -178,12 +219,46 @@ a:hover {
   .dn {
     display: inline-block;
   }
-  .amznbtn.--w300 {
-    font-size: 18px;
+  .page-mv {
+    padding: 210px 0 180px;
   }
-  .amznbtn.--w400 {
-    font-size: 24px;
-    line-height: 1.65;
+  .mt30 {
+    margin-top: 60px;
+  }
+  /* ----- ボタン関連----- */
+  /* amazonボタン */
+  .amznbtn {
+    /* nav内 */
+    /* アイコン付きボタン */
+    /* 幅広 */
+    /* 小さめ */
+  }
+  .amznbtn.--nav {
+    font-size: 1rem;
+    margin: 0 0 0 0.8rem;
+    align-items: center;
+  }
+  .amznbtn.--icon::before {
+    font-size: 1.625rem;
+  }
+  .amznbtn.l-amznbtn {
+    font-size: 1.5rem;
+  }
+  .amznbtn.s-amznbtn {
+    font-size: 1.125rem;
+    padding: 15px 20px 10px;
+    max-width: 300px;
+    line-height: 1.65em;
+  }
+  /* ボタン用margin */
+  .btn-mt15 {
+    margin-top: 45px;
+  }
+  .btn-mt30 {
+    margin-top: 75px;
+  }
+  .btn-mb45 {
+    margin-bottom: 60px;
   }
 }
 @media (min-width: 992px) {
@@ -196,6 +271,17 @@ a:hover {
     max-width: 1140px;
   }
 }
+/* Hover Event */
+@media (hover: hover) {
+  .amznbtn,
+  a {
+    transition: opacity 0.3s;
+  }
+  .amznbtn:hover,
+  a:hover {
+    opacity: 0.7;
+  }
+}
 /* -------------------------------------------- */
 /* header */
 /* -------------------------------------------- */
@@ -204,7 +290,7 @@ a:hover {
   color: #fff;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   padding: 0.5rem 0;
   transition: padding 0.25s;
   /* ナビ部分*/
@@ -250,47 +336,7 @@ a:hover {
   min-width: 130px;
 }
 
-.btn {
-  background-color: #FF9900;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 0;
-  font-size: 0.75rem;
-  border-radius: 100px;
-  font-family: "noto sans jp";
-  margin: 0.4rem 0 1rem;
-  color: #fff;
-}
-.btn:hover {
-  opacity: 0.7;
-}
-.btn--amazon {
-  width: 160px;
-  font-size: 0.75rem;
-}
-.btn a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border-radius: 100px;
-  padding: 0.4rem 1.5rem;
-  line-height: 1.2;
-}
-.btn a::before {
-  content: "\f017";
-  font-weight: 400;
-  font-family: "Font Awesome 5 Free";
-  margin-right: 0.5rem;
-  font-size: 1rem;
-}
-
-.btn--sm {
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-}
-
-/* ハンバーガーメニュー */
+/*----- ハンバーガーメニュー -----*/
 .burger {
   width: 30px;
   height: 30px;
@@ -355,7 +401,7 @@ a:hover {
     flex-direction: row;
     justify-content: flex-end;
   }
-  /* ハンバーガーメニュー */
+  /* ---- ハンバーガーメニュー -----*/
   .burger {
     display: none;
   }
@@ -363,18 +409,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
   }
-  .btn {
-    margin: 0.4rem 0.8rem;
-  }
-  .btn--amazon {
-    width: 160px;
-    font-size: 1rem;
-  }
-  .btn a::before {
-    font-size: 1.625rem;
-  }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* nav関連 */
 /* -------------------------------------------- */
@@ -382,6 +417,7 @@ a:hover {
   font-weight: 500;
   font-family: "noto sans jp";
 }
+
 .header-nav__list {
   text-align: center;
   line-height: 1;
@@ -391,36 +427,36 @@ a:hover {
   margin: 0 0.65rem;
   display: inline-block;
   font-weight: 500;
-  transition: color 0.2s ease-in-out;
 }
 
-/* Hover Event */
+/*見出しの画像 */
+.heading-image {
+  display: block;
+  text-align: center;
+}
+
 /* -------------------------------------------- */
 /* top-mv */
 /* -------------------------------------------- */
 .mv-top {
-  text-align: center;
   background: url(../images/pc-mv-bg.png);
   padding: 125px 0 75px;
 }
-.mv-top__text-first {
+.mv-top__copy {
   font-size: clamp(1.063rem, 0.693rem + 1.58vw, 1.875rem);
+  text-align: center;
 }
-.mv-top__text-second {
-  font-size: clamp(1.75rem, 0.386rem + 5.82vw, 4.75rem);
-  line-height: 1.2;
+.mv-top__large {
+  font-size: 1.375rem;
 }
-.mv-top__text-third {
-  font-size: clamp(2.5rem, 0.227rem + 9.7vw, 7.5rem);
-  line-height: 1.2;
-  font-style: italic;
-  background: -webkit-linear-gradient(88deg, #000, #bab7b7);
-  -webkit-background-clip: text; /* テキストで切り抜く */
-  -webkit-text-fill-color: transparent;
+.mv-top__heading {
+  margin-top: 30px;
 }
 
 .mv-bottom {
   background-color: #000;
+  position: relative;
+  padding-bottom: 45px;
 }
 .mv-bottom__image {
   position: relative;
@@ -432,20 +468,7 @@ a:hover {
   width: 100%;
 }
 
-.s {
-  color: #fff;
-}
-
-.mv-text__first--top {
-  font-size: clamp(1.063rem, 0.693rem + 1.58vw, 1.875rem);
-}
-.mv-text__first--bottom {
-  font-size: clamp(1.063rem, 0.693rem + 1.58vw, 1.875rem);
-}
-
-.mv-text__secondly {
-  letter-spacing: 0.15em;
-}
+/* 限定 */
 .gentei {
   position: relative;
   background: linear-gradient(to bottom, #ece29d, #a6702e);
@@ -460,80 +483,48 @@ a:hover {
 
 .gentei-body {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.gentei-body .gentei-handbook {
-  text-align: center;
+.gentei-body__right {
+  margin-top: 15px;
 }
-.gentei-body__heading {
-  letter-spacing: -0.05em;
-}
-.gentei-body__heading--balloon {
-  border: 2px solid #000;
-  border-radius: 30px;
-  display: inline-block;
-  font-size: 10px;
-  padding: 0.2rem 0.8rem;
-}
-.gentei-body__heading--red {
-  font-size: 22px;
-}
-.gentei-body__heading--black {
-  font-size: 22px;
-}
-.gentei-body__text {
+.gentei-body__desc {
   margin-top: 15px;
 }
 
-.aaa {
-  position: relative;
-}
-.aaa::before {
-  position: absolute;
-  content: "\f054";
-  font-family: "font awesome 5 free";
-  top: 18px;
-  right: 15px;
-  font-weight: 900;
-}
-.m0auto {
-  margin: 0 auto;
-}
-
 @media (min-width: 768px) {
+  .mv-top__heading {
+    margin-top: 60px;
+  }
+  .mv-bottom {
+    padding-bottom: 60px;
+  }
+  /* 限定 */
+  .gentei__wrap {
+    padding: 45px;
+  }
   .gentei-body {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
   .gentei-body .gentei-handbook {
     width: 25%;
   }
-  .gentei-body__heading {
-    letter-spacing: -0.05em;
-  }
-  .gentei-body__heading--balloon {
-    border: 2px solid #000;
-    border-radius: 30px;
-    display: inline-block;
-    font-size: 10px;
-    padding: 0.2rem 0.8rem;
-  }
-  .gentei-body__heading--red {
-    font-size: 22px;
-    font-size: 36px;
-  }
-  .gentei-body__heading--black {
-    font-size: 22px;
-    font-size: 36px;
+  .gentei-body__left {
+    width: 30%;
   }
   .gentei-body__right {
     width: 70%;
+    padding: 0 15px;
+    margin-top: 0;
   }
-  .gentei-body__text {
+  .gentei-body__desc {
     font-size: 16px;
+    margin-top: 30px;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* reason */
 /* -------------------------------------------- */
@@ -541,44 +532,36 @@ a:hover {
   padding: 45px 0;
   background: url(../images/pc-reason-bg.png) center/cover no-repeat;
 }
-.reason__body {
+
+.reason-body {
   background-color: #fff;
   padding: 15px;
+  margin-top: 30px;
 }
-.reason__body-wrap {
+.reason-body__wrap {
   margin-top: 15px;
   background-color: #fff;
 }
-.reason__heading {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-}
-.reason__list {
+
+.reason-body-list {
   padding: 15px 0;
   border: 1px solid #dee2e6;
 }
-.reason__list-con {
+.reason-body-list__con {
   padding: 0 15px;
 }
-.reason__item {
+.reason-body-list__con:last-child {
+  margin-bottom: -10px;
+}
+.reason-body-list__item {
   border-bottom: 2px dotted #ccc;
   padding-bottom: 10px;
   margin-bottom: 10px;
-}
-.reason__item:last-child {
-  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
   .reason {
     padding: 120px 0;
-  }
-  .reason__body {
-    padding: 45px;
-  }
-  .reason__body-wrap {
-    margin-top: 30px;
   }
   .reason__list {
     padding: 30px 0;
@@ -587,8 +570,29 @@ a:hover {
   .reason__list-con {
     width: 50%;
   }
+  .reason-body {
+    padding: 45px;
+    margin-top: 45px;
+  }
+  .reason-body__wrap {
+    margin-top: 30px;
+  }
+  .reason-body-list {
+    padding: 30px;
+    border: 1px solid #dee2e6;
+    display: flex;
+  }
+  .reason-body-list__con {
+    padding: 0 15px;
+    width: 50%;
+  }
+  .reason-body-list__item {
+    font-size: 18px;
+  }
+  .mb0 {
+    margin-bottom: 0;
+  }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* product */
 /* -------------------------------------------- */
@@ -599,7 +603,7 @@ a:hover {
 
 .product-item {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .product-item__cont {
   display: flex;
@@ -633,7 +637,6 @@ a:hover {
 }
 .product-item__desc {
   text-align: center;
-  font-size: 16px;
   font-size: 15px;
 }
 .product-item__price {
@@ -660,7 +663,7 @@ a:hover {
 }
 
 .doukonhin-btn {
-  color: #fff;
+  color: #008cff;
   font-size: 12px;
   margin-top: 10px;
   display: inline-block;
@@ -702,6 +705,7 @@ a:hover {
   }
   .product-item {
     width: calc((100% - 30px) / 2);
+    margin-top: 45px;
   }
   .product-item-bg--black {
     background: #000;
@@ -730,7 +734,6 @@ a:hover {
     margin-top: 30px;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* compare */
 /* -------------------------------------------- */
@@ -750,7 +753,23 @@ a:hover {
   margin-top: 16px;
 }
 
-/* Hover Event */
+@media (min-width: 765px) {
+  .compare {
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: 90px 0 60px;
+  }
+  .compare__heading {
+    font-size: 3.6rem;
+  }
+  .compare__desc {
+    margin-top: 24px;
+  }
+  .compare__table {
+    margin-top: 16px;
+  }
+}
 /* -------------------------------------------- */
 /* refund */
 /* -------------------------------------------- */
@@ -804,7 +823,6 @@ a:hover {
     font-size: 22px;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* usage */
 /* -------------------------------------------- */
@@ -847,9 +865,53 @@ a:hover {
   width: 102px;
 }
 
+/* ----- スライダー ----- */
+.instaSwiper {
+  margin-top: 15px;
+  max-height: 600px;
+}
+
+/* ボタン */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 60px;
+  height: 60px;
+  width: 40px;
+  height: 40px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  top: 50%;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+}
+
+/* 前へ */
+.swiper-button-prev::after {
+  transform: translate(-35%, -50%) rotate(315deg);
+}
+
+/* 次へ */
+.swiper-button-next::after {
+  transform: translate(-65%, -50%) rotate(135deg);
+}
+
+/* ページネーション */
+.swiper-pagination {
+  display: none;
+}
+
 @media (min-width: 765px) {
   .usage {
-    padding: 120px 0 60px;
+    padding: 120px 0 120px;
   }
   .usage__youtube {
     margin-top: 60px;
@@ -863,8 +925,51 @@ a:hover {
   .usage-list {
     margin-top: 30px;
   }
+  /* ----- スライダー ----- */
+  .instaSwiper {
+    margin-top: 120px;
+  }
+  /* ボタン */
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 60px;
+    height: 60px;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 50%;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+  }
+  /* 前へ */
+  .swiper-button-prev::after {
+    transform: translate(-35%, -50%) rotate(315deg);
+  }
+  /* 次へ */
+  .swiper-button-next::after {
+    transform: translate(-65%, -50%) rotate(135deg);
+  }
+  /* ページネーション */
+  .swiper-pagination {
+    display: block;
+  }
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+  }
+  .swiper-pagination-bullet-active {
+    background: #000;
+    background: #008CFF;
+  }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* exam */
 /* -------------------------------------------- */
@@ -901,7 +1006,6 @@ a:hover {
     margin-top: 30px;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* baseCoat */
 /* -------------------------------------------- */
@@ -911,7 +1015,7 @@ a:hover {
   font-size: 16px;
 }
 .baseCoat__cont {
-  background: rgba(255, 255, 255, 0.6);
+  background: #EAEAEA;
   padding: 15px;
   margin-top: 15px;
 }
@@ -942,7 +1046,7 @@ a:hover {
   }
   .baseCoat__cont {
     padding: 45px;
-    margin-top: 30px;
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -967,7 +1071,6 @@ a:hover {
     margin-top: 30px;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* protect */
 /* -------------------------------------------- */
@@ -1052,7 +1155,6 @@ a:hover {
     justify-content: space-between;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* workability */
 /* -------------------------------------------- */
@@ -1074,7 +1176,7 @@ a:hover {
 }
 .workability__image {
   width: 100%;
-  margin-top: 15px;
+  padding: 15px;
 }
 
 @media (min-width: 765px) {
@@ -1103,7 +1205,6 @@ a:hover {
     margin-top: 0px;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* detail */
 /* -------------------------------------------- */
@@ -1166,7 +1267,7 @@ a:hover {
   }
   .detail__wrap-common {
     padding: 45px 30px;
-    margin-top: 30px;
+    margin-top: 60px;
   }
   .detail__common-heading {
     font-size: 30px;
@@ -1206,7 +1307,6 @@ a:hover {
     display: block;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* qaa */
 /* -------------------------------------------- */
@@ -1265,6 +1365,7 @@ a:hover {
 }
 .question__body {
   padding-right: 30px;
+  font-weight: 700;
 }
 
 /* 答え */
@@ -1314,7 +1415,6 @@ a:hover {
     padding: 30px;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* cta */
 /* -------------------------------------------- */
@@ -1329,7 +1429,6 @@ a:hover {
     padding: 30px 0 60px;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* footer */
 /* -------------------------------------------- */
@@ -1385,8 +1484,34 @@ a:hover {
     font-size: 1.4rem;
   }
 }
-/* Hover Event */
+/* -------------------------------------------- */
+/* triple */
+/* -------------------------------------------- */
+.triple-mv {
+  background-image: url(../images/triple/triple-mv-sp.png);
+}
+.triple-mv__copy--top {
+  text-align: center;
+}
+.triple-mv__copy--bottom {
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media (min-width: 765px) {
+  .triple-mv {
+    background-image: url(../images/triple/triple-mv-pc.png);
+  }
+  .triple-mv__copy--bottom {
+    margin-top: 60px;
+  }
+}
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
-/* Hover Event */
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- *//*# sourceMappingURL=styles.css.map */

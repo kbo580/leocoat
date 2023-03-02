@@ -42,6 +42,32 @@ $(function(){
     }
   });
 
+  var instaSwiper=  new Swiper('.instaSwiper', {
+    grabCursor: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    autoplay: {
+      delay: 4000,
+      waitForTransition: true,
+      disableOnInteraction: false,
+    },
+    speed: 1000,
+    effect: 'slide',
+    fadeEffect: {
+      crossFade: true
+    },
+  });
+
 
 
 });
+// ではお送りします
+// 「納品の完了」と今回は評価をお願いいたします！

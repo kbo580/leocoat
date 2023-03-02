@@ -61,6 +61,10 @@ select::-ms-expand {
   display: none;
 }
 
+picture{
+  // display: block;
+}
+
 /* ----- common ----- */
 @function rem($px){
   @return ($px / 16) *1rem;
@@ -93,14 +97,8 @@ body {
   padding: 0 15px;
 }
 
-a{
-  &:hover{
-    color: #c1c1c1;
-  }
-}
-
 .underline{
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .bold{
@@ -132,62 +130,108 @@ a{
   display: none;
 }
 
+.page-mv{
+  padding: 120px 0 90px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ----- ボタン関連----- */
+/* amazonボタン */
 .amznbtn{
   color: #fff;
   font-weight: 700;
-  width: 100%;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: $orange;
+  border-radius: 100px;
+  letter-spacing: 1px;
+  line-height: 1;
+  display: block;
   
-  margin: 0 auto;
-  
-  &.--w300{
-    max-width: 300px;
-    font-size: 16px;
-    line-height: 1.4;   
-
-  a{
-    padding: 15px 20px 10px;
-    }
+  /* nav内 */
+  &.--nav{
+    font-size: rem(12);
+    padding: 0.4rem 1.5rem;
+    margin: 0.4rem 0 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-family: "noto sans jp",sans-serif;
   }
-  
-  &.--w400{
-    max-width: 400px;
-    font-size: 18px;
-    line-height: 1.4;
 
-    a{
-      padding: 20px 20px 15px;
-    }
-  }
-  
-  a{
-    background: $orange;
-    border-radius: 45px;
-    display: block;
-    position: relative;
-
+  /* amazonアイコン付きボタン */
+  &.--icon{
     &::before{
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-top: 3px solid #fff;
-      border-right: 3px solid #fff;
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform:rotate(45deg) translateX(-50%);
+      content: '\f270';
+      font-weight: 400;
+      font-family: "Font Awesome 5 Brands";
+      margin-right: 0.5rem;
+      font-size: rem(16);
     }
+  }
+  
+  /* 幅広 */
+  &.l-amznbtn{
+    font-size: rem(18);
+    font-weight: 700;
+    border-radius: 45px;
+    max-width: 400px;
+    padding: 20px 20px 15px;
+    line-height: 1.65;
+    // margin: 0 15px  
+  }
+
+  /* 小さめ */
+  &.s-amznbtn{
+    padding: 15px 20px 10px;
+    max-width: 300px;
+    font-size: rem(16);
+    line-height: 1.4em;
   }
 }
 
-.btn-margin{
-  padding: 30px 0 60px;
+/* アロー付きボタン */
+.--arrow{
+  display: block;
+  position: relative;
+
+  &::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform:rotate(45deg) translateX(-50%);
+  }
+}
+
+/* ボタン用margin */
+.btn-mt15{
+  margin-top: 15px;
+}
+
+.btn-mt30{
+  margin-top: 30px;
+}
+
+.btn-mb45{
+  margin-bottom: 45px;
 }
 
 @media (min-width: 576px) {
   .inner{
     max-width: 540px;
   }
+}
+
+.mt30{
+  margin-top: 30px;
 }
 
 @media (min-width: 768px) {
@@ -204,18 +248,59 @@ a{
     display: inline-block;
   }
 
+  .page-mv{
+    padding: 210px 0 180px;
+  }
+
+  .mt30{
+    margin-top: 60px;
+  }
+
+  /* ----- ボタン関連----- */
+  /* amazonボタン */
   .amznbtn{
-    &.--w300{
-      font-size: 18px;
+
+    /* nav内 */
+    &.--nav{
+      font-size: rem(16);
+      margin: 0 0 0 0.8rem;
+      align-items: center;  
     }
-  
-    &.--w400{
-      font-size: 24px;
-      line-height: 1.65;
+
+    /* アイコン付きボタン */
+    &.--icon::before{
+      font-size: rem(26);
+    }
+
+      /* 幅広 */
+    &.l-amznbtn{
+      font-size: rem(24);
+    }
+
+    /* 小さめ */
+    &.s-amznbtn{
+      font-size: rem(18);
+      padding: 15px 20px 10px;
+      max-width: 300px;
+      line-height: 1.65em;
     }
   }
 
+  /* ボタン用margin */
+  .btn-mt15{
+    margin-top: 45px;
+  }
+
+  .btn-mt30{
+    margin-top: 75px;
+  }
+
+  .btn-mb45{
+    margin-bottom: 60px;
+  }
+
 }
+
 @media (min-width: 992px) {
   .inner{
     max-width: 960px;
@@ -227,6 +312,18 @@ a{
     max-width: 1140px;
   }
 }
+
+/* Hover Event */
+@media (hover: hover){
+  .amznbtn,
+  a{
+    transition: opacity .3s;
+    &:hover{
+      opacity: .7;
+    }
+  }
+}
+
 /* -------------------------------------------- */
 /* header */
 /* -------------------------------------------- */
@@ -235,7 +332,7 @@ a{
   color: #fff;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   padding: 0.5rem 0;
   transition: padding .25s;
 
@@ -243,7 +340,6 @@ a{
     padding: 0;
   }
 
-  
   &__wrap{
     padding: 0 1rem;
   }
@@ -261,11 +357,7 @@ a{
     justify-content: center;
     align-items: center;
     width: 100%;
-    // left: 0;
     display: none;
-    // background-color: #000;
-    // position: absolute;
-    // z-index: 1;
   }
 }
 
@@ -293,63 +385,14 @@ a{
   }
 }
 
-.btn{
-  background-color: $orange;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 0;
-  font-size: rem(12);
-  border-radius: 100px;
-  font-family: "noto sans jp";
-  margin: 0.4rem 0 1rem;
-  color: #fff;
-
-  &:hover{
-    opacity: .7;
-  }
-
-  &--amazon{
-    width: 160px;
-    font-size: rem(12);
-  }
-
-  a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    border-radius: 100px;
-    padding: 0.4rem 1.5rem;
-    line-height: 1.2;
-    
-    &::before{
-      content: "\f017";
-      font-weight: 400;
-      font-family: "Font Awesome 5 Free";
-      margin-right: 0.5rem;
-      font-size: rem(16);
-    }
-  }
-}
-
-.btn--sm{
-  font-weight: 500;
-  transition: all .3s ease-in-out;
-  // margin: 0.4rem 0.8rem;
-}
-
-/* ハンバーガーメニュー */
+/*----- ハンバーガーメニュー -----*/
 .burger{
   width: 30px;
   height: 30px;
-  // position: fixed;
   position: relative;
   color: #000;
   cursor: pointer;
-  // top: 2%;
-  // right: 2%;
   z-index: 3;
-
 }
 
 /* ハンバーガーメニューのバー */
@@ -418,15 +461,12 @@ a{
     }
   }
 
-  /* ハンバーガーメニュー */
+  /* ---- ハンバーガーメニュー -----*/
   .burger{
     display: none;
   }
 
   .header-nav{
-    // border: 1px solid #fff;
-    // max-height: 80vh;
-    // max-height: 93.5vh;
   
     &__list{
       display: flex;
@@ -434,44 +474,17 @@ a{
     }
   }
 
-  .btn{
-    margin: 0.4rem 0.8rem;
-  
-    &--amazon{
-      width: 160px;
-      font-size: rem(16);
-    }
-  
-    a{
-      
-      &::before{
-        font-size: rem(26);
-      }
-    }
-  }
-
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
 /* -------------------------------------------- */
 /* nav関連 */
 /* -------------------------------------------- */
 .nav{
   font-weight: 500;
   font-family: "noto sans jp";
-
-  &__list{
-
-  }
 }
 
 .header-nav{
-  // border: 1px solid #fff;
-  // max-height: 80vh;
-  // max-height: 93.5vh;
 
   &__list{
     text-align: center;
@@ -483,7 +496,6 @@ a{
     margin: 0 0.65rem;
     display: inline-block;
     font-weight: 500;
-    transition: color .2s ease-in-out;
   }
 }
 
@@ -492,49 +504,41 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
+/*見出しの画像 */
+.heading-image{
+  display: block;
+  text-align: center;
 }
+
 /* -------------------------------------------- */
 /* top-mv */
 /* -------------------------------------------- */
 .mv{
+
 }
 
 .mv-top{
-  text-align: center;
   background: url(../images/pc-mv-bg.png);
   padding: 125px 0 75px;
-  &__text-first{
+  
+  &__copy{
     font-size: clamp(1.063rem, 0.693rem + 1.58vw, 1.875rem); 
+    text-align: center;
   }
 
-  &__text-second{
-    font-size: clamp(1.75rem, 0.386rem + 5.82vw, 4.75rem);
-      // font-size: 76px;
-    // font-size: 28px;
-    line-height: 1.2;
+  &__large{
+    font-size: rem(22);
   }
 
-  &__text-third{
-// font-size: 120px;
-// font-size: 40px;
-    font-size:clamp(2.5rem, 0.227rem + 9.7vw, 7.5rem);
-    line-height: 1.2;
-    font-style: italic;
-    background: -webkit-linear-gradient(88deg, #000, #bab7b7);
-    -webkit-background-clip: text; /* テキストで切り抜く */
-    -webkit-text-fill-color: transparent; 
+  &__heading{
+    margin-top: 30px;
   }
-}
-
-.heading-grad{
-
 }
 
 .mv-bottom{
   background-color: #000;
+  position: relative;
+  padding-bottom: 45px;
   
   &__image{
     position: relative;
@@ -548,42 +552,7 @@ a{
   }
 }
 
-.s{
-  color: #fff;
-
-}
-
-.mv-text__first{
-
-  &--top{
-    font-size: clamp(1.063rem, 0.693rem + 1.58vw, 1.875rem);
-  }
-  
-  &--bottom{
-    font-size: clamp(1.063rem, 0.693rem + 1.58vw, 1.875rem);
-  }
-}
-
-.mv-text__secondly{
-  
-  letter-spacing: 0.15em;
-
-  &--top{
-  
-  }
-  
-  &--middle{
-    // font-size: 76px;
-    // font-size: 28px;
-  }
-
-  &--bottom{
-   
-    
-    
-  }
-}
-
+/* 限定 */
 .gentei{
   position: relative;
   background: linear-gradient(to bottom,#ece29d,#a6702e);
@@ -595,182 +564,116 @@ a{
     padding: 2% 2%;
     background-color: #fff;
   }
-
 }
 
 .gentei-body{
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  .gentei-handbook{
-    text-align: center;
+  &__left{
+
   }
 
-  &__heading{
-    letter-spacing: -0.05em;
-
-    &--balloon{
-      border: 2px solid #000;
-      border-radius: 30px;
-      display: inline-block;
-      font-size: 10px;
-      padding: 0.2rem 0.8rem;
-    }
-
-    &--red{
-      font-size: 22px;
-    }
-    
-    &--black{
-      font-size: 22px;
-    }
+  &__right{
+    margin-top: 15px;
   }
 
-  &__text{
+  &__desc{
     margin-top: 15px;
   }
 }
 
-.aaa{
-  position: relative;
-
-  &::before{
-    position: absolute;
-    content: "\f054";
-    font-family: "font awesome 5 free";
-    top: 18px;
-    right: 15px;
-    font-weight: 900;
-  }
-
-  &.cta{
-// padding: 30px 60px;
-  }
-}
-
-.btn--n{
-  // padding: 0 15px;
-  // font-size: 18px;
-}
-
-.btn--w{
-
-}
-
-.m0auto{
-  margin: 0 auto;
-}
-
 
 @media (min-width: 768px) {
+  .mv-top{
+  
+    &__heading{
+      margin-top: 60px;
+    }
+  }
+
+  .mv-bottom{
+    padding-bottom: 60px;
+  }
+
+
+
+  /* 限定 */
+  .gentei{
+  
+    &__wrap{
+      padding: 45px;
+    }
+  }
+
   .gentei-body{
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 
     .gentei-handbook{
       width: 25%;
     }
 
-    &__heading{
-      letter-spacing: -0.05em;
-  
-      &--balloon{
-        border: 2px solid #000;
-        border-radius: 30px;
-        display: inline-block;
-        font-size: 10px;
-        padding: 0.2rem 0.8rem;
-      }
-  
-      &--red{
-        font-size: 22px;
-        font-size: 36px;
-      }
-      
-      &--black{
-        font-size: 22px;
-        font-size: 36px;
-      }
+    &__left{
+      width: 30%;
     }
 
     &__right{
       width: 70%;
+      padding: 0 15px;
+      margin-top: 0;
     }
 
-    &__text{
+    &__desc{
       font-size: 16px;
+      margin-top: 30px;
     }
   }
-
-
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
 /* -------------------------------------------- */
 /* reason */
 /* -------------------------------------------- */
 .reason{
   padding: 45px 0;
   background: url(../images/pc-reason-bg.png) center /cover no-repeat;
+}
 
-  &__body{
-    background-color: #fff;
-    padding: 15px;
-  }
+.reason-body{
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 30px;
 
-  &__body-wrap{
+  &__wrap{
     margin-top: 15px;
     background-color: #fff;
   }
+}
 
-  &__heading{
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-  }
-
-  &__list{
-    padding: 15px 0;
-    border: 1px solid #dee2e6;
-  }
-
-  &__list-con{
+.reason-body-list{
+  padding: 15px 0;
+  border: 1px solid #dee2e6;
+  
+  &__con{
     padding: 0 15px;
-  }
 
+    &:last-child{
+      margin-bottom: -10px;
+    }
+  }
+  
   &__item{
     border-bottom: 2px dotted #ccc;
     padding-bottom: 10px;
     margin-bottom: 10px;
-
-    &:last-child{
-      margin-bottom: 0;
-    }
-    
- 
   }
 }
-
-
 
 @media (min-width: 768px) {
   .reason{
     padding: 120px 0;
-  
-    &__body{
-      padding: 45px;
-    }
-  
-    &__body-wrap{
-      margin-top: 30px;
-    }
-  
-    &__heading{
-
-    }
   
     &__list{
       padding: 30px 0;
@@ -780,20 +683,37 @@ a{
     &__list-con{
       width: 50%;
     }
-  
-    &__item{
-      &:last-child{
+  }
 
-      }
+  .reason-body{
+    padding: 45px;
+    margin-top: 45px;
+  
+    &__wrap{
+      margin-top: 30px;
     }
   }
 
+  .reason-body-list{
+    padding: 30px;
+    border: 1px solid #dee2e6;
+    display: flex;
+    
+    &__con{
+      padding: 0 15px;
+      width: 50%;
+    }
+    
+    &__item{
+      font-size: 18px;
+    }
+  }
+
+  .mb0{
+    margin-bottom: 0;
+  }
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
 /* -------------------------------------------- */
 /* product */
 /* -------------------------------------------- */
@@ -804,7 +724,7 @@ a{
 
 .product-item{
   width: 100%;
-  margin-top: 15px;
+  margin-top: 30px;
 
   &__cont{
     display: flex;
@@ -844,7 +764,6 @@ a{
 
   &__desc{
     text-align: center;
-    font-size: 16px;
     font-size: 15px;
   }
 
@@ -877,7 +796,7 @@ a{
 }
 
 .doukonhin-btn{
-  color: #fff;
+  color: #008cff;
   font-size: 12px;
   margin-top: 10px;
   display: inline-block;
@@ -921,7 +840,6 @@ a{
   }
 }
 
-
 @media (min-width: 768px) {
   .product{
     padding: 120px 0;
@@ -929,6 +847,7 @@ a{
 
   .product-item{
     width: calc((100% - 30px) / 2);
+    margin-top: 45px;
 
     &-bg--black{
       background: #000;
@@ -971,10 +890,6 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
 /* -------------------------------------------- */
 /* compare */
 /* -------------------------------------------- */
@@ -998,14 +913,27 @@ a{
 }
 
 @media (min-width: 765px) {
-
+  .compare{
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: 90px 0 60px;
+  
+    &__heading{
+      font-size: 3.6rem;
+    }
+  
+    &__desc{
+      margin-top: 24px;
+    }
+    
+    &__table{
+      margin-top: 16px;
+    }
+  }
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
 /* -------------------------------------------- */
 /* refund */
 /* -------------------------------------------- */
@@ -1071,10 +999,6 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
 /* -------------------------------------------- */
 /* usage */
 /* -------------------------------------------- */
@@ -1123,9 +1047,58 @@ a{
   }
 }
 
+/* ----- スライダー ----- */
+.instaSwiper{
+  margin-top: 15px;
+  max-height: 600px;
+}
+
+/* ボタン */
+.swiper-button-prev,
+.swiper-button-next{
+  background-color: rgba(0, 0, 0,0.5);
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 60px;
+  height: 60px;
+  width: 40px;
+  height: 40px;
+
+  &::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+  }
+}
+
+/* 前へ */
+.swiper-button-prev{
+  &::after{
+    transform: translate(-35%, -50%) rotate(315deg);
+  }
+}
+
+/* 次へ */
+.swiper-button-next{
+  &::after{
+    transform: translate(-65%, -50%) rotate(135deg);
+  }
+}
+
+/* ページネーション */
+.swiper-pagination{
+  display: none;
+}
+
+
 @media (min-width: 765px) {
   .usage{
-    padding: 120px 0 60px;
+    padding: 120px 0 120px;
   
     &__youtube{
       margin-top: 60px;
@@ -1144,10 +1117,60 @@ a{
     margin-top: 30px;
   }
 
-}
+  /* ----- スライダー ----- */
+  .instaSwiper{
+    margin-top: 120px;
+  }
 
-/* Hover Event */
-@media (hover: hover){
+  /* ボタン */
+  .swiper-button-prev,
+  .swiper-button-next{
+    background-color: rgba(0, 0, 0,0.5);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 60px;
+    height: 60px;
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 50%;
+      top: 50%;
+      border-left: 2px solid #fff;
+      border-top: 2px solid #fff;
+    }
+  }
+
+  /* 前へ */
+  .swiper-button-prev{
+    &::after{
+      transform: translate(-35%, -50%) rotate(315deg);
+    }
+  }
+
+  /* 次へ */
+  .swiper-button-next{
+    &::after{
+      transform: translate(-65%, -50%) rotate(135deg);
+    }
+  }
+
+  /* ページネーション */
+  .swiper-pagination{
+    display: block;
+  }
+
+  .swiper-pagination-bullet{
+    width: 16px;
+    height: 16px;
+  }
+
+  .swiper-pagination-bullet-active{
+    background: #000;
+    background: #008CFF;
+  }
 
 }
 
@@ -1197,10 +1220,6 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
 
 /* -------------------------------------------- */
 /* baseCoat */
@@ -1211,7 +1230,7 @@ a{
   font-size: 16px;
 
   &__cont{
-    background: rgba(255,255,255,.6);
+    background:#EAEAEA;
     padding: 15px;
     margin-top: 15px;
   }
@@ -1247,7 +1266,7 @@ a{
   
     &__cont{
       padding: 45px;
-      margin-top: 30px;
+      margin-top: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1277,11 +1296,6 @@ a{
       margin-top: 30px;
     }
   }
-
-}
-
-/* Hover Event */
-@media (hover: hover){
 
 }
 
@@ -1387,11 +1401,6 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
-
 /* -------------------------------------------- */
 /* workability */
 /* -------------------------------------------- */
@@ -1419,7 +1428,8 @@ a{
 
   &__image{
     width: 100%;
-    margin-top: 15px;
+    // margin-top: 15px;
+    padding: 15px;
   }
 }
 
@@ -1455,11 +1465,6 @@ a{
       margin-top: 0px;
     }
   }
-
-}
-
-/* Hover Event */
-@media (hover: hover){
 
 }
 
@@ -1539,7 +1544,7 @@ a{
 
     &__wrap-common{
       padding: 45px 30px;
-      margin-top: 30px;
+      margin-top: 60px;
     }
 
     &__common-heading{
@@ -1591,10 +1596,6 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
 
 /* -------------------------------------------- */
 /* qaa */
@@ -1664,6 +1665,7 @@ a{
 
   &__body{
     padding-right: 30px;
+    font-weight: 700;
   }
 }
 
@@ -1735,11 +1737,6 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
-
 /* -------------------------------------------- */
 /* cta */
 /* -------------------------------------------- */
@@ -1756,10 +1753,6 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
 
 /* -------------------------------------------- */
 /* footer */
@@ -1828,8 +1821,40 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
+/* -------------------------------------------- */
+/* triple */
+/* -------------------------------------------- */
+.triple-mv{
+    background-image: url(../images/triple/triple-mv-sp.png);
+  
+    &__copy--top{
+      text-align: center;
+    }
+    
+    &__copy--bottom{
+      margin-top: 30px;
+      text-align: center;
+    }
+
+}
+
+@media (min-width: 765px) {
+  .triple-mv{
+      background-image: url(../images/triple/triple-mv-pc.png);
+
+      &__copy--bottom{
+        margin-top: 60px;
+      }
+    }
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
 
 }
 
@@ -1843,7 +1868,14 @@ a{
 
 }
 
-/* Hover Event */
-@media (hover: hover){
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
 
 }
+
+
