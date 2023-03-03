@@ -61,9 +61,6 @@ select::-ms-expand {
   display: none;
 }
 
-picture{
-  // display: block;
-}
 
 /* ----- common ----- */
 @function rem($px){
@@ -130,6 +127,10 @@ body {
   display: none;
 }
 
+.db{
+  display: block;
+}
+
 .page-mv{
   padding: 120px 0 90px;
   background-position: center;
@@ -170,6 +171,7 @@ body {
       font-family: "Font Awesome 5 Brands";
       margin-right: 0.5rem;
       font-size: rem(16);
+      line-height: 1;
     }
   }
   
@@ -190,6 +192,16 @@ body {
     max-width: 300px;
     font-size: rem(16);
     line-height: 1.4em;
+  }
+
+  /* 極小 */
+  &.ss-amznbtn{
+    font-size: rem(12);
+    padding: 16px 48px;
+    display: inline-block;
+    line-height: 1;
+    font-family: "noto sans JP";
+    text-align: center;
   }
 }
 
@@ -283,6 +295,13 @@ body {
       padding: 15px 20px 10px;
       max-width: 300px;
       line-height: 1.65em;
+    }
+
+    /* 極小 */
+    &.ss-amznbtn{
+      font-size: rem(16);
+      padding: 16px 48px;
+      // display: inline-block;
     }
   }
 
@@ -1824,6 +1843,19 @@ body {
 /* -------------------------------------------- */
 /* triple */
 /* -------------------------------------------- */
+/* tripleページ共通パーツ */
+/* タイトル */
+.title-common{
+  font-size:calc( 1.35rem + (2 - 1.35) * ((100vw - 20rem)/(48 - 20)));
+  margin-top: 16px;
+}
+
+/* テキスト */
+.desc-common{
+  font-size: rem(19);
+  margin-top: 16px;
+}
+
 .triple-mv{
     background-image: url(../images/triple/triple-mv-sp.png);
   
@@ -1834,27 +1866,327 @@ body {
     &__copy--bottom{
       margin-top: 30px;
       text-align: center;
+      padding-bottom: 15px;
     }
 
 }
 
 @media (min-width: 765px) {
+  .title-common{
+    font-size: rem(32);
+  }
+
   .triple-mv{
       background-image: url(../images/triple/triple-mv-pc.png);
 
       &__copy--bottom{
         margin-top: 60px;
+        padding-bottom: 45px;
       }
     }
 }
 
-/* -------------------------------------------- */
-/*  */
-/* -------------------------------------------- */
+@media (min-width: 765px){
+.title-common{
+  margin-top: 0;
+}
+}
 
+/* -------------------------------------------- */
+/* triple-reason */
+/* -------------------------------------------- */
+.triple-reason{
+  padding: 90px 0 30px;
+
+  &__left{
+    width: 100%;
+  }
+
+  &__right{
+    text-align: center;
+    margin-top: 48px;
+    font-family: "noto sans jp";
+  }
+
+  &__heading{
+    font-size: rem(23);
+  }
+
+  &__image{
+
+  }
+
+  &__attention{
+    color: red;
+    margin-top: 6px;
+    font-size: rem(16);
+  }
+
+  &__doukonhin-btn{
+    font-weight: 700;
+    font-size: rem(19);
+    margin-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0,0.125);
+  }
+
+  &__instructions{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.triple-reason-list{
+  line-height: 1.6;
+  font-size: rem(19);
+  padding-bottom: 24px;
+  
+  &__title{
+    font-size: rem(19);
+    margin-top: 24px;
+    font-weight: 700;
+  }
+}
 
 @media (min-width: 765px) {
+  .triple-reason{
+    padding: 90px 0 120px;
+  
+    &__heading{
+      font-size: rem(32);
+    }
+  
+    &__doukonhin-btn{
+      font-size: rem(22);
+    }
+  
+    &__instructions{
+      margin-top: 30px;
+    }
+  }
+}
 
+@media (min-width: 992px) {
+  .triple-reason{
+
+    &__cont{
+      display: flex;
+    }
+  
+    &__left{
+      width: 55%;
+    }
+  
+    &__right{
+      flex:1;
+      padding-left: 64px;
+      margin-top: 0;
+    }
+
+  }
+
+}
+
+/* -------------------------------------------- */
+/* triple-doukonhinn */
+/* -------------------------------------------- */
+.triple-doukonhinn{
+  font-family: "noto sans JP";
+
+  &__heading{
+    background: linear-gradient(rgba(79,73,67,0.8), rgba(79,73,67,0.8)),url(../images/triple/doukonhinn-bg-1.jpg) 50% 50%/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0 76px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    font-size: calc( 1.91rem + (3.6 - 1.91) * ((100vw - 20rem)/(48 - 20)));
+    background-attachment: fixed;
+  }
+
+  &__cont{
+    padding: 64px 0;
+  }
+}
+
+@media (min-width: 765px) {
+  .triple-doukonhinn{
+  
+    &__heading{
+      padding: 60px 0 76px;
+      font-size: 58px;
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .triple-doukonhinn{
+  
+    &__cont{
+      padding: 64px 0;
+    }
+
+    &__image{
+      width: 50%;
+    }
+    
+    &__body{
+      flex:1;
+      padding: 2rem;
+    }
+  }
+  
+  .flex-common{
+    display: flex;
+    align-items: center;
+
+    &.--reverse{
+      flex-direction: row-reverse;
+
+      .desc-common{
+        max-width: 28rem;
+      }
+    }
+  }
+}
+
+/* -------------------------------------------- */
+/* triple-features */
+/* -------------------------------------------- */
+.triple-feature{
+  
+  &__wrap{
+    background-color: #4F4943;
+    padding: 135px 15px;
+    color: #fff;
+  }
+
+  &__title{
+    margin-top: 24px;
+  }
+
+  &__desc{
+    margin-top: 46px;
+  }
+
+  &__bg{
+    background: url(../images/triple/doukonhinn-bg-2.jpg) center/cover no-repeat;
+    padding: 135px 0;
+    background-attachment: fixed;
+
+    span{
+      display: block;
+      width: 100%;
+      height: 160px;
+    }
+  }
+
+  &__image{
+
+    &.--mt{
+      margin-top: 64px;
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+
+  &__btn{
+    padding: 30px;
+    text-align: center;
+  }
+}
+
+.triple-feature-list{
+  margin-top: 45px;
+
+  &__item{
+    padding: 16px;
+  }
+
+  &__image{
+    padding-bottom: 32px;
+  }
+}
+
+@media (min-width: 765px) {
+  .triple-feature{
+
+    &__title{
+      margin-top: 0px;
+    }
+  
+    &__desc{
+      margin-top: 60px;
+    }
+  
+    &__bg{
+
+      span{
+        height: 230px;
+      }
+    }
+  
+    &__btn{
+      .ss-amznbtn{
+        font-size: rem(19);
+      }
+    }
+  }
+  
+  .triple-feature-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  
+    &__item{
+      width: 50%;
+    }
+  }
+
+}
+
+@media (min-width: 992px){
+  .triple-feature{
+
+    &__cont{
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    &__wrap{
+      background-color: #4F4943;
+      padding: 135px 15px;
+      color: #fff;
+    }
+  
+    &__image{
+      width: 60%;
+      padding-right: 64px;
+      
+      &.--mt{
+        margin-top: 0px;
+        padding-right: 0;
+        padding-left: 64px;
+      }
+    }
+
+    &__body{
+      flex:1;
+    }
+  }
+  
+  .triple-feature-list{
+  
+    &__item{
+      width: 25%;
+    }
+  }
 
 }
 

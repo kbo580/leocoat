@@ -113,6 +113,10 @@ body {
   display: none;
 }
 
+.db {
+  display: block;
+}
+
 .page-mv {
   padding: 120px 0 90px;
   background-position: center;
@@ -137,6 +141,7 @@ body {
   /* amazonアイコン付きボタン */
   /* 幅広 */
   /* 小さめ */
+  /* 極小 */
 }
 .amznbtn.--nav {
   font-size: 0.75rem;
@@ -153,6 +158,7 @@ body {
   font-family: "Font Awesome 5 Brands";
   margin-right: 0.5rem;
   font-size: 1rem;
+  line-height: 1;
 }
 .amznbtn.l-amznbtn {
   font-size: 1.125rem;
@@ -167,6 +173,14 @@ body {
   max-width: 300px;
   font-size: 1rem;
   line-height: 1.4em;
+}
+.amznbtn.ss-amznbtn {
+  font-size: 0.75rem;
+  padding: 16px 48px;
+  display: inline-block;
+  line-height: 1;
+  font-family: "noto sans JP";
+  text-align: center;
 }
 
 /* アロー付きボタン */
@@ -232,6 +246,7 @@ body {
     /* アイコン付きボタン */
     /* 幅広 */
     /* 小さめ */
+    /* 極小 */
   }
   .amznbtn.--nav {
     font-size: 1rem;
@@ -249,6 +264,10 @@ body {
     padding: 15px 20px 10px;
     max-width: 300px;
     line-height: 1.65em;
+  }
+  .amznbtn.ss-amznbtn {
+    font-size: 1rem;
+    padding: 16px 48px;
   }
   /* ボタン用margin */
   .btn-mt15 {
@@ -1487,6 +1506,19 @@ body {
 /* -------------------------------------------- */
 /* triple */
 /* -------------------------------------------- */
+/* tripleページ共通パーツ */
+/* タイトル */
+.title-common {
+  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
+  margin-top: 16px;
+}
+
+/* テキスト */
+.desc-common {
+  font-size: 1.1875rem;
+  margin-top: 16px;
+}
+
 .triple-mv {
   background-image: url(../images/triple/triple-mv-sp.png);
 }
@@ -1496,19 +1528,243 @@ body {
 .triple-mv__copy--bottom {
   margin-top: 30px;
   text-align: center;
+  padding-bottom: 15px;
 }
 
 @media (min-width: 765px) {
+  .title-common {
+    font-size: 2rem;
+  }
   .triple-mv {
     background-image: url(../images/triple/triple-mv-pc.png);
   }
   .triple-mv__copy--bottom {
     margin-top: 60px;
+    padding-bottom: 45px;
+  }
+}
+@media (min-width: 765px) {
+  .title-common {
+    margin-top: 0;
   }
 }
 /* -------------------------------------------- */
-/*  */
+/* triple-reason */
 /* -------------------------------------------- */
+.triple-reason {
+  padding: 90px 0 30px;
+}
+.triple-reason__left {
+  width: 100%;
+}
+.triple-reason__right {
+  text-align: center;
+  margin-top: 48px;
+  font-family: "noto sans jp";
+}
+.triple-reason__heading {
+  font-size: 1.4375rem;
+}
+.triple-reason__attention {
+  color: red;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+.triple-reason__doukonhin-btn {
+  font-weight: 700;
+  font-size: 1.1875rem;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.triple-reason__instructions {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.triple-reason-list {
+  line-height: 1.6;
+  font-size: 1.1875rem;
+  padding-bottom: 24px;
+}
+.triple-reason-list__title {
+  font-size: 1.1875rem;
+  margin-top: 24px;
+  font-weight: 700;
+}
+
+@media (min-width: 765px) {
+  .triple-reason {
+    padding: 90px 0 120px;
+  }
+  .triple-reason__heading {
+    font-size: 2rem;
+  }
+  .triple-reason__doukonhin-btn {
+    font-size: 1.375rem;
+  }
+  .triple-reason__instructions {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .triple-reason__cont {
+    display: flex;
+  }
+  .triple-reason__left {
+    width: 55%;
+  }
+  .triple-reason__right {
+    flex: 1;
+    padding-left: 64px;
+    margin-top: 0;
+  }
+}
+/* -------------------------------------------- */
+/* triple-doukonhinn */
+/* -------------------------------------------- */
+.triple-doukonhinn {
+  font-family: "noto sans JP";
+}
+.triple-doukonhinn__heading {
+  background: linear-gradient(rgba(79, 73, 67, 0.8), rgba(79, 73, 67, 0.8)), url(../images/triple/doukonhinn-bg-1.jpg) 50% 50%/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0 76px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  font-size: calc(1.91rem + 1.69 * (100vw - 20rem) / 28);
+  background-attachment: fixed;
+}
+.triple-doukonhinn__cont {
+  padding: 64px 0;
+}
+
+@media (min-width: 765px) {
+  .triple-doukonhinn__heading {
+    padding: 60px 0 76px;
+    font-size: 58px;
+  }
+}
+@media (min-width: 992px) {
+  .triple-doukonhinn__cont {
+    padding: 64px 0;
+  }
+  .triple-doukonhinn__image {
+    width: 50%;
+  }
+  .triple-doukonhinn__body {
+    flex: 1;
+    padding: 2rem;
+  }
+  .flex-common {
+    display: flex;
+    align-items: center;
+  }
+  .flex-common.--reverse {
+    flex-direction: row-reverse;
+  }
+  .flex-common.--reverse .desc-common {
+    max-width: 28rem;
+  }
+}
+/* -------------------------------------------- */
+/* triple-features */
+/* -------------------------------------------- */
+.triple-feature__wrap {
+  background-color: #4F4943;
+  padding: 135px 15px;
+  color: #fff;
+}
+.triple-feature__title {
+  margin-top: 24px;
+}
+.triple-feature__desc {
+  margin-top: 46px;
+}
+.triple-feature__bg {
+  background: url(../images/triple/doukonhinn-bg-2.jpg) center/cover no-repeat;
+  padding: 135px 0;
+  background-attachment: fixed;
+}
+.triple-feature__bg span {
+  display: block;
+  width: 100%;
+  height: 160px;
+}
+.triple-feature__image.--mt {
+  margin-top: 64px;
+}
+.triple-feature__image img {
+  width: 100%;
+}
+.triple-feature__btn {
+  padding: 30px;
+  text-align: center;
+}
+
+.triple-feature-list {
+  margin-top: 45px;
+}
+.triple-feature-list__item {
+  padding: 16px;
+}
+.triple-feature-list__image {
+  padding-bottom: 32px;
+}
+
+@media (min-width: 765px) {
+  .triple-feature__title {
+    margin-top: 0px;
+  }
+  .triple-feature__desc {
+    margin-top: 60px;
+  }
+  .triple-feature__bg span {
+    height: 230px;
+  }
+  .triple-feature__btn .ss-amznbtn {
+    font-size: 1.1875rem;
+  }
+  .triple-feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .triple-feature-list__item {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .triple-feature__cont {
+    display: flex;
+    justify-content: space-between;
+  }
+  .triple-feature__wrap {
+    background-color: #4F4943;
+    padding: 135px 15px;
+    color: #fff;
+  }
+  .triple-feature__image {
+    width: 60%;
+    padding-right: 64px;
+  }
+  .triple-feature__image.--mt {
+    margin-top: 0px;
+    padding-right: 0;
+    padding-left: 64px;
+  }
+  .triple-feature__body {
+    flex: 1;
+  }
+  .triple-feature-list__item {
+    width: 25%;
+  }
+}
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
