@@ -65,6 +65,7 @@ $(function(){
       crossFade: true
     },
   });
+  
 
 
 

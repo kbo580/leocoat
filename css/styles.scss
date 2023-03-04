@@ -14,6 +14,7 @@ body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,figure,input,textarea {
   appearance: none;
   -webkit-appearance: none;
   border-radius: 0;
+  font-size: 16px;
 }
 
 a { 
@@ -88,10 +89,11 @@ body {
 }
 
 .inner{
-  margin: 0 auto;
   max-width: 768px;
+  margin: 0 auto;
   width: 100%;
   padding: 0 15px;
+  // background-color: pink;
 }
 
 .underline{
@@ -131,15 +133,13 @@ body {
   display: block;
 }
 
-.page-mv{
-  padding: 120px 0 90px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.link-common--blue{
+  color: $linkColor;
 }
 
+
 /* ----- ボタン関連----- */
-/* amazonボタン */
+//amazonボタン
 .amznbtn{
   color: #fff;
   font-weight: 700;
@@ -152,7 +152,7 @@ body {
   line-height: 1;
   display: block;
   
-  /* nav内 */
+  // nav内 
   &.--nav{
     font-size: rem(12);
     padding: 0.4rem 1.5rem;
@@ -163,7 +163,7 @@ body {
     font-family: "noto sans jp",sans-serif;
   }
 
-  /* amazonアイコン付きボタン */
+  // amazonアイコン付きボタン 
   &.--icon{
     &::before{
       content: '\f270';
@@ -175,7 +175,7 @@ body {
     }
   }
   
-  /* 幅広 */
+  // 幅広 
   &.l-amznbtn{
     font-size: rem(18);
     font-weight: 700;
@@ -186,7 +186,7 @@ body {
     // margin: 0 15px  
   }
 
-  /* 小さめ */
+  // 小さめ 
   &.s-amznbtn{
     padding: 15px 20px 10px;
     max-width: 300px;
@@ -194,7 +194,7 @@ body {
     line-height: 1.4em;
   }
 
-  /* 極小 */
+  // 極小 
   &.ss-amznbtn{
     font-size: rem(12);
     padding: 16px 48px;
@@ -205,7 +205,7 @@ body {
   }
 }
 
-/* アロー付きボタン */
+// アロー付きボタン 
 .--arrow{
   display: block;
   position: relative;
@@ -223,7 +223,7 @@ body {
   }
 }
 
-/* ボタン用margin */
+// ボタン用margin 
 .btn-mt15{
   margin-top: 15px;
 }
@@ -258,10 +258,6 @@ body {
 
   .dn{
     display: inline-block;
-  }
-
-  .page-mv{
-    padding: 210px 0 180px;
   }
 
   .mt30{
@@ -326,7 +322,7 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1140px) {
   .inner{
     max-width: 1140px;
   }
@@ -905,8 +901,6 @@ body {
       margin-top: 30px;
     }
   }
-
-
 }
 
 /* -------------------------------------------- */
@@ -969,7 +963,7 @@ body {
   &__border{
     border: 3px solid #fc2;
     border-image: linear-gradient(to bottom, #ECE29D 0%, #A5702E 100%);
-  border-image-slice: 1;
+    border-image-slice: 1;
     padding: 10px;
   }
 
@@ -1617,9 +1611,9 @@ body {
 
 
 /* -------------------------------------------- */
-/* qaa */
+/* top-qaa */
 /* -------------------------------------------- */
-.qaa{
+.top-qaa{
   background: url(../images/pc-qa-bg.png);
   padding: 45px 0;
 
@@ -1712,7 +1706,7 @@ body {
 }
 
 @media (min-width: 765px) {
-  .qaa{
+  .top-qaa{
     padding: 120px 0;
   
     &__wrap{
@@ -1841,6 +1835,106 @@ body {
 }
 
 /* -------------------------------------------- */
+/* 下層ページ共通 */
+/* -------------------------------------------- */
+//下層ページ用inner
+@media (min-width: 576px){
+  .page-inner{
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px){
+  .page-inner{
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 992px){
+  .page-inner{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 1140px){
+  .page-inner{
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px){
+  .page-inner{
+    max-width: 950px;
+  }
+}
+
+.page{
+  font-family: "noto sans jp",sans-serif;
+
+  //メインビジュアル
+  &__mv{
+    color:#fff;
+    padding: 75px 0 135px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(../images/leo-bg.jpg) center/cover no-repeat;
+    position: relative;
+  }
+  
+  //見出し
+  &__heading{
+    font-size: calc( 1.91rem + (3.6 - 1.91) * ((100vw - 20rem)/(48 - 20)));
+    margin-top: 30px;
+  }
+  
+  //小さい見出し
+  &__sub-heading{
+    font-size: calc( 1.35rem + (2 - 1.35) * ((100vw - 20rem)/(48 - 20)));
+    margin-top: 24px;
+    padding-bottom: 16px;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+  
+  //背景画像
+  &__fixed-bg{
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    &.--l-car{
+      background-image: url(../images/triple/doukonhinn-bg-2.jpg);
+      background-attachment: fixed;
+    }
+  
+    &.--s-car{
+      background-image:  linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(../images/history/fixed-bg-car.jpeg);
+      background-attachment: fixed;
+    }
+    
+    &.--machine{
+      background: linear-gradient(rgba(35,35,35,.6),rgba(35,35,35,.6)), url(../images/history/fixed-bg-machine.jpeg);
+      background-attachment: fixed;
+    }
+  }
+}
+
+@media (min-width: 765px) {
+  .page{
+
+    //見出し
+    &__heading{
+      font-size: 3.6rem;
+      margin-top: 34px;
+    }
+    
+    //小さい見出し
+    &__sub-heading{
+      font-size: 2rem;
+    }
+  }
+  
+}
+
+/* -------------------------------------------- */
 /* triple */
 /* -------------------------------------------- */
 /* tripleページ共通パーツ */
@@ -1858,6 +1952,7 @@ body {
 
 .triple-mv{
     background-image: url(../images/triple/triple-mv-sp.png);
+    padding: 120px 90px;
   
     &__copy--top{
       text-align: center;
@@ -1868,28 +1963,24 @@ body {
       text-align: center;
       padding-bottom: 15px;
     }
-
 }
 
 @media (min-width: 765px) {
+  
   .title-common{
     font-size: rem(32);
+    margin-top: 0;
   }
 
   .triple-mv{
       background-image: url(../images/triple/triple-mv-pc.png);
+      padding: 210px 180px;
 
       &__copy--bottom{
         margin-top: 60px;
         padding-bottom: 45px;
       }
     }
-}
-
-@media (min-width: 765px){
-.title-common{
-  margin-top: 0;
-}
 }
 
 /* -------------------------------------------- */
@@ -1985,7 +2076,6 @@ body {
       padding-left: 64px;
       margin-top: 0;
     }
-
   }
 
 }
@@ -1997,7 +2087,7 @@ body {
   font-family: "noto sans JP";
 
   &__heading{
-    background: linear-gradient(rgba(79,73,67,0.8), rgba(79,73,67,0.8)),url(../images/triple/doukonhinn-bg-1.jpg) 50% 50%/cover no-repeat;
+    background: linear-gradient(rgba(79,73,67,0.8), rgba(79,73,67,0.8)),url(../images/leo-bg.jpg) 50% 50%/cover no-repeat;
     color: #fff;
     text-align: center;
     padding: 60px 0 76px;
@@ -2072,12 +2162,11 @@ body {
     margin-top: 46px;
   }
 
-  &__bg{
-    background: url(../images/triple/doukonhinn-bg-2.jpg) center/cover no-repeat;
+  &__fixedbg{
     padding: 135px 0;
-    background-attachment: fixed;
+    
 
-    span{
+    .fixed-space{
       display: block;
       width: 100%;
       height: 160px;
@@ -2126,7 +2215,7 @@ body {
   
     &__bg{
 
-      span{
+      .fixed-space{
         height: 230px;
       }
     }
@@ -2191,9 +2280,130 @@ body {
 }
 
 /* -------------------------------------------- */
-/*  */
+/* history */
 /* -------------------------------------------- */
+.history{
+  &__fixedbg{
+    padding: 45px 0;
 
+    .fixed-space{
+      height: 16px;
+      display: block; 
+    }
+  }
+
+  &__text-wrap{
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: #000;
+    color:#fff;
+  }
+
+  &__text{
+    font-size: 1.2rem;
+    line-height: 1.6;
+
+    &:not(:first-child){
+      margin-top: 38px;
+    }
+  }
+}
+
+@media (min-width: 765px) {
+  .history{
+    &__text-wrap .inner{
+      // max-width: 950px;
+    }
+  }
+  
+}
+
+/* -------------------------------------------- */
+/* qaa */
+/* -------------------------------------------- */
+//qaaページ用inner
+.qaa-inner{
+  padding: 15px 0;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 768px){
+  .qaa-inner{
+    max-width: 510px;
+  }
+}
+
+@media (min-width: 992px){
+  .qaa-inner{
+    max-width: 490px;
+  }
+}
+
+@media (min-width: 1140px){
+  .qaa-inner{
+    max-width: 620px;
+  }
+}
+
+@media (min-width: 1200px){
+  .qaa-inner{
+    max-width: 740px;
+  }
+}
+
+.qaa{
+  &__wrap{
+    padding: 60px 0 45px;
+  }
+}
+
+/* リスト */
+.qaa-list{
+  counter-reset:number; 
+  padding: 15px;
+  
+  &__heading{
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: 300;
+  }
+  
+  &__item{
+    position: relative;
+    padding-left: 40px;
+    margin-top: 1rem;
+    color: #767676;
+
+    &::before{
+      position: absolute;
+      counter-increment: number;
+      content: counter(number);
+      display:inline-block;
+      background: #008cff;
+      color: white;
+      border-radius: 50%;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+  }
+
+  &__wrap{
+    padding-left: 8px;
+  }
+  
+  &__question,
+  &__answer{
+    font-size: 1.2rem;
+  }
+  
+  &__question{
+    font-weight: 700;
+  }
+}
 
 @media (min-width: 765px) {
 

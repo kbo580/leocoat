@@ -13,6 +13,7 @@ body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd, figure, input, textarea {
   appearance: none;
   -webkit-appearance: none;
   border-radius: 0;
+  font-size: 16px;
 }
 
 a {
@@ -76,8 +77,8 @@ body {
 }
 
 .inner {
-  margin: 0 auto;
   max-width: 768px;
+  margin: 0 auto;
   width: 100%;
   padding: 0 15px;
 }
@@ -117,15 +118,11 @@ body {
   display: block;
 }
 
-.page-mv {
-  padding: 120px 0 90px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.link-common--blue {
+  color: #008cff;
 }
 
 /* ----- ボタン関連----- */
-/* amazonボタン */
 .amznbtn {
   color: #fff;
   font-weight: 700;
@@ -137,11 +134,6 @@ body {
   letter-spacing: 1px;
   line-height: 1;
   display: block;
-  /* nav内 */
-  /* amazonアイコン付きボタン */
-  /* 幅広 */
-  /* 小さめ */
-  /* 極小 */
 }
 .amznbtn.--nav {
   font-size: 0.75rem;
@@ -183,7 +175,6 @@ body {
   text-align: center;
 }
 
-/* アロー付きボタン */
 .--arrow {
   display: block;
   position: relative;
@@ -200,7 +191,6 @@ body {
   transform: rotate(45deg) translateX(-50%);
 }
 
-/* ボタン用margin */
 .btn-mt15 {
   margin-top: 15px;
 }
@@ -232,9 +222,6 @@ body {
   }
   .dn {
     display: inline-block;
-  }
-  .page-mv {
-    padding: 210px 0 180px;
   }
   .mt30 {
     margin-top: 60px;
@@ -285,7 +272,7 @@ body {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1140px) {
   .inner {
     max-width: 1140px;
   }
@@ -1327,30 +1314,30 @@ body {
   }
 }
 /* -------------------------------------------- */
-/* qaa */
+/* top-qaa */
 /* -------------------------------------------- */
-.qaa {
+.top-qaa {
   background: url(../images/pc-qa-bg.png);
   padding: 45px 0;
   /* アイコン */
 }
-.qaa__wrap {
+.top-qaa__wrap {
   margin-top: 6px;
   padding-bottom: 26px;
 }
-.qaa__body {
+.top-qaa__body {
   margin-top: 24px;
 }
-.qaa__common {
+.top-qaa__common {
   padding: 15px;
   display: flex;
 }
-.qaa__icon {
+.top-qaa__icon {
   margin-right: 15px;
   min-width: 32px;
   width: 32px;
 }
-.qaa__link {
+.top-qaa__link {
   color: #008cff;
 }
 
@@ -1404,17 +1391,17 @@ body {
 }
 
 @media (min-width: 765px) {
-  .qaa {
+  .top-qaa {
     padding: 120px 0;
     /* アイコン */
   }
-  .qaa__wrap {
+  .top-qaa__wrap {
     margin-top: 60px;
   }
-  .qaa__body {
+  .top-qaa__body {
     margin-top: 26px;
   }
-  .qaa__icon {
+  .top-qaa__icon {
     min-width: 50px;
     width: 50px;
   }
@@ -1504,6 +1491,81 @@ body {
   }
 }
 /* -------------------------------------------- */
+/* 下層ページ共通 */
+/* -------------------------------------------- */
+@media (min-width: 576px) {
+  .page-inner {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .page-inner {
+    max-width: 600px;
+  }
+}
+@media (min-width: 992px) {
+  .page-inner {
+    max-width: 640px;
+  }
+}
+@media (min-width: 1140px) {
+  .page-inner {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-inner {
+    max-width: 950px;
+  }
+}
+.page {
+  font-family: "noto sans jp", sans-serif;
+}
+.page__mv {
+  color: #fff;
+  padding: 75px 0 135px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/leo-bg.jpg) center/cover no-repeat;
+  position: relative;
+}
+.page__heading {
+  font-size: calc(1.91rem + 1.69 * (100vw - 20rem) / 28);
+  margin-top: 30px;
+}
+.page__sub-heading {
+  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
+  margin-top: 24px;
+  padding-bottom: 16px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+.page__fixed-bg {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page__fixed-bg.--l-car {
+  background-image: url(../images/triple/doukonhinn-bg-2.jpg);
+  background-attachment: fixed;
+}
+.page__fixed-bg.--s-car {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/history/fixed-bg-car.jpeg);
+  background-attachment: fixed;
+}
+.page__fixed-bg.--machine {
+  background: linear-gradient(rgba(35, 35, 35, 0.6), rgba(35, 35, 35, 0.6)), url(../images/history/fixed-bg-machine.jpeg);
+  background-attachment: fixed;
+}
+
+@media (min-width: 765px) {
+  .page__heading {
+    font-size: 3.6rem;
+    margin-top: 34px;
+  }
+  .page__sub-heading {
+    font-size: 2rem;
+  }
+}
+/* -------------------------------------------- */
 /* triple */
 /* -------------------------------------------- */
 /* tripleページ共通パーツ */
@@ -1521,6 +1583,7 @@ body {
 
 .triple-mv {
   background-image: url(../images/triple/triple-mv-sp.png);
+  padding: 120px 90px;
 }
 .triple-mv__copy--top {
   text-align: center;
@@ -1534,18 +1597,15 @@ body {
 @media (min-width: 765px) {
   .title-common {
     font-size: 2rem;
+    margin-top: 0;
   }
   .triple-mv {
     background-image: url(../images/triple/triple-mv-pc.png);
+    padding: 210px 180px;
   }
   .triple-mv__copy--bottom {
     margin-top: 60px;
     padding-bottom: 45px;
-  }
-}
-@media (min-width: 765px) {
-  .title-common {
-    margin-top: 0;
   }
 }
 /* -------------------------------------------- */
@@ -1630,7 +1690,7 @@ body {
   font-family: "noto sans JP";
 }
 .triple-doukonhinn__heading {
-  background: linear-gradient(rgba(79, 73, 67, 0.8), rgba(79, 73, 67, 0.8)), url(../images/triple/doukonhinn-bg-1.jpg) 50% 50%/cover no-repeat;
+  background: linear-gradient(rgba(79, 73, 67, 0.8), rgba(79, 73, 67, 0.8)), url(../images/leo-bg.jpg) 50% 50%/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 60px 0 76px;
@@ -1685,12 +1745,10 @@ body {
 .triple-feature__desc {
   margin-top: 46px;
 }
-.triple-feature__bg {
-  background: url(../images/triple/doukonhinn-bg-2.jpg) center/cover no-repeat;
+.triple-feature__fixedbg {
   padding: 135px 0;
-  background-attachment: fixed;
 }
-.triple-feature__bg span {
+.triple-feature__fixedbg .fixed-space {
   display: block;
   width: 100%;
   height: 160px;
@@ -1723,7 +1781,7 @@ body {
   .triple-feature__desc {
     margin-top: 60px;
   }
-  .triple-feature__bg span {
+  .triple-feature__bg .fixed-space {
     height: 230px;
   }
   .triple-feature__btn .ss-amznbtn {
@@ -1766,8 +1824,102 @@ body {
   }
 }
 /* -------------------------------------------- */
-/*  */
+/* history */
 /* -------------------------------------------- */
+.history__fixedbg {
+  padding: 45px 0;
+}
+.history__fixedbg .fixed-space {
+  height: 16px;
+  display: block;
+}
+.history__text-wrap {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #000;
+  color: #fff;
+}
+.history__text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.history__text:not(:first-child) {
+  margin-top: 38px;
+}
+
+/* -------------------------------------------- */
+/* qaa */
+/* -------------------------------------------- */
+.qaa-inner {
+  padding: 15px 0;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .qaa-inner {
+    max-width: 510px;
+  }
+}
+@media (min-width: 992px) {
+  .qaa-inner {
+    max-width: 490px;
+  }
+}
+@media (min-width: 1140px) {
+  .qaa-inner {
+    max-width: 620px;
+  }
+}
+@media (min-width: 1200px) {
+  .qaa-inner {
+    max-width: 740px;
+  }
+}
+.qaa__wrap {
+  padding: 60px 0 45px;
+}
+
+/* リスト */
+.qaa-list {
+  counter-reset: number;
+  padding: 15px;
+}
+.qaa-list__heading {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  font-weight: 300;
+}
+.qaa-list__item {
+  position: relative;
+  padding-left: 40px;
+  margin-top: 1rem;
+  color: #767676;
+}
+.qaa-list__item::before {
+  position: absolute;
+  counter-increment: number;
+  content: counter(number);
+  display: inline-block;
+  background: #008cff;
+  color: white;
+  border-radius: 50%;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.qaa-list__wrap {
+  padding-left: 8px;
+}
+.qaa-list__question, .qaa-list__answer {
+  font-size: 1.2rem;
+}
+.qaa-list__question {
+  font-weight: 700;
+}
+
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- *//*# sourceMappingURL=styles.css.map */
