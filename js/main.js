@@ -65,6 +65,13 @@ $(function(){
       crossFade: true
     },
   });
+
+  $('.tab-title').on('click', function(){
+    var index = $('.tab-title').index(this);
+    $('.tab-title').removeClass('selected'); 
+    $(this).addClass('selected');
+    $('.tab-contents .tab-list').removeClass('show').eq(index).addClass('show');
+  });
   
 
 

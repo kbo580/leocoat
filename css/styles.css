@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd, figure, input, textarea {
   margin: 0;
   padding: 0;
@@ -13,7 +17,6 @@ body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd, figure, input, textarea {
   appearance: none;
   -webkit-appearance: none;
   border-radius: 0;
-  font-size: 16px;
 }
 
 a {
@@ -120,6 +123,7 @@ body {
 
 .link-common--blue {
   color: #008cff;
+  font-weight: 400;
 }
 
 /* ----- ボタン関連----- */
@@ -1538,6 +1542,15 @@ body {
   font-weight: 300;
   line-height: 1.3;
 }
+.page__sec-heading {
+  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+.page__text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
 .page__fixed-bg {
   background-position: 50% 50%;
   background-size: cover;
@@ -1562,6 +1575,9 @@ body {
     margin-top: 34px;
   }
   .page__sub-heading {
+    font-size: 2rem;
+  }
+  .page__sec-heading {
     font-size: 2rem;
   }
 }
@@ -1920,6 +1936,315 @@ body {
   font-weight: 700;
 }
 
+/* -------------------------------------------- */
+/* about */
+/* -------------------------------------------- */
+.about-info {
+  margin-top: 1rem;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: -0.05em;
+}
+.about-info__heading {
+  font-weight: normal;
+}
+.about-info__wrap {
+  padding: 60px 0;
+}
+
+/*----- form関連 -----*/
+.form__wrap {
+  padding: 60px 0;
+}
+.form__heading {
+  text-align: center;
+  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
+}
+.form__desc {
+  color: #767676;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  margin-top: 16px;
+  padding-bottom: 16px;
+}
+.form__body {
+  margin-top: 2rem;
+}
+
+.form-parts {
+  margin-top: 15px;
+  width: 100%;
+}
+.form-parts__heading {
+  color: #232323;
+}
+
+input[type=text],
+input[type=mail],
+input[type=submit] {
+  width: 100%;
+  line-height: 1.43;
+  min-height: 3.5em;
+  padding: 1.07em 0.5em;
+}
+
+input[type=text],
+input[type=mail] {
+  display: block;
+  background-color: #f5f5f5;
+  box-shadow: none;
+  color: #565656;
+  border: 1px solid #e8e8e8;
+  margin-top: 0.357em;
+}
+
+input[type=submit] {
+  background-color: #008cff;
+  border: 2px solid #008cff;
+  cursor: pointer;
+  color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 100px;
+  margin: calc(0.4rem + 16px) 0;
+  font-size: 1.4rem;
+  font-size: 0.75rem;
+  line-height: calc(1.4 * (1.14rem + 0.26 * (100vw - 20rem) / 28));
+}
+
+/* Hover Event */
+@media (hover: hover) {
+  input[type=submit] {
+    transition: box-shadow 0.4s, background-color 0.4s, border-color 4s;
+  }
+  input[type=submit]:hover {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+    background-color: #0062b3;
+    border-color: #0062b3;
+  }
+}
+@media (min-width: 765px) {
+  /*----- form関連 -----*/
+  .form__heading {
+    font-size: 2rem;
+  }
+  input[type=submit] {
+    margin: calc(0.4rem + 16px) 0;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 992px) {
+  .form__inner {
+    max-width: 760px;
+  }
+  .form__body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .form-parts.name, .form-parts.mail {
+    width: calc(50% - 15px);
+  }
+}
+/* -------------------------------------------- */
+/* inspection */
+/* -------------------------------------------- */
+/* 共通 */
+.inspection-heading__wrap {
+  background: #232323;
+  width: 100%;
+  color: #fff;
+}
+.inspection-heading__wrap.--inspection {
+  padding: 60px 0 30px;
+}
+.inspection-heading__wrap.--result {
+  padding: 45px 0 30px;
+}
+
+.inspection__heading {
+  text-align: center;
+}
+
+.inspection__desc {
+  margin-top: 24px;
+}
+
+.inspection-content {
+  padding-bottom: 30px;
+  margin-top: -30px;
+}
+
+.inspection-3-col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.inspection-card {
+  width: 100%;
+  padding: 16px;
+}
+.inspection-card__desc {
+  margin-top: 32px;
+}
+
+.inspection-result {
+  padding-top: 45px;
+  padding-bottom: 30px;
+}
+
+.inspection-points {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.inspection-points__list {
+  padding: 16px;
+  width: 100%;
+}
+.inspection-points__image {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+}
+.inspection-points__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.inspection-points__title {
+  font-weight: bold;
+  line-height: calc(1.4 * (1.14rem + 0.26 * (100vw - 20rem) / 28));
+  font-size: calc(1.14rem + 0.26 * (100vw - 20rem) / 28);
+  margin-top: 32px;
+}
+.inspection-points__desc {
+  margin-top: 28px;
+  color: #767676;
+}
+
+.hardness-report__wrap {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 66.666667%;
+  margin: 0 auto;
+}
+.hardness-report__heading {
+  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
+  text-align: center;
+  font-weight: 700;
+}
+.hardness-report__desc {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin-top: 16px;
+}
+.hardness-report__summarize {
+  color: #767676;
+  font-weight: 700;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: calc(1.14rem + 0.26 * (100vw - 20rem) / 28);
+  margin-top: 45px;
+}
+
+.hardness-report-list {
+  margin-top: 45px;
+}
+.hardness-report-list__item {
+  padding: 24px;
+  width: 100%;
+}
+
+/*------ タブ -----*/
+.tab-title-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tab-title {
+  width: 33.3333333333%;
+  background-color: #000;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.tab-title.selected {
+  background-color: #232323;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tab-list {
+  display: none;
+}
+.tab-list.show {
+  display: block;
+}
+
+@media (min-width: 765px) {
+  .inspection-card {
+    width: 50%;
+  }
+  .inspection-result {
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+  .inspection-2-col {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -32px;
+  }
+  .inspection-2-col .inspection-card {
+    width: 50%;
+    margin-top: 32px;
+  }
+  .inspection-points__list {
+    width: 50%;
+  }
+  .inspection-points__title {
+    font-size: 1.4rem;
+  }
+  .hardness-report__heading {
+    font-size: 2rem;
+  }
+  .hardness-report__summarize {
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4rem;
+  }
+  .hardness-report-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hardness-report-list__item {
+    width: 33.333%;
+  }
+  /*------ タブ -----*/
+  .tab-title {
+    padding: 16px 16px;
+  }
+}
+@media (min-width: 992px) {
+  .inspection-card {
+    width: 33.333%;
+  }
+  .inspection-points__list {
+    width: 33.3333%;
+  }
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- *//*# sourceMappingURL=styles.css.map */
