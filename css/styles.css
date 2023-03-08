@@ -129,14 +129,98 @@ body {
   font-weight: 400;
 }
 
-.mv-copy {
+/*----- mv共通 ----- */
+.mv-common__padding--top {
+  padding: 120px 0 90px;
+}
+.mv-common__padding--l {
+  padding: 120px 0 90px;
+}
+.mv-common__padding--s {
+  padding: 75px 0 135px;
+}
+.mv-common__fixedbg {
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/leo-bg.jpg) center/cover no-repeat;
+  position: relative;
+}
+.mv-common__copy--s {
+  text-align: center;
+}
+.mv-common__copy--l {
+  margin-top: 30px;
   text-align: center;
 }
 
-.mv__common {
-  padding: 120px 0 90px;
+.page {
+  font-family: "noto sans jp", sans-serif;
+}
+.page__heading {
+  font-size: calc(1.91rem + 1.69 * (100vw - 20rem) / 28);
+  margin-top: 30px;
+}
+.page__sub-heading {
+  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
+  font-weight: 300;
+  line-height: 1.3;
+  margin-top: 24px;
+  padding-bottom: 16px;
 }
 
+.page__sec-heading {
+  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+.page__text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.page__fixed-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page__fixed-bg.--l-car {
+  background-image: url(../images/triple/doukonhinn-bg-2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+}
+.page__fixed-bg.--s-car {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/history/fixed-bg-car.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+}
+.page__fixed-bg.--machine {
+  background-image: linear-gradient(rgba(35, 35, 35, 0.6), rgba(35, 35, 35, 0.6)), url(../images/history/fixed-bg-machine.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+}
+.page__fixed-bg.--xl-car {
+  background-image: linear-gradient(rgba(0, 140, 255, 0.4), rgba(0, 140, 255, 0.4)), url(../images/maintenance/fixedbg.jpg);
+  background-attachment: fixed;
+}
+
+@media (min-width: 765px) {
+  .mv-common__padding--top {
+    padding: 120px 0 75px;
+  }
+  .mv-common__padding--l {
+    padding: 210px 0 180px;
+  }
+  .mv-common__padding--s {
+    padding: 75px 0 135px;
+  }
+  .mv-common__copy--l {
+    margin-top: 60px;
+  }
+  .page__heading {
+    font-size: 3.6rem;
+    margin-top: 34px;
+  }
+  .page__sub-heading {
+    font-size: 2rem;
+  }
+}
 /* ----- ボタン関連----- */
 .amznbtn {
   color: #fff;
@@ -240,9 +324,6 @@ body {
   }
   .mt30 {
     margin-top: 60px;
-  }
-  .mv__common {
-    padding: 210px 0 180px;
   }
   /* ----- ボタン関連----- */
   /* amazonボタン */
@@ -466,13 +547,8 @@ body {
   font-family: "ヒラギノ角ゴ pro", sans-serif;
 }
 
-.mv-copy.--bottom {
-  margin-top: 30px;
-}
-
 .mv-top {
-  background: url(../images/pc-mv-bg.png);
-  padding: 120px 0 90px;
+  background: url(../images/pc-mv-bg.png) center/cover no-repeat;
 }
 .mv-top__heading {
   margin-top: 30px;
@@ -521,9 +597,6 @@ body {
 
 @media (min-width: 768px) {
   .mv-top__heading {
-    margin-top: 60px;
-  }
-  .mv-copy.--bottom {
     margin-top: 60px;
   }
   .mv-bottom {
@@ -1775,59 +1848,6 @@ body {
     max-width: 950px;
   }
 }
-.page {
-  font-family: "noto sans jp", sans-serif;
-}
-.page__mv {
-  color: #fff;
-  padding: 75px 0 135px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/leo-bg.jpg) center/cover no-repeat;
-  position: relative;
-}
-.page__heading {
-  font-size: calc(1.91rem + 1.69 * (100vw - 20rem) / 28);
-  margin-top: 30px;
-}
-.page__sub-heading {
-  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
-  margin-top: 24px;
-  padding-bottom: 16px;
-  font-weight: 300;
-  line-height: 1.3;
-}
-.page__sec-heading {
-  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
-  line-height: 1.2;
-  letter-spacing: -0.05em;
-}
-.page__text {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-.page__fixed-bg {
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.page__fixed-bg.--l-car {
-  background-image: url(../images/triple/doukonhinn-bg-2.jpg);
-  background-attachment: fixed;
-  background-position: center;
-}
-.page__fixed-bg.--s-car {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/history/fixed-bg-car.jpeg);
-  background-attachment: fixed;
-  background-position: center;
-}
-.page__fixed-bg.--machine {
-  background-image: linear-gradient(rgba(35, 35, 35, 0.6), rgba(35, 35, 35, 0.6)), url(../images/history/fixed-bg-machine.jpeg);
-  background-attachment: fixed;
-  background-position: center;
-}
-.page__fixed-bg.--xl-car {
-  background-image: linear-gradient(rgba(0, 140, 255, 0.4), rgba(0, 140, 255, 0.4)), url(../images/maintenance/fixedbg.jpg);
-  background-attachment: fixed;
-}
-
 .reason__right {
   text-align: center;
   margin-top: 48px;
@@ -1845,13 +1865,6 @@ body {
 }
 
 @media (min-width: 765px) {
-  .page__heading {
-    font-size: 3.6rem;
-    margin-top: 34px;
-  }
-  .page__sub-heading {
-    font-size: 2rem;
-  }
   .page__sec-heading {
     font-size: 2rem;
   }
@@ -1871,7 +1884,7 @@ body {
   }
 }
 /* -------------------------------------------- */
-/* triple */
+/* superleocoat */
 /* -------------------------------------------- */
 /* tripleページ共通パーツ */
 /* タイトル */
@@ -1887,14 +1900,12 @@ body {
 }
 
 .triple-mv {
-  background-image: url(../images/triple/triple-mv-sp.png);
+  background: url(../images/triple/triple-mv-sp.png) center/cover no-repeat;
 }
 .triple-mv__copy--top {
   text-align: center;
 }
 .triple-mv__copy--bottom {
-  margin-top: 30px;
-  text-align: center;
   padding-bottom: 15px;
 }
 
@@ -1905,10 +1916,8 @@ body {
   }
   .triple-mv {
     background-image: url(../images/triple/triple-mv-pc.png);
-    padding: 210px 180px;
   }
   .triple-mv__copy--bottom {
-    margin-top: 60px;
     padding-bottom: 45px;
   }
 }
