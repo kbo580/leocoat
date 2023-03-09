@@ -66,7 +66,6 @@ select::-ms-expand {
 
 /* ----- common ----- */
 body {
-  font-size: 1rem;
   color: #232323;
   line-height: 1.5;
   position: relative;
@@ -167,14 +166,49 @@ body {
   padding-bottom: 16px;
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex.--jcsb {
+  justify-content: space-between;
+}
+.flex.--jcc {
+  justify-content: center;
+}
+.flex.--aic {
+  align-items: center;
+}
+
+.col-2 {
+  width: 100%;
+}
+
+.col-3 {
+  width: 100%;
+}
+
+/*----- 下層ページ共通 -----*/
 .page__sec-heading {
   font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
   line-height: 1.2;
   letter-spacing: -0.05em;
 }
+.page__sec-heading.--mt16 {
+  margin-top: 16px;
+}
+.page__sec-heading.--mt24 {
+  margin-top: 24px;
+}
 .page__text {
   font-size: 1.2rem;
   line-height: 1.6;
+}
+.page__text.--mt16 {
+  margin-top: 16px;
+}
+.page__text.--mt24 {
+  margin-top: 24px;
 }
 .page__fixed-bg {
   background-size: cover;
@@ -200,6 +234,31 @@ body {
   background-attachment: fixed;
 }
 
+@media (min-width: 576px) {
+  .page-inner {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .page-inner {
+    max-width: 600px;
+  }
+}
+@media (min-width: 992px) {
+  .page-inner {
+    max-width: 640px;
+  }
+}
+@media (min-width: 1140px) {
+  .page-inner {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-inner {
+    max-width: 950px;
+  }
+}
 @media (min-width: 765px) {
   .mv-common__padding--top {
     padding: 120px 0 75px;
@@ -219,6 +278,28 @@ body {
   }
   .page__sub-heading {
     font-size: 2rem;
+  }
+  /*----- 下層ページ共通 -----*/
+  .page__sec-heading {
+    font-size: 2rem;
+  }
+  .page__text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  .page__text.--mt16 {
+    margin-top: 16px;
+  }
+  .col-2 {
+    width: 50%;
+  }
+  .col-3 {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .col-3 {
+    width: 33.333%;
   }
 }
 /* ----- ボタン関連----- */
@@ -1592,6 +1673,11 @@ body {
   background: url(../images/maintenance/maintenance-mv-sp.png) center/cover no-repeat;
 }
 
+.maintenance__heading-wrap {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
 .maintenance-archives {
   padding: 60px 0 60px;
   background: #c1c1c1;
@@ -1611,6 +1697,7 @@ body {
   padding: 32px;
   background: #696969;
   color: #fff;
+  flex-direction: column;
 }
 .maintenance-archives__body-heading {
   font-size: calc(1rem + 0 * (100vw - 20rem) / 28);
@@ -1633,11 +1720,6 @@ body {
   margin: 75px auto 0;
   padding: 0 15px;
   line-height: 1.6;
-}
-
-.flex {
-  display: flex;
-  justify-content: center;
 }
 
 .keepclean {
@@ -1676,9 +1758,6 @@ body {
   background: #383838;
   color: #fff;
 }
-.houden__cont {
-  margin-top: 24px;
-}
 
 .houden-list {
   padding: 16px;
@@ -1699,9 +1778,6 @@ body {
 .maintenance-common__cont {
   margin-top: 16px;
 }
-.maintenance-common__desc {
-  margin-top: 24px;
-}
 .maintenance-common__list {
   padding: 16px;
 }
@@ -1721,6 +1797,14 @@ body {
   background-color: #fff;
   color: #000;
 }
+.maintenance-common__image {
+  width: 100%;
+}
+.maintenance-common__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @media (min-width: 768px) {
   .maintenance-archives__wrap {
@@ -1731,43 +1815,6 @@ body {
   }
   .maintenance-archives__btn {
     margin: 32px -32px 0;
-  }
-  .houden {
-    padding: 60px 0;
-    background: #383838;
-    color: #fff;
-  }
-  .maintenance-common__cont {
-    margin-top: 16px;
-    display: flex;
-  }
-  .maintenance-common__wrap--2col {
-    width: 50%;
-  }
-  .maintenance-common__wrap--3col {
-    width: 50%;
-  }
-  .maintenance-common__desc {
-    margin-top: 24px;
-  }
-  .maintenance-common__list {
-    padding: 16px;
-  }
-  .maintenance-common__list-item {
-    padding: 32px;
-  }
-  .maintenance-common__bgc.--gray {
-    background-color: #585858;
-    color: #fff;
-    margin-top: -24px;
-  }
-  .maintenance-common__bgc.--black {
-    background-color: #232323;
-    color: #fff;
-  }
-  .maintenance-common__bgc.--white {
-    background-color: #fff;
-    color: #000;
   }
 }
 @media (min-width: 992px) {
@@ -1785,34 +1832,8 @@ body {
     width: 60%;
     padding-left: 4rem;
   }
-  .maintenance-common__cont {
-    margin-top: 16px;
-    display: flex;
-  }
-  .maintenance-common__wrap--3col {
-    width: 33.3333%;
-  }
-  .maintenance-common__desc {
-    margin-top: 24px;
-  }
-  .maintenance-common__list {
-    padding: 16px;
-  }
   .maintenance-common__list-item {
     padding: 32px;
-  }
-  .maintenance-common__bgc.--gray {
-    background-color: #585858;
-    color: #fff;
-    margin-top: -24px;
-  }
-  .maintenance-common__bgc.--black {
-    background-color: #232323;
-    color: #fff;
-  }
-  .maintenance-common__bgc.--white {
-    background-color: #fff;
-    color: #000;
   }
 }
 @media (min-width: 1140px) {
@@ -1820,38 +1841,9 @@ body {
     width: 25%;
   }
 }
-/* -------------------------------------------- */
-/* 下層ページ共通 */
-/* -------------------------------------------- */
-@media (min-width: 576px) {
-  .page-inner {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .page-inner {
-    max-width: 600px;
-  }
-}
-@media (min-width: 992px) {
-  .page-inner {
-    max-width: 640px;
-  }
-}
-@media (min-width: 1140px) {
-  .page-inner {
-    max-width: 800px;
-  }
-}
-@media (min-width: 1200px) {
-  .page-inner {
-    max-width: 950px;
-  }
-}
 .reason__right {
   text-align: center;
   margin-top: 48px;
-  font-family: "noto sans jp";
 }
 .reason__left {
   width: 100%;
@@ -1864,11 +1856,6 @@ body {
   margin-top: 24px;
 }
 
-@media (min-width: 765px) {
-  .page__sec-heading {
-    font-size: 2rem;
-  }
-}
 @media (min-width: 992px) {
   .reason__cont {
     display: flex;
@@ -1886,19 +1873,6 @@ body {
 /* -------------------------------------------- */
 /* superleocoat */
 /* -------------------------------------------- */
-/* tripleページ共通パーツ */
-/* タイトル */
-.title-common {
-  font-size: calc(1.35rem + 0.65 * (100vw - 20rem) / 28);
-  margin-top: 16px;
-}
-
-/* テキスト */
-.desc-common {
-  font-size: 1.1875rem;
-  margin-top: 16px;
-}
-
 .triple-mv {
   background: url(../images/triple/triple-mv-sp.png) center/cover no-repeat;
 }
@@ -1910,12 +1884,8 @@ body {
 }
 
 @media (min-width: 765px) {
-  .title-common {
-    font-size: 2rem;
-    margin-top: 0;
-  }
   .triple-mv {
-    background-image: url(../images/triple/triple-mv-pc.png);
+    background: url(../images/triple/triple-mv-pc.png) center/cover no-repeat;
   }
   .triple-mv__copy--bottom {
     padding-bottom: 45px;
@@ -2028,6 +1998,9 @@ body {
   width: 100%;
   height: 160px;
 }
+.triple-feature__image {
+  padding-bottom: 16px;
+}
 .triple-feature__image.--mt {
   margin-top: 64px;
 }
@@ -2061,12 +2034,6 @@ body {
   }
   .triple-feature__btn .ss-amznbtn {
     font-size: 1.1875rem;
-  }
-  .triple-feature-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
   }
   .triple-feature-list__item {
     width: 50%;
@@ -2188,9 +2155,6 @@ body {
 .qaa-list__wrap {
   padding-left: 8px;
 }
-.qaa-list__question, .qaa-list__answer {
-  font-size: 1.2rem;
-}
 .qaa-list__question {
   font-weight: 700;
 }
@@ -2308,6 +2272,10 @@ input[type=submit] {
 /* -------------------------------------------- */
 /* inspection */
 /* -------------------------------------------- */
+.inspection__cont {
+  margin-top: 30px;
+}
+
 /* 共通 */
 .inspection-heading__wrap {
   background: #232323;
@@ -2325,24 +2293,12 @@ input[type=submit] {
   text-align: center;
 }
 
-.inspection__desc {
-  margin-top: 24px;
-}
-
 .inspection-content {
   padding-bottom: 30px;
   margin-top: -30px;
 }
 
-.inspection-3-col {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-}
-
 .inspection-card {
-  width: 100%;
   padding: 16px;
 }
 .inspection-card__desc {
@@ -2361,7 +2317,6 @@ input[type=submit] {
 }
 .inspection-points__list {
   padding: 16px;
-  width: 100%;
 }
 .inspection-points__image {
   width: 96px;
@@ -2450,24 +2405,15 @@ input[type=submit] {
 }
 
 @media (min-width: 765px) {
-  .inspection-card {
-    width: 50%;
-  }
   .inspection-result {
     padding-top: 45px;
     padding-bottom: 30px;
   }
   .inspection-2-col {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: -32px;
   }
   .inspection-2-col .inspection-card {
-    width: 50%;
     margin-top: 32px;
-  }
-  .inspection-points__list {
-    width: 50%;
   }
   .inspection-points__title {
     font-size: 1.4rem;
@@ -2491,14 +2437,6 @@ input[type=submit] {
   /*------ タブ -----*/
   .tab-title {
     padding: 16px 16px;
-  }
-}
-@media (min-width: 992px) {
-  .inspection-card {
-    width: 33.333%;
-  }
-  .inspection-points__list {
-    width: 33.3333%;
   }
 }
 /* -------------------------------------------- */
