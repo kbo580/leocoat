@@ -650,9 +650,11 @@ body {
   font-size: 8.5333333333vw;
   letter-spacing: 0.05em;
   line-height: 1.2;
+  text-shadow: 0px 0px 1px #fff;
 }
 .mv-large-copy--top .mv-large-copy--small {
   font-size: 5.3333333333vw;
+  text-shadow: 0px 0px 1px #fff;
 }
 .mv-large-copy--bottom {
   font-size: 11.2vw;
@@ -706,6 +708,48 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* ----- maintenanceページ ----- */
+.mv-small-copy.--maintenance {
+  color: #fff;
+  font-size: 5.0666666667vw;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.mv-large-copy.--maintenance {
+  color: #fff;
+  line-height: 1;
+}
+
+.mv-large-copy--top.--maintenance {
+  font-size: 10.6666666667vw;
+  line-height: 1.4;
+}
+.mv-large-copy--top.--maintenance .mv-large-copy--small {
+  font-size: 6.9333333333vw;
+  letter-spacing: -0.1em;
+}
+
+.mv-large-copy--bottom.--maintenance {
+  font-size: 17.3333333333vw;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+.mv-large-copy--bottom.--maintenance .mv-large-copy--small {
+  font-size: 10.6666666667vw;
+  letter-spacing: -0.1em;
+}
+.mv-large-copy--bottom.--text-gradeient {
+  background: -webkit-linear-gradient(93deg, #dddddd 0% 45%, #ffffff 45% 100%);
+  color: #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mv-large-copy--bottom--pc {
+  display: none;
+}
+
 @media (min-width: 600px) {
   /*----- Topページ -----*/
   .mv-small-copy {
@@ -747,6 +791,54 @@ body {
   .mv-large-copy--bottom.--superleocoat .mv-large-copy--small {
     font-size: 9.1666666667vw;
   }
+  /* ----- maintenanceページ ----- */
+  .mv-small-copy.--maintenance {
+    font-size: 30px;
+  }
+  .mv-large-copy.--maintenance {
+    color: #fff;
+  }
+  .mv-large-copy--top.--maintenance {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  .mv-large-copy--top.--maintenance .mv-large-copy--small {
+    font-size: 40px;
+    letter-spacing: -0.1em;
+  }
+  .mv-large-copy--bottom.--maintenance {
+    font-size: 95px;
+  }
+  .mv-large-copy--bottom.--maintenance .mv-large-copy--small {
+    font-size: 60px;
+  }
+}
+@media (min-width: 768px) {
+  /* ----- maintenanceページ ----- */
+  .mv-small-copy.--maintenance {
+    font-size: 32px;
+  }
+  .mv-large-copy.--maintenance {
+    color: #fff;
+  }
+  .mv-large-copy--top.--maintenance {
+    font-size: 50px;
+  }
+  .mv-large-copy--top.--maintenance .mv-large-copy--small {
+    font-size: 40px;
+  }
+  .mv-large-copy--bottom.--maintenance {
+    font-size: 86px;
+  }
+  .mv-large-copy--bottom.--maintenance .mv-large-copy--small {
+    font-size: 60px;
+  }
+  .mv-large-copy--bottom--sp {
+    display: none;
+  }
+  .mv-large-copy--bottom--pc {
+    display: block;
+  }
 }
 @media (min-width: 992px) {
   /*----- Topページ -----*/
@@ -785,6 +877,37 @@ body {
   }
   .mv-large-copy--bottom.--superleocoat .mv-large-copy--small {
     font-size: 95px;
+  }
+  /* ----- maintenanceページ ----- */
+  .mv-small-copy.--maintenance {
+    font-size: 30px;
+  }
+  .mv-large-copy--top.--maintenance {
+    font-size: 72px;
+  }
+  .mv-large-copy--top.--maintenance .mv-large-copy--small {
+    font-size: 50px;
+  }
+  .mv-large-copy--bottom.--maintenance {
+    font-size: 115px;
+  }
+  .mv-large-copy--bottom.--maintenance .mv-large-copy--small {
+    font-size: 84px;
+  }
+}
+@media (min-width: 1140px) {
+  /* ----- maintenanceページ ----- */
+  .mv-large-copy--top.--maintenance {
+    font-size: 80px;
+  }
+  .mv-large-copy--top.--maintenance .mv-large-copy--small {
+    font-size: 60px;
+  }
+  .mv-large-copy--bottom.--maintenance {
+    font-size: 130px;
+  }
+  .mv-large-copy--bottom.--maintenance .mv-large-copy--small {
+    font-size: 100px;
   }
 }
 /* -------------------------------------------- */

@@ -799,15 +799,18 @@ body {
   white-space: nowrap;
   margin-top: 30px;
 
+
   //上側
   &--top{
     font-size: calc(32 / 375 *100vw);
     letter-spacing: 0.05em;
     line-height: 1.2;
+    text-shadow: 0px 0px 1px #fff;
     
     //小さい文字
     .mv-large-copy--small{
       font-size: calc(20 / 375 *100vw);
+      text-shadow: 0px 0px 1px #fff;
     }
   }
   
@@ -887,6 +890,65 @@ body {
   }
 }
 
+/* ----- maintenanceページ ----- */
+//小さい見出し
+.mv-small-copy{
+  &.--maintenance{
+    color:#fff;
+    font-size: calc(19 / 375 *100vw);
+    font-weight: 300;
+    line-height: 1.4;
+  }
+}
+
+//大きい見出し
+.mv-large-copy{
+  &.--maintenance{
+    color:#fff;
+    line-height: 1;
+  }
+}
+
+//上の文章
+.mv-large-copy--top{
+  &.--maintenance{
+    font-size: calc(40 / 375 *100vw);
+    line-height: 1.4;
+    
+    //小さい文字
+    .mv-large-copy--small{
+      font-size: calc(26 / 375 *100vw);
+      letter-spacing: -0.1em;
+    }
+  }
+}
+
+//下の文章
+.mv-large-copy--bottom{
+  &.--maintenance{
+    font-size: calc(65 / 375 *100vw);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+
+    //小さい文字
+    .mv-large-copy--small{
+      font-size: calc(40 / 375 *100vw);
+      letter-spacing: -0.1em;
+    }
+  }
+
+  //グラデーション
+  &.--text-gradeient{
+    background: -webkit-linear-gradient(93deg, #dddddd 0% 45%,#ffffff 45% 100% ); 
+    color: #000000; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+  }
+}
+
+.mv-large-copy--bottom--pc{
+  display: none;
+}
 
 @media (min-width: 600px){
   /*----- Topページ -----*/
@@ -954,8 +1016,105 @@ body {
       }
     }
   }
+
+  /* ----- maintenanceページ ----- */
+  //小さい見出し
+  .mv-small-copy{
+    &.--maintenance{
+      font-size: 30px;
+    }
+  }
+  
+  //大きい見出し
+  .mv-large-copy{
+    &.--maintenance{
+      color:#fff;
+    }
+  }
+  
+  //上の文章
+  .mv-large-copy--top{
+    &.--maintenance{
+      font-size: 60px;
+      line-height: 1.2;
+
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 40px;
+        letter-spacing: -0.1em;
+      }
+    }
+  }
+  
+  // //下の文章
+  .mv-large-copy--bottom{
+    &.--maintenance{
+      font-size: 95px;
+  
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 60px;
+      }
+    }
+  }
+
 }
 
+@media (min-width: 768px){
+
+
+
+
+
+
+/* ----- maintenanceページ ----- */
+  //小さい見出し
+  .mv-small-copy{
+    &.--maintenance{
+      font-size: 32px;
+    }
+  }
+  
+  //大きい見出し
+  .mv-large-copy{
+    &.--maintenance{
+      color:#fff;
+    }
+  }
+  
+  //上の文章
+  .mv-large-copy--top{
+
+    &.--maintenance{
+      font-size: 50px;
+      
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 40px;
+      }
+    }
+  }
+  
+  // //下の文章
+  .mv-large-copy--bottom{
+    &.--maintenance{
+      font-size: 86px;
+  
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 60px;
+      }
+    }
+  }
+
+  .mv-large-copy--bottom--sp{
+    display: none;
+  }
+
+  .mv-large-copy--bottom--pc{
+    display: block;
+  }
+}
 
 @media (min-width: 992px) {
   /*----- Topページ -----*/
@@ -1019,6 +1178,68 @@ body {
       //小さい文字
       .mv-large-copy--small{
         font-size: 95px;
+      }
+    }
+  }
+
+  /* ----- maintenanceページ ----- */
+  //小さい見出し
+  .mv-small-copy{
+    &.--maintenance{
+      font-size: 30px
+    }
+  }
+
+  //大きい見出し
+  //上の文章
+  .mv-large-copy--top{
+    &.--maintenance{
+      font-size: 72px;
+
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 50px;
+      }
+    }
+  }
+
+  // //下の文章
+  .mv-large-copy--bottom{
+    &.--maintenance{
+      font-size: 115px;
+  
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 84px;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 1140px){
+  /* ----- maintenanceページ ----- */
+  //大きい見出し
+  //上の文章
+  .mv-large-copy--top{
+    &.--maintenance{
+      font-size: 80px;
+
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 60px;
+      }
+    }
+  }
+
+  // //下の文章
+  .mv-large-copy--bottom{
+    &.--maintenance{
+      font-size: 130px;
+
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 100px;
       }
     }
   }
