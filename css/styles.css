@@ -113,7 +113,7 @@ body {
 
 .checkmark::before {
   content: "\f058";
-  font-family: "font awesome 5 free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   margin-right: 0.6em;
 }
@@ -1816,7 +1816,7 @@ body {
 }
 .question__wrap::after {
   content: "\f078";
-  font-family: "font awesome 5 free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
   width: 30px;
