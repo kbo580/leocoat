@@ -97,6 +97,10 @@ body {
 
 .underline{
   border-bottom: 2px solid #000;
+
+  &.--white{
+    border-bottom: 1px solid #fff;
+  }
 }
 
 .noto-sans{
@@ -769,6 +773,255 @@ body {
 .heading-image{
   display: block;
   text-align: center;
+}
+
+/* -------------------------------------------- */
+/* mvの見出し */
+/* -------------------------------------------- */
+/*----- Topページ -----*/
+//小さい見出し
+.mv-small-copy{
+  font-size: calc(16 / 375 *100vw);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.mv-small-copy--bold{
+  font-size: calc(22 / 375 *100vw);
+}
+
+//大きい見出し
+.mv-large-copy{
+  text-align: center;
+  font-weight: 900;
+  white-space: nowrap;
+  margin-top: 30px;
+
+  //上側
+  &--top{
+    font-size: calc(32 / 375 *100vw);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    
+    //小さい文字
+    .mv-large-copy--small{
+      font-size: calc(20 / 375 *100vw);
+    }
+  }
+  
+  //下側
+  &--bottom{
+    font-size: calc(42 / 375 *100vw);
+    transform: skewX(-12deg);
+    letter-spacing: 0.05em;
+    
+    //小さい文字
+    .mv-large-copy--small{
+      font-size: calc(30 / 375 *100vw);
+      letter-spacing: 0.05em;
+    }
+  }
+
+  //グラデーション
+  &.--text-gradeient{
+    background: -webkit-linear-gradient(93deg, #000000 0% 45%,#4d4d4d 45% 100% ); 
+    color: #000000; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+  }
+}
+
+/*----- leocoatページ ----- */
+//小さい見出し
+.mv-small-copy{
+  &.--superleocoat{
+    color:#fff;
+    font-size: calc(35 / 375 *100vw);
+  }
+}
+
+//大きい見出し
+.mv-large-copy{
+  &.--superleocoat{
+    color:#fff;
+  }
+}
+
+//上の文章
+.mv-large-copy--top{
+  &.--superleocoat{
+    font-size: calc(32 / 375 *100vw);
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    
+    //小さい文字
+    .mv-large-copy--small{
+      font-size: calc(25 / 375 *100vw);
+      letter-spacing: -0.1em;
+    }
+  }
+}
+
+//下の文章
+.mv-large-copy--bottom{
+  &.--superleocoat{
+    font-size: calc(64 / 375 *100vw);
+    letter-spacing: 0.05em;
+    line-height: 1;
+
+    //小さい文字
+    .mv-large-copy--small{
+      font-size: calc(45 / 375 *100vw);
+      letter-spacing: -0.1em;
+    }
+  }
+
+  //グラデーション
+  &.--text-gradeient{
+    background: -webkit-linear-gradient(93deg, #dddddd 0% 45%,#ffffff 45% 100% ); 
+    color: #000000; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+  }
+}
+
+
+@media (min-width: 600px){
+  /*----- Topページ -----*/
+  //小さい見出し
+  .mv-small-copy{
+    font-size: calc(24 / 600 *100vw);
+    letter-spacing: 0;
+  }
+  
+  .mv-small-copy--bold{
+    font-size: calc(30 / 600 *100vw);
+  }
+
+  //大きい見出し
+  .mv-large-copy{
+    margin-top: 60px;
+  
+    &--top{
+      font-size: calc(36 / 600 *100vw);
+      
+      .mv-large-copy--small{
+        font-size: calc(25 / 600 *100vw);
+      }
+    }
+    
+    &--bottom{
+      font-size: calc(50 / 600 *100vw);
+      letter-spacing: 0;
+      
+      .mv-large-copy--small{
+        font-size: calc(45 / 600 *100vw);
+      }
+    }
+  }
+
+  /*----- leocoatページ ----- */
+  //小さい見出し
+  .mv-small-copy{
+    &.--superleocoat{
+      font-size: 40px;
+    }
+  }
+
+  //大きい見出し
+  //上の文章
+  .mv-large-copy--top{
+    &.--superleocoat{
+      font-size: calc(42 / 600 *100vw);
+
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: calc(36 / 600 *100vw);
+      }
+    }
+  }
+
+  //下の文章
+  .mv-large-copy--bottom{
+    &.--superleocoat{
+      font-size: calc(80 / 600 *100vw);
+
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: calc(55 / 600 *100vw);
+      }
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+  /*----- Topページ -----*/
+  //小さい見出し
+  .mv-small-copy{
+    font-size: 30px;
+    letter-spacing: 0.1em;
+  }
+
+  .mv-small-copy--bold{
+    font-size: 36px;
+  }
+
+  //大きい見出し
+  .mv-large-copy{
+
+    &--top{
+      font-size: 78px;
+      
+      .mv-large-copy--small{
+        font-size: 65px;
+      }
+    }
+
+    &--bottom{
+      font-size: 120px;
+      letter-spacing: 0.05em;
+      
+      .mv-large-copy--small{
+        font-size: 80px;
+      }
+    }
+  }
+  
+  /*----- leocoatページ ----- */
+  //小さい見出し
+  .mv-small-copy{
+    &.--superleocoat{
+      font-size: 30px;
+    }
+  }
+
+  //大きい見出し
+  //上の文章
+  .mv-large-copy--top{
+    &.--superleocoat{
+      font-size: 80px;
+
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 70px;
+      }
+    }
+  }
+
+  //下の文章
+  .mv-large-copy--bottom{
+    &.--superleocoat{
+      font-size: 150px;
+
+      //小さい文字
+      .mv-large-copy--small{
+        font-size: 95px;
+      }
+    }
+  }
 }
 
 /* -------------------------------------------- */
