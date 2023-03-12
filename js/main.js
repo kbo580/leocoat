@@ -78,6 +78,28 @@ $(function(){
     },
   });
 
+  //---- モーダル -----
+  $(function(){
+    var open = $('.modal-open');
+    var close = $('.modal-close');
+    var container = $('#modal-container');
+
+    $(open).on('click', function(){
+      var src = $(this).children('img').attr('src');
+      var alt = $(this).children('img').attr('alt');
+      $('#modalImage').attr('src', src).attr('alt', alt);
+      $(container).addClass('active');
+      return false;
+    });
+    
+    $(close).on('click', function(){
+      $(container).removeClass('active');
+    });
+
+    $(container).on('click', function(){
+      $(container).removeClass('active');
+    });
+  });
 
   //----- タブメニュー-----
   $('.tab-title').on('click', function(){
@@ -87,7 +109,4 @@ $(function(){
     $('.tab-contents .tab-list').removeClass('show').eq(index).addClass('show');
   });
   
-
-
-
 });
