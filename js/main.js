@@ -1,17 +1,17 @@
 $(function(){
 
+  //----- バーガーメニュー -----
   $('#show').on('click', function(){
     $(this).toggleClass('active');
     $('.header__bottom').toggleClass('active');
-    // $('body').toggleClass('active');
   });
   
   $('.nav-menu li a').on('click', function () {
     $('#show').removeClass('active');
     $('#nav').removeClass('active');
-    // $('body').removeClass('active');
   });
 
+  //----- 同梱品のトグル -----
   $('.doukonhin-btn').on('click', function () {
     $(this).next('.doukonhin').slideToggle();
     $(this).toggleClass("active");
@@ -19,6 +19,7 @@ $(function(){
     return false;
   });
 
+  //----- よくある質問のトグル -----
   $('.question').on('click', function () {
     var answer = $(this).next(".answer");
     answer.slideToggle(200);
@@ -30,6 +31,7 @@ $(function(){
     }
   });
 
+  //----- headerのfadein -----
   $(window).on('scroll', function(){
     var headerHight =$('.header__wrap').outerHeight(true);
     if($(this).scrollTop()>= headerHight){
@@ -42,8 +44,18 @@ $(function(){
     }
   });
 
+  //----- instaのスライド -----
   var instaSwiper=  new Swiper('.instaSwiper', {
+    slidesPerView: '1',
+    spaceBetween: 30,
+    breakpoints: {
+      768: {
+        slidesPerView: 3.5,
+        spaceBetween: 30,
+      }
+    },
     grabCursor: true,
+    centeredSlides: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -54,11 +66,11 @@ $(function(){
     },
     loop: true,
     loopAdditionalSlides: 1,
-    autoplay: {
-      delay: 4000,
-      waitForTransition: true,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    //   waitForTransition: true,
+    //   disableOnInteraction: false,
+    // },
     speed: 1000,
     effect: 'slide',
     fadeEffect: {
@@ -66,6 +78,8 @@ $(function(){
     },
   });
 
+
+  //----- タブメニュー-----
   $('.tab-title').on('click', function(){
     var index = $('.tab-title').index(this);
     $('.tab-title').removeClass('selected'); 
@@ -77,5 +91,3 @@ $(function(){
 
 
 });
-// ではお送りします
-// 「納品の完了」と今回は評価をお願いいたします！
