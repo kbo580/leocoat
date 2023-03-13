@@ -2688,39 +2688,45 @@ body {
 }
 
 /* リスト */
-.qaa-list {
+.num-list {
   counter-reset: number;
   padding: 15px;
 }
-.qaa-list__heading {
+.num-list__heading {
   font-size: 1.2rem;
   line-height: 1.3;
   font-weight: 300;
 }
-.qaa-list__item {
+.num-list__item {
   position: relative;
   padding-left: 40px;
   margin-top: 1rem;
   color: #767676;
 }
-.qaa-list__item::before {
+.num-list__item::before {
   position: absolute;
   counter-increment: number;
   content: counter(number);
   display: inline-block;
-  background: #008cff;
-  color: white;
-  border-radius: 50%;
   left: 0;
   width: 40px;
   height: 40px;
   line-height: 40px;
   text-align: center;
 }
-.qaa-list__wrap {
+.num-list__item.--round::before {
+  background: #008cff;
+  color: white;
+  border-radius: 50%;
+}
+.num-list__item.--square::before {
+  background: #000;
+  color: white;
+}
+.num-list__wrap {
   padding-left: 8px;
 }
-.qaa-list__question {
+.num-list__question {
   font-weight: 700;
 }
 
@@ -3005,8 +3011,64 @@ input[type=submit] {
   }
 }
 /* -------------------------------------------- */
-/*  */
+/* delivery */
 /* -------------------------------------------- */
+.delivery__wrap {
+  padding: 60px 0 15px;
+}
+.delivery__heading {
+  text-align: center;
+}
+
+/* -------------------------------------------- */
+/* privacy */
+/* -------------------------------------------- */
+.privacy__heading {
+  text-align: center;
+}
+.privacy__heading-comp {
+  padding: 0 15px;
+  margin-top: 54px;
+}
+.privacy__sub-heading {
+  font-size: calc(1.14rem + 0.26 * (100vw - 20rem) / 28);
+  text-align: center;
+}
+.privacy__body {
+  padding: 45px 15px;
+}
+
+.privacy-announce {
+  padding: 45px 0;
+}
+.privacy-announce__text {
+  font-weight: 300;
+  margin-top: 16px;
+  letter-spacing: -0.05em;
+}
+.privacy-announce__table {
+  margin-top: 45px;
+}
+
+.privacy-toc {
+  padding: 45px 0;
+}
+.privacy-toc__body {
+  color: #767676;
+  padding: 30px 15px 0;
+}
+
+@media (min-width: 765px) {
+  .privacy__sub-heading {
+    font-size: 1.4rem;
+  }
+  .privacy-announce {
+    padding: 60px 0;
+  }
+  .privacy-toc {
+    padding: 60px 0;
+  }
+}
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- *//*# sourceMappingURL=styles.css.map */
