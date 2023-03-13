@@ -3048,6 +3048,11 @@ input[type=submit] {
 }
 .privacy-announce__table {
   margin-top: 45px;
+  border-collapse: collapse;
+}
+.privacy-announce table, .privacy-announce td, .privacy-announce th {
+  border: 1px #ddd solid;
+  padding: 12px;
 }
 
 .privacy-toc {
