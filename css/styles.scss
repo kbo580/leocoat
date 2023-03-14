@@ -145,7 +145,6 @@ body {
   font-weight: 400;
 }
 
-
 //セクションの見出し
 .sec-heading{
   text-align: center;
@@ -346,7 +345,6 @@ body {
   }
 }
 
-
 @media (min-width: 765px){
   //mv共通
   .mv-common{
@@ -420,7 +418,6 @@ body {
   .col-3{
     width: 33.333%;
   }
-
 }
 
 /* ----- ボタン関連----- */
@@ -553,13 +550,6 @@ body {
   /* amazonボタン */
   .amznbtn{
 
-    /* nav内 */
-    &.--nav{
-      font-size: rem(16);
-      margin: 0 0 0 0.8rem;
-      align-items: center;  
-    }
-
     /* アイコン付きボタン */
     &.--icon::before{
       font-size: rem(26);
@@ -604,6 +594,18 @@ body {
 @media (min-width: 992px) {
   .inner{
     max-width: 960px;
+  }
+}
+@media (min-width: 1024px){
+  /* amazonボタン */
+  .amznbtn{
+
+    /* nav内 */
+    &.--nav{
+      font-size: rem(16);
+      margin: 0 0 0 0.8rem;
+      align-items: center;  
+    }
   }
 }
 

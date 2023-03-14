@@ -433,16 +433,10 @@ body {
   /* ----- ボタン関連----- */
   /* amazonボタン */
   .amznbtn {
-    /* nav内 */
     /* アイコン付きボタン */
     /* 幅広 */
     /* 小さめ */
     /* 極小 */
-  }
-  .amznbtn.--nav {
-    font-size: 1rem;
-    margin: 0 0 0 0.8rem;
-    align-items: center;
   }
   .amznbtn.--icon::before {
     font-size: 1.625rem;
@@ -474,6 +468,17 @@ body {
 @media (min-width: 992px) {
   .inner {
     max-width: 960px;
+  }
+}
+@media (min-width: 1024px) {
+  /* amazonボタン */
+  .amznbtn {
+    /* nav内 */
+  }
+  .amznbtn.--nav {
+    font-size: 1rem;
+    margin: 0 0 0 0.8rem;
+    align-items: center;
   }
 }
 @media (min-width: 1140px) {
