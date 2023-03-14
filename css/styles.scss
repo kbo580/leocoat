@@ -2087,6 +2087,10 @@ body {
   }
 }
 
+.fancybox__counter{
+  display: none;
+}
+
 @media (min-width: 765px) {
   .usage{
     padding: 120px 0 120px;
@@ -4008,6 +4012,37 @@ input[type="submit"]{
   .privacy-toc{
     padding: 60px 0;
   }
+
+}
+
+/* -------------------------------------------- */
+/* fade in */
+/* -------------------------------------------- */
+
+/* 下からフェードイン */
+.fadeUpTrigger{
+  opacity: 0;
+}
+
+.fadeUpAnime {
+  animation-name:fadeUpAnime;
+  animation-duration: 1.6s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 765px) {
+
 
 }
 

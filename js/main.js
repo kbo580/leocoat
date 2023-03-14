@@ -65,12 +65,12 @@ $(function(){
       clickable: true
     },
     loop: true,
-    loopAdditionalSlides: 1,
-    // autoplay: {
-    //   delay: 4000,
-    //   waitForTransition: true,
-    //   disableOnInteraction: false,
-    // },
+    // loopAdditionalSlides: 1,
+    autoplay: {
+      delay: 4000,
+      waitForTransition: true,
+      disableOnInteraction: false,
+    },
     speed: 1000,
     effect: 'slide',
     fadeEffect: {
@@ -79,27 +79,27 @@ $(function(){
   });
 
   //---- モーダル -----
-  $(function(){
-    var open = $('.modal-open');
-    var close = $('.modal-close');
-    var container = $('#modal-container');
+  // $(function(){
+  //   var open = $('.modal-open');
+  //   var close = $('.modal-close');
+  //   var container = $('#modal-container');
 
-    $(open).on('click', function(){
-      var src = $(this).children('img').attr('src');
-      var alt = $(this).children('img').attr('alt');
-      $('#modalImage').attr('src', src).attr('alt', alt);
-      $(container).addClass('active');
-      return false;
-    });
+  //   $(open).on('click', function(){
+  //     var src = $(this).children('img').attr('src');
+  //     var alt = $(this).children('img').attr('alt');
+  //     $('#modalImage').attr('src', src).attr('alt', alt);
+  //     $(container).addClass('active');
+  //     return false;
+  //   });
     
-    $(close).on('click', function(){
-      $(container).removeClass('active');
-    });
+  //   $(close).on('click', function(){
+  //     $(container).removeClass('active');
+  //   });
 
-    $(container).on('click', function(){
-      $(container).removeClass('active');
-    });
-  });
+  //   $(container).on('click', function(){
+  //     $(container).removeClass('active');
+  //   });
+  // });
 
   //----- タブメニュー-----
   $('.tab-title').on('click', function(){
@@ -108,5 +108,24 @@ $(function(){
     $(this).addClass('selected');
     $('.tab-contents .tab-list').removeClass('show').eq(index).addClass('show');
   });
+
+  //--------------- 下からフェードイン ----------------
+  function fadeUpAnime(){
+    $('.fadeUp').each(function(){ 
+      var elemPos = $(this).offset().top; 
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll >= elemPos - windowHeight){
+      $(this).addClass('fadeUpAnime');
+      }else{
+      $(this).removeClass('fadeUpAnime');
+      }
+    });
+  }
+  
+  $(window).on('load scroll', function (){
+    fadeUpAnime();
+  });
+  
   
 });
