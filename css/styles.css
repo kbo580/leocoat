@@ -2155,6 +2155,7 @@ body {
 .accordion-btn {
   cursor: pointer;
   display: inline-block;
+  color: #008cff;
 }
 
 .history-accordion__heading {
