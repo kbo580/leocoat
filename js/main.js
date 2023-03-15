@@ -57,7 +57,7 @@ $(function(){
 
   //--------------- 下からフェードイン ----------------
   function fadeUpAnime(){
-    $('.fadeUp').each(function(){ 
+    $('.fadeUpTrigger').each(function(){ 
       var elemPos = $(this).offset().top; 
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
