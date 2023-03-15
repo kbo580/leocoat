@@ -63,8 +63,6 @@ $(function(){
       var windowHeight = $(window).height();
       if (scroll >= elemPos - windowHeight){
       $(this).addClass('fadeUpAnime');
-      }else{
-      $(this).removeClass('fadeUpAnime');
       }
     });
   }
