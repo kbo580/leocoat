@@ -126,6 +126,10 @@ body {
   display: block;
 }
 
+.tac-wrap {
+  text-align: center;
+}
+
 .link-common--blue {
   color: #008cff;
   font-weight: 400;
@@ -1436,6 +1440,25 @@ body {
 }
 .usage__instructions {
   margin-top: 15px;
+  font-size: 30px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+.usage__instructions::before, .usage__instructions::after {
+  content: "";
+  background: #232323;
+  width: 80px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 55%;
+}
+.usage__instructions::before {
+  left: -62%;
+}
+.usage__instructions::after {
+  right: -62%;
 }
 
 .usage-list {
@@ -1870,6 +1893,9 @@ body {
 .detail {
   padding: 45px 0;
 }
+.detail__lead-wrap {
+  flex-direction: column;
+}
 .detail__heading {
   font-size: 7.7333333333vw;
 }
@@ -1884,7 +1910,6 @@ body {
   font-size: 21px;
 }
 .detail__common-desc {
-  text-align: center;
   margin-top: 15px;
 }
 

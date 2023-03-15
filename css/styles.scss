@@ -140,6 +140,10 @@ body {
   display: block;
 }
 
+.tac-wrap{
+  text-align: center;
+}
+
 .link-common--blue{
   color: $linkColor;
   font-weight: 400;
@@ -1912,6 +1916,29 @@ body {
 
   &__instructions{
     margin-top: 15px;
+    font-size: 30px;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+
+    &::before,
+    &::after{
+      content:"";
+      background: #232323;
+      width: 80px;
+      height: 2px;
+      display: block;
+      position: absolute;
+      top: 55%;
+    }
+
+    &::before{
+      left: -62%;
+    }
+
+    &::after{
+      right: -62%;
+    }
   }
 }
 
@@ -2439,6 +2466,10 @@ body {
 .detail{
   padding: 45px 0;
 
+  &__lead-wrap{
+    flex-direction: column;
+  }
+
   &__heading{
     font-size: calc(29 / 375 * 100vw);
   }
@@ -2457,7 +2488,6 @@ body {
   }
 
   &__common-desc{
-    text-align: center;
     margin-top: 15px;
   }
 }
