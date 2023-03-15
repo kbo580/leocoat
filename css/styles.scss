@@ -1674,7 +1674,7 @@ body {
     font-weight: 900;
     margin-left: 8px;
   }
-
+  
   &.active::after{
     content: "\f106";
   }
@@ -2779,17 +2779,37 @@ body {
   &__heading{
     font-size: calc(35 / 375 * 100vw);
   }
-
+  
   &__text-wrap{
     padding: 45px 0 30px;
-    margin-top: -40px;
   }
-
+  
   &__text{
     font-size: 1.2rem;
     line-height: 1.6;
-    margin-top: 40px;
+
+    &--l{
+      font-size: 24px;
+    }
+
+    &.--mt30{
+      margin-top: 30px;
+    }
   }
+}
+
+.accordion-btn{
+  cursor: pointer;
+  display: inline-block;
+}
+
+.history-accordion{
+  &__heading{
+    font-size: 20px;
+    margin-top: 45px;
+    padding-bottom: 15px;
+  }
+
 }
 
 @media (min-width: 600px){

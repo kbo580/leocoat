@@ -107,6 +107,12 @@ $(function(){
   $(window).on('load scroll', function (){
     fadeUpAnime();
   });
+
+  //----- 誕生物語のaccordion-----
+  $(".history-accordion").hide();
+  $('#accordion').on('click', function(){
+    $(".history-accordion").slideToggle(600);
+  });
   
   
 });
