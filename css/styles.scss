@@ -144,6 +144,10 @@ body {
   text-align: center;
 }
 
+.tac{
+  text-align: center;
+}
+
 .link-common--blue{
   color: $linkColor;
   font-weight: 400;
@@ -3093,6 +3097,9 @@ body {
     }
   }
 }
+.maintenance-kodawari{
+  padding: 60px 0;
+}
 
 @media (min-width: 768px){
   .maintenance-archives{
@@ -3860,6 +3867,15 @@ input[type="submit"]{
   &.show{
     display: block;
   } 
+}
+
+//タブの上へ戻る
+.toTop{
+  background-color: #dedede;
+  padding: 16px 0;
+  cursor: pointer;
+  text-align: center;
+  display: block;
 }
 
 @media (min-width: 765px) {

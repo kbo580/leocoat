@@ -130,6 +130,10 @@ body {
   text-align: center;
 }
 
+.tac {
+  text-align: center;
+}
+
 .link-common--blue {
   color: #008cff;
   font-weight: 400;
@@ -2390,6 +2394,10 @@ body {
   object-fit: cover;
 }
 
+.maintenance-kodawari {
+  padding: 60px 0;
+}
+
 @media (min-width: 768px) {
   .maintenance-archives__wrap {
     width: 50%;
@@ -2973,6 +2981,14 @@ input[type=submit] {
   display: none;
 }
 .tab-list.show {
+  display: block;
+}
+
+.toTop {
+  background-color: #dedede;
+  padding: 16px 0;
+  cursor: pointer;
+  text-align: center;
   display: block;
 }
 

@@ -55,6 +55,17 @@ $(function(){
     $('.tab-contents .tab-list').removeClass('show').eq(index).addClass('show');
   });
 
+  //タブ用スクロール
+  $('.toTop').click(function () {
+    var height = $(".tab-title-list").outerHeight(true);
+    console.log(height);
+    var id =$(this).attr('href');
+    var pos = $(id).offset().top-height;
+    $('html, body').animate({'scrollTop': pos}, 300);
+    return false;
+  });
+
+
   //--------------- 下からフェードイン ----------------
   function fadeUpAnime(){
     $('.fadeUpTrigger').each(function(){ 
