@@ -87,7 +87,10 @@ $(function(){
   $('#accordion').on('click', function(){
     $(".history-accordion").slideToggle(600);
   });
-  
+
+
+
+
   
 });
 

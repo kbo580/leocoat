@@ -15,7 +15,7 @@
           <ul class="nav__list footer-nav__list">
             <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/superleocoat" target="_blank"  class="nav__link">最上級3層コート</a></li>
             <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/maintenance" target="_blank"  class="nav__link">ポリマースプレー</a></li>
-            <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/inspection" target="_blank"  class="nav__link">試験結果</a></li>
+            <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/inspections" target="_blank"  class="nav__link">試験結果</a></li>
             <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/faq" target="_blank"  class="nav__link">Q&A</a></li>
             <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/about" target="_blank"  class="nav__link">会社概要</a></li>
           </ul>

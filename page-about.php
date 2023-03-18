@@ -39,38 +39,7 @@
   </div>
   <!-- about-info-wrap -->
 
-  <div class="form__wrap">
-    <div class="inner form__inner">
-      <h2 class="form__heading">メールでお問い合わせ</h2>
-      <p class="form__desc page__text">弊社へのお問い合わせは、以下のフォームからお願いいたします。</p>
-
-      <div class="form__body page__text"> 
-        <div class="form-parts">
-          <label for="content" class="form-parts__heading">お問い合わせ内容</label>
-          <input type="text" id="content">
-        </div>
-        <!-- form-parts -->
-  
-        <div class="form-parts name">
-          <label for="name" class="form-parts__heading">お名前</label>
-          <input type="text" id="name">
-        </div>
-        <!-- form-parts -->
-
-        <div class="form-parts mail">
-          <label for="mail" class="form-parts__heading">メールアドレス</label>
-          <input type="mail" id="mail">
-        </div>
-        <!-- form-parts -->
-  
-        <input type="submit" value="この内容で問い合わせる">
-      </div>
-      <!-- form__body -->
-    </div>
-    <!-- inner page-inner -->
-
-  </div>
-  <!-- form__wrap -->
+<?php get_template_part('template-parts/contact-form'); ?>
 
 
 <?php get_footer(); ?>

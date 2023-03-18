@@ -33,12 +33,7 @@
 
             <div class="gentei__wrap">
 
-              <picture class="gentei__heading">
-                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/sp-present-heading.png">
-                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/pc-present-heading.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/pc-present-heading.png" alt="LEO COATをご購入の方限定">
-              </picture>
-              <!-- gentei__heading -->
+              <h2 class="q gentei__heading noto-sans">LEO COATをご購入の方限定！</h2>
 
               <div class="gentei-body">
 
@@ -110,13 +105,8 @@
           </picture>
   
           <div class="reason-body__wrap">
-            <h3 class="reason-body__heading">
-              <picture class="reason-body__heading-image">
-                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/reason-h3-sp.png">
-                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/reason-h3-pc.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/reason-h3-sp.png" alt="LEO COATが選ばれる理由">
-              </picture>
-            </h3>
+
+            <h3 class="reason-body__heading">LEO COATが<span class="reason-body__heading--l noto-sans">選ばれる理由</span></h3>
   
             <ul class="reason-body-list bold">
               <li class="reason-body-list__con">
