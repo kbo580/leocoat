@@ -76,6 +76,22 @@ $red: #C20802;
 $yellow: #fde625;
 $linkColor: #008cff;
 
+.bg-white{
+  background-color: #fff;
+}
+
+.bg-black{
+  background-color: #000;
+}
+
+.bg-brown{
+  background-color: #4F4943;
+}
+
+.bg-gray{
+  background-color: #CBCBCB;
+}
+
 body {
   color: $textColor;
   line-height: 1.5;
@@ -1291,7 +1307,6 @@ body {
 }
 
 .mv-bottom{
-  background-color: #000;
   position: relative;
   padding-bottom: 45px;
   
@@ -1308,10 +1323,9 @@ body {
 }
 
 /* ----- 限定 ----- */
-.q{
+.gentei__heading{
   color:#fff;
   background-color: #000;
-  // font-size: 18px;
   font-size: calc(18 / 375 *100vw);
   text-align: center;
   font-weight: 500;
@@ -1376,7 +1390,7 @@ body {
 
 @media (min-width: 576px){
     /* ----- 限定 ----- */
-  .q{
+  .gentei__heading{
     font-size: 26px;
 
     &::before{
@@ -1409,7 +1423,7 @@ body {
   }
 
   /* ----- 限定 ----- */
-  .q{
+  .gentei__heading{
     font-size: 21px;
     padding: 6px;
   
@@ -1462,7 +1476,7 @@ body {
 
 @media (min-width: 992px){
   /* ----- 限定 ----- */
-  .q{
+  .gentei__heading{
     font-size: 34px;
     padding: 8px 0;
 
@@ -1480,7 +1494,6 @@ body {
       border-left: 17px solid transparent;
     }
   }
-
 }
 
 /* -------------------------------------------- */
@@ -1714,13 +1727,6 @@ body {
       font-size: 52px;
     }
   
-    &__wrap{
-    }
-
-    &__cont{
-      // display: flex;
-    }
-  
     &__image{
       margin-top: 60px;
     }
@@ -1748,10 +1754,6 @@ body {
 .product-item{
   width: 100%;
   margin-top: 30px;
-
-  &__cont{
-
-  }
 
   &__image{
     width: 100%;
@@ -1797,7 +1799,6 @@ body {
   &__price{
     margin: 15px 0;
     text-align: center;
-    // white-space: nowrap;
   }
 
   &__price--before{
@@ -1937,7 +1938,6 @@ body {
 /* -------------------------------------------- */
 .compare{
   color: #fff;
-  background-color: #000;
   text-align: center;
   padding: 90px 0 60px;
 
@@ -1956,21 +1956,12 @@ body {
 
 @media (min-width: 765px) {
   .compare{
-    color: #fff;
-    background-color: #000;
-    text-align: center;
-    padding: 90px 0 60px;
-  
     &__heading{
       font-size: 3.6rem;
     }
   
     &__desc{
       margin-top: 24px;
-    }
-    
-    &__table{
-      margin-top: 16px;
     }
   }
 
@@ -2276,7 +2267,6 @@ body {
 /* exam */
 /* -------------------------------------------- */
 .exam{
-  background-color: #000;
   padding: 45px 0;
 
   &__heading{
@@ -2335,7 +2325,6 @@ body {
 /* baseCoat */
 /* -------------------------------------------- */
 .baseCoat{
-  background: #cdcdcd;
   padding: 45px 0 60px;
   font-size: 16px;
 
@@ -3073,7 +3062,7 @@ body {
   background: #000;
 
 
-  &__bottom{
+  &__wrap{
     padding: 30px 0 120px;
   }
 

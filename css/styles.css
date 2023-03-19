@@ -65,6 +65,22 @@ select::-ms-expand {
 }
 
 /* ----- common ----- */
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-brown {
+  background-color: #4F4943;
+}
+
+.bg-gray {
+  background-color: #CBCBCB;
+}
+
 body {
   color: #232323;
   line-height: 1.5;
@@ -959,7 +975,6 @@ body {
 }
 
 .mv-bottom {
-  background-color: #000;
   position: relative;
   padding-bottom: 45px;
 }
@@ -974,7 +989,7 @@ body {
 }
 
 /* ----- 限定 ----- */
-.q {
+.gentei__heading {
   color: #fff;
   background-color: #000;
   font-size: 4.8vw;
@@ -983,19 +998,19 @@ body {
   padding: 1em;
   position: relative;
 }
-.q::before, .q::after {
+.gentei__heading::before, .gentei__heading::after {
   content: "";
   position: absolute;
   top: 0;
 }
-.q::before {
+.gentei__heading::before {
   left: 0;
   border-top: 8.2666666667vw solid transparent;
   border-right: 6.1333333333vw solid transparent;
   border-bottom: 8.2666666667vw solid transparent;
   border-left: 6.1333333333vw solid #fff;
 }
-.q::after {
+.gentei__heading::after {
   right: 0;
   border-top: 8.2666666667vw solid transparent;
   border-right: 6.1333333333vw solid #fff;
@@ -1030,16 +1045,16 @@ body {
 
 @media (min-width: 576px) {
   /* ----- 限定 ----- */
-  .q {
+  .gentei__heading {
     font-size: 26px;
   }
-  .q::before {
+  .gentei__heading::before {
     border-top: 46px solid transparent;
     border-right: 35px solid transparent;
     border-bottom: 46px solid transparent;
     border-left: 35px solid #fff;
   }
-  .q::after {
+  .gentei__heading::after {
     border-top: 46px solid transparent;
     border-right: 35px solid #fff;
     border-bottom: 46px solid transparent;
@@ -1054,17 +1069,17 @@ body {
     padding-bottom: 60px;
   }
   /* ----- 限定 ----- */
-  .q {
+  .gentei__heading {
     font-size: 21px;
     padding: 6px;
   }
-  .q::before {
+  .gentei__heading::before {
     border-top: 21px solid transparent;
     border-right: 11px solid transparent;
     border-bottom: 21px solid transparent;
     border-left: 11px solid #fff;
   }
-  .q::after {
+  .gentei__heading::after {
     border-top: 21px solid transparent;
     border-right: 11px solid #fff;
     border-bottom: 21px solid transparent;
@@ -1095,17 +1110,17 @@ body {
 }
 @media (min-width: 992px) {
   /* ----- 限定 ----- */
-  .q {
+  .gentei__heading {
     font-size: 34px;
     padding: 8px 0;
   }
-  .q::before {
+  .gentei__heading::before {
     border-top: 34px solid transparent;
     border-right: 17px solid transparent;
     border-bottom: 34px solid transparent;
     border-left: 17px solid #fff;
   }
-  .q::after {
+  .gentei__heading::after {
     border-top: 34px solid transparent;
     border-right: 17px solid #fff;
     border-bottom: 34px solid transparent;
@@ -1452,7 +1467,6 @@ body {
 /* -------------------------------------------- */
 .compare {
   color: #fff;
-  background-color: #000;
   text-align: center;
   padding: 90px 0 60px;
 }
@@ -1467,20 +1481,11 @@ body {
 }
 
 @media (min-width: 765px) {
-  .compare {
-    color: #fff;
-    background-color: #000;
-    text-align: center;
-    padding: 90px 0 60px;
-  }
   .compare__heading {
     font-size: 3.6rem;
   }
   .compare__desc {
     margin-top: 24px;
-  }
-  .compare__table {
-    margin-top: 16px;
   }
 }
 /* -------------------------------------------- */
@@ -1743,7 +1748,6 @@ body {
 /* exam */
 /* -------------------------------------------- */
 .exam {
-  background-color: #000;
   padding: 45px 0;
 }
 .exam__heading {
@@ -1789,7 +1793,6 @@ body {
 /* baseCoat */
 /* -------------------------------------------- */
 .baseCoat {
-  background: #cdcdcd;
   padding: 45px 0 60px;
   font-size: 16px;
 }
@@ -2372,7 +2375,7 @@ body {
   color: #fff;
   background: #000;
 }
-.footer__bottom {
+.footer__wrap {
   padding: 30px 0 120px;
 }
 .footer__copyright {
