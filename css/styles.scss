@@ -2981,21 +2981,21 @@ body {
   text-align: center;
   color: #fff;
 
-  &.--doukonhin{
-    background: linear-gradient(rgba(79, 73, 67,0.8),rgba(79, 73, 67,0.8));
-  }
+  // &.--doukonhin{
+  //   background: linear-gradient(rgba(79, 73, 67,0.8),rgba(79, 73, 67,0.8));
+  // }
 
-  &.--l-car{
-    padding: 215px 0;
-  }
+  // &.--l-car{
+  //   padding: 215px 0;
+  // }
   
-  &.--blue-car{
-    padding: 260px 0;
-    background: linear-gradient(rgba(0,140,255,.4),rgba(0,140,255,.4));
-  }
+  // &.--blue-car{
+  //   padding: 260px 0;
+  //   background: linear-gradient(rgba(0,140,255,.4),rgba(0,140,255,.4));
+  // }
   
   &.--footer{
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    // background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
   }
 
   &__attachment{
@@ -3006,16 +3006,17 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
+    border: 4px solid #fc2;
   
     &__clip{
       position: relative;
       clip-path: inset(0 0 0 0);
       height: 100%;
+      // background: url(../images/footer_bg.jpg) center/cover;
     }
 
     img{
       position: fixed;
-      // position: absolute;
       width: 100%;
       min-height: 100vh;
       height: auto;
@@ -3041,6 +3042,52 @@ body {
     line-height: 1.3;
     font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem)/(48 - 20)));
   }
+}
+
+
+#aaa,
+#bbb,
+#ccc {
+  // height: 100vh;
+  background-color: #ff0;
+}
+
+.gutter {
+  height: 30vh;
+}
+
+.back-img-a,
+.back-img-b {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  height: 0;
+  max-height: 0;
+  overflow: visible;
+}
+
+.back-img-a::after,
+.back-img-b::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: cover;
+}
+
+.back-img-a::after {
+  background-image: url(../images/leo-bg.jpg);
+}
+
+.back-img-b::after {
+  background-image: url(../images/gentei-image-pc.png);
 }
 
 

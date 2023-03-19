@@ -2310,19 +2310,6 @@ body {
   text-align: center;
   color: #fff;
 }
-.fixed-bg.--doukonhin {
-  background: linear-gradient(rgba(79, 73, 67, 0.8), rgba(79, 73, 67, 0.8));
-}
-.fixed-bg.--l-car {
-  padding: 215px 0;
-}
-.fixed-bg.--blue-car {
-  padding: 260px 0;
-  background: linear-gradient(rgba(0, 140, 255, 0.4), rgba(0, 140, 255, 0.4));
-}
-.fixed-bg.--footer {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-}
 .fixed-bg__attachment {
   position: absolute;
   left: 0;
@@ -2331,6 +2318,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
+  border: 4px solid #fc2;
 }
 .fixed-bg__attachment__clip {
   position: relative;
@@ -2360,6 +2348,50 @@ body {
   letter-spacing: -0.05em;
   line-height: 1.3;
   font-size: calc(1.14rem + 0.26 * (100vw - 20rem) / 28);
+}
+
+#aaa,
+#bbb,
+#ccc {
+  background-color: #ff0;
+}
+
+.gutter {
+  height: 30vh;
+}
+
+.back-img-a,
+.back-img-b {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  height: 0;
+  max-height: 0;
+  overflow: visible;
+}
+
+.back-img-a::after,
+.back-img-b::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: cover;
+}
+
+.back-img-a::after {
+  background-image: url(../images/leo-bg.jpg);
+}
+
+.back-img-b::after {
+  background-image: url(../images/gentei-image-pc.png);
 }
 
 @media (min-width: 765px) {
