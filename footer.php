@@ -1,29 +1,20 @@
+<?php get_template_part('template-parts/fixed-bg'); ?>
 </main>
 
 <footer id="footer" class="footer noto-sans">
   <div class="inner">
     <div class="footer__wrap">
+      <nav class="nav footer-nav">
+        <ul class="nav__list footer-nav__list">
+          <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/superleocoat" target="_blank"  class="nav__link">最上級3層コート</a></li>
+          <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/maintenance" target="_blank"  class="nav__link">ポリマースプレー</a></li>
+          <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/inspections" target="_blank"  class="nav__link">試験結果</a></li>
+          <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/faq" target="_blank"  class="nav__link">Q&A</a></li>
+          <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/about" target="_blank"  class="nav__link">会社概要</a></li>
+        </ul>
+      </nav>
 
-      <div class="footer__fixed-bg">
-        <a href="<?php echo home_url(); ?>"><strong class="footer__maintitle">LEO COAT</strong></a>
-        <p class="footer__subtitle">New Generation Super Glass Coating</p>
-      </div>
-      <!-- /footer__fixed-bg -->
-
-      <div class="footer__bottom">
-        <nav class="nav footer-nav">
-          <ul class="nav__list footer-nav__list">
-            <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/superleocoat" target="_blank"  class="nav__link">最上級3層コート</a></li>
-            <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/maintenance" target="_blank"  class="nav__link">ポリマースプレー</a></li>
-            <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/inspections" target="_blank"  class="nav__link">試験結果</a></li>
-            <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/faq" target="_blank"  class="nav__link">Q&A</a></li>
-            <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/about" target="_blank"  class="nav__link">会社概要</a></li>
-          </ul>
-        </nav>
-
-        <p class="footer__copyright">© 2018, LEO COAT - All Rights Reserved</p>
-      </div>
-      <!-- footer__bottom -->
+      <p class="footer__copyright">© 2018, LEO COAT - All Rights Reserved</p>
 
     </div>
     <!-- /fooetr__wrap -->

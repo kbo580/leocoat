@@ -258,29 +258,6 @@ body {
 .page__text.--mt24 {
   margin-top: 24px;
 }
-.page__fixed-bg {
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.page__fixed-bg.--l-car {
-  background-image: url(../images/triple/doukonhinn-bg-2.jpg);
-  background-attachment: fixed;
-  background-position: center;
-}
-.page__fixed-bg.--s-car {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/history/fixed-bg-car.jpeg);
-  background-attachment: fixed;
-  background-position: center;
-}
-.page__fixed-bg.--machine {
-  background-image: linear-gradient(rgba(35, 35, 35, 0.6), rgba(35, 35, 35, 0.6)), url(../images/history/fixed-bg-machine.jpeg);
-  background-attachment: fixed;
-  background-position: center;
-}
-.page__fixed-bg.--xl-car {
-  background-image: linear-gradient(rgba(0, 140, 255, 0.4), rgba(0, 140, 255, 0.4)), url(../images/maintenance/fixedbg.jpg);
-  background-attachment: fixed;
-}
 
 @media (min-width: 576px) {
   .page-inner {
@@ -2333,17 +2310,42 @@ body {
   text-align: center;
   color: #fff;
 }
-.fixed-bg::before {
-  content: "";
-  display: block;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/footer_bg.jpg) top;
-  background-size: cover;
-  position: fixed;
-  top: 0;
+.fixed-bg.--doukonhin {
+  background: linear-gradient(rgba(79, 73, 67, 0.8), rgba(79, 73, 67, 0.8));
+}
+.fixed-bg.--l-car {
+  padding: 215px 0;
+}
+.fixed-bg.--blue-car {
+  padding: 260px 0;
+  background: linear-gradient(rgba(0, 140, 255, 0.4), rgba(0, 140, 255, 0.4));
+}
+.fixed-bg.--footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+.fixed-bg__attachment {
+  position: absolute;
   left: 0;
-  z-index: -1;
-  width: 100%;
+  top: 0;
+  display: block;
   height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.fixed-bg__attachment__clip {
+  position: relative;
+  clip-path: inset(0 0 0 0);
+  height: 100%;
+}
+.fixed-bg__attachment img {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: -1;
 }
 .fixed-bg__title {
   line-height: 1;
@@ -2665,14 +2667,13 @@ body {
   font-family: "noto sans JP";
 }
 .triple-doukonhinn__heading {
-  background: linear-gradient(rgba(79, 73, 67, 0.8), rgba(79, 73, 67, 0.8)), url(../images/leo-bg.jpg) 50% 50%/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 60px 0 76px;
+  position: relative;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   font-size: calc(1.91rem + 1.69 * (100vw - 20rem) / 28);
-  background-attachment: fixed;
 }
 .triple-doukonhinn__cont {
   padding: 64px 0;

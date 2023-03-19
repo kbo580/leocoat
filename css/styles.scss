@@ -307,35 +307,6 @@ body {
       margin-top: 24px;
     }
   }
-  
-  //背景画像
-  &__fixed-bg{
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    &.--l-car{
-      background-image: url(../images/triple/doukonhinn-bg-2.jpg);
-      background-attachment: fixed;
-      background-position: center;
-    }
-  
-    &.--s-car{
-      background-image:  linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(../images/history/fixed-bg-car.jpeg);
-      background-attachment: fixed;
-      background-position: center;
-    }
-    
-    &.--machine{
-      background-image: linear-gradient(rgba(35,35,35,.6),rgba(35,35,35,.6)), url(../images/history/fixed-bg-machine.jpeg);
-      background-attachment: fixed;
-      background-position: center;
-    }
-
-    &.--xl-car{
-      background-image: linear-gradient(rgba(0,140,255,.4),rgba(0,140,255,.4)), url(../images/maintenance/fixedbg.jpg);
-      background-attachment: fixed;
-    }
-  }
 }
 
 //下層ページ用inner
@@ -3010,17 +2981,49 @@ body {
   text-align: center;
   color: #fff;
 
-  &::before{
-    content: "";
-    display: block;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/footer_bg.jpg) top;
-    background-size: cover;
-    position: fixed;
-    top: 0;
+  &.--doukonhin{
+    background: linear-gradient(rgba(79, 73, 67,0.8),rgba(79, 73, 67,0.8));
+  }
+
+  &.--l-car{
+    padding: 215px 0;
+  }
+  
+  &.--blue-car{
+    padding: 260px 0;
+    background: linear-gradient(rgba(0,140,255,.4),rgba(0,140,255,.4));
+  }
+  
+  &.--footer{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+  }
+
+  &__attachment{
+    position: absolute;
     left: 0;
-    z-index: -1;
-    width: 100%;
+    top: 0;
+    display: block;
     height: 100%;
+    width: 100%;
+    z-index: -1;
+  
+    &__clip{
+      position: relative;
+      clip-path: inset(0 0 0 0);
+      height: 100%;
+    }
+
+    img{
+      position: fixed;
+      // position: absolute;
+      width: 100%;
+      min-height: 100vh;
+      height: auto;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
   }
 
   &__title{
@@ -3039,6 +3042,7 @@ body {
     font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem)/(48 - 20)));
   }
 }
+
 
 @media (min-width: 765px) {
   .fixed-bg{
@@ -3436,14 +3440,13 @@ body {
   font-family: "noto sans JP";
 
   &__heading{
-    background: linear-gradient(rgba(79,73,67,0.8), rgba(79,73,67,0.8)),url(../images/leo-bg.jpg) 50% 50%/cover no-repeat;
     color: #fff;
     text-align: center;
     padding: 60px 0 76px;
+    position: relative;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     font-size: calc( 1.91rem + (3.6 - 1.91) * ((100vw - 20rem)/(48 - 20)));
-    background-attachment: fixed;
   }
 
   &__cont{
@@ -4233,6 +4236,5 @@ input[type="submit"]{
 @media (min-width: 765px) {
   
 }
-
 
 

@@ -15,7 +15,7 @@
   </div>
   <!-- triple-mv -->
 
-  <section class="triple-reason page-reason--common">
+  <section class="triple-reason page-reason--common bg-white">
     <div class="inner">
       <div class="reason__cont">
         <a  class="triple-reason__image reason__left db" href="https://www.amazon.co.jp/SUPER-LEO-COAT%E8%BB%8A%EF%BD%A5%E3%83%90%E3%82%A4%E3%82%AF%E7%94%A8-%E4%B8%8B%E5%9C%B0%E5%87%A6%E7%90%86%EF%BC%8B3%E5%B1%A4%E3%82%B3%E3%83%BC%E3%83%88%E3%80%90%E4%B8%8D%E6%BA%80%E8%B6%B3%E3%81%AA%E3%82%89%E5%85%A8%E9%A1%8D%E8%BF%94%E9%87%91%E4%BF%9D%E8%A8%BC%E3%80%91%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%AC%E3%82%AA%E3%82%B3%E3%83%BC%E3%83%88%E3%82%AC%E3%83%A9%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%83%E3%83%88/dp/B09157HPQ1?&linkCode=sl1&tag=amazon0ad3-22&linkId=24bd4b932fadb8e86ca4a5c023a7a82e&language=ja_JP&ref_=as_li_ss_tl" target="_blank">
@@ -107,9 +107,18 @@
     <!-- inner -->
   </section>
 
-  <section class="triple-doukonhinn">
+  <div class="fixed-bg --doukonhin">
+    <h2 class="triple-doukonhinn__heading">同梱品</h2>
+    <div class="fixed-bg__attachment">
+      <div class="fixed-bg__attachment__clip">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/leo-bg.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- /fixed-bg -->
+  
+  <section class="triple-doukonhinn bg-white">
     <div class="inner">
-      <h2 class="triple-doukonhinn__heading">同梱品</h2>
 
       <div class="triple-doukonhinn__cont">
 
@@ -180,7 +189,14 @@
     </section>
     <!-- triple-feature__wrap -->
 
-    <div class="triple-feature__fixedbg page__fixed-bg --l-car"><span class="fixed-space"></span></div>
+    <div class="fixed-bg --l-car noto-sans">
+      <div class="fixed-bg__attachment">
+        <div class="fixed-bg__attachment__clip">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/triple/doukonhinn-bg-2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- /fixed-bg -->
 
     <section class="triple-feature__wrap">
       <div class="triple-feature__cont inner">
@@ -198,7 +214,7 @@
     <!-- triple-feature__wrap -->
 
     <div>
-      <div class="triple-feature__btn">
+      <div class="triple-feature__btn bg-white">
         <a href="https://www.amazon.co.jp/stores/page/6DF7E7BC-F501-4EA4-821D-E3AF0D70736E?&linkCode=sl2&tag=amazon0ad3-22&linkId=ca0c4ec9efc5e3ada1d4f2881d07fa6d&language=ja_JP&ref_=as_li_ss_tl" target="_blank" class="amznbtn ss-amznbtn">Amazonで見る</a>
       </div>
     </div>

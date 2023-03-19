@@ -144,7 +144,7 @@
     </section> 
     <!-- maintenance-archives -->
   
-    <section class="compare">
+    <section class="compare bg-black">
       <div class="inner">
         <h2 class="compare__heading text-grad-white noto-sans sec-heading fadeUpTrigger">効果比較</h2>
         <p class="compare__desc">LEO COATのポリマーコートは、他社製の弱点を克服。さらに防汚性などの効果も。</p>
@@ -181,7 +181,14 @@
     </section>
     <!-- keepclean -->
 
-    <div class="maintenance__fixedbg page__fixed-bg --xl-car"><span class="fixed-space"></span></div>
+    <div class="fixed-bg --blue-car noto-sans">
+      <div class="fixed-bg__attachment">
+        <div class="fixed-bg__attachment__clip">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/maintenance/fixedbg.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- /fixed-bg -->
 
     <section class="coating">
       <div class="inner">
