@@ -1,9 +1,14 @@
-<?php get_template_part('template-parts/fixed-bg'); ?>
 </main>
 
 <footer id="footer" class="footer noto-sans">
   <div class="inner">
     <div class="footer__wrap">
+      <div class="footer-bg">
+        <a href="index.html"><strong class="footer-bg__title">LEO COAT</strong></a>
+        <p class="footer-bg__subtitle">New Generation Super Glass Coating</p>
+      </div>
+      <!-- footer-bg -->
+
       <nav class="nav footer-nav">
         <ul class="nav__list footer-nav__list">
           <li class="nav__item  footer-nav__item"><a href="<?php echo home_url(); ?>/superleocoat" target="_blank"  class="nav__link">最上級3層コート</a></li>

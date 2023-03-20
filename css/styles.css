@@ -2304,64 +2304,14 @@ body {
 /* -------------------------------------------- */
 /* fixed-bg */
 /* -------------------------------------------- */
-.fixed-bg {
-  padding: 15px 0;
-  position: relative;
-  text-align: center;
-  color: #fff;
-}
-.fixed-bg__attachment {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: block;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  border: 4px solid #fc2;
-}
-.fixed-bg__attachment__clip {
-  position: relative;
-  clip-path: inset(0 0 0 0);
-  height: 100%;
-}
-.fixed-bg__attachment img {
-  position: fixed;
-  width: 100%;
-  min-height: 100vh;
-  height: auto;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  z-index: -1;
-}
-.fixed-bg__title {
-  line-height: 1;
-  font-size: calc(1.91rem + 1.69 * (100vw - 20rem) / 28);
-  font-weight: 700;
-  letter-spacing: -0.05em;
-}
-.fixed-bg__subtitle {
-  font-weight: 300;
-  margin-top: 16px;
-  padding-bottom: 16px;
-  letter-spacing: -0.05em;
-  line-height: 1.3;
-  font-size: calc(1.14rem + 0.26 * (100vw - 20rem) / 28);
-}
-
 #aaa,
 #bbb,
 #ccc {
+  height: 100vh;
   background-color: #ff0;
 }
 
-.gutter {
-  height: 30vh;
-}
-
-.back-img-a,
-.back-img-b {
+.fixed-bg {
   display: block;
   position: sticky;
   top: 0;
@@ -2370,9 +2320,7 @@ body {
   max-height: 0;
   overflow: visible;
 }
-
-.back-img-a::after,
-.back-img-b::after {
+.fixed-bg::after {
   content: "";
   position: absolute;
   display: block;
@@ -2385,23 +2333,27 @@ body {
   -webkit-background-size: contain;
   background-size: cover;
 }
-
-.back-img-a::after {
-  background-image: url(../images/leo-bg.jpg);
+.fixed-bg.--leo::after {
+  background-image: linear-gradient(rgba(79, 73, 67, 0.8), rgba(79, 73, 67, 0.8)), url(../images/leo-bg.jpg);
+}
+.fixed-bg.--l-car::after {
+  background-image: url(../images/triple/doukonhinn-bg-2.jpg);
+}
+.fixed-bg.--xl-car::after {
+  background-image: linear-gradient(rgba(0, 140, 255, 0.3), rgba(0, 140, 255, 0.3)), url(../images/maintenance/fixedbg.jpg);
+  background-position: 42%;
 }
 
-.back-img-b::after {
-  background-image: url(../images/gentei-image-pc.png);
+.gutter.--leo {
+  padding: 60px 0 76px;
+}
+.gutter.--l-car {
+  height: 500px;
+}
+.gutter.--xl-car {
+  height: 500px;
 }
 
-@media (min-width: 765px) {
-  .fixed-bg__title {
-    font-size: 3.6rem;
-  }
-  .fixed-bg__subtitle {
-    font-size: 1.4rem;
-  }
-}
 /* -------------------------------------------- */
 /* footer */
 /* -------------------------------------------- */
@@ -2411,6 +2363,27 @@ body {
 }
 .footer__wrap {
   padding: 30px 0 120px;
+}
+.footer-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/footer_bg.jpg) center/cover;
+  text-align: center;
+  padding: 15px 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+.footer-bg__title {
+  line-height: 1;
+  font-size: calc(1.91rem + 1.69 * (100vw - 20rem) / 28);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+.footer-bg__subtitle {
+  font-weight: 300;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  letter-spacing: -0.05em;
+  line-height: 1.3;
+  font-size: calc(1.14rem + 0.26 * (100vw - 20rem) / 28);
 }
 .footer__copyright {
   text-align: center;
@@ -2430,6 +2403,14 @@ body {
   font-size: 1.2rem;
 }
 
+@media (min-width: 765px) {
+  .footer-bg__title {
+    font-size: 3.6rem;
+  }
+  .footer-bg__subtitle {
+    font-size: 1.4rem;
+  }
+}
 /* -------------------------------------------- */
 /* maintenance */
 /* -------------------------------------------- */
@@ -2495,16 +2476,6 @@ body {
 }
 .keepclean__right {
   margin-top: 64px;
-}
-
-.maintenance__fixedbg {
-  padding: 135px 0;
-  background-position: 43%;
-}
-.maintenance__fixedbg .fixed-space {
-  display: block;
-  width: 100%;
-  height: 160px;
 }
 
 .coating {
@@ -2701,7 +2672,6 @@ body {
 .triple-doukonhinn__heading {
   color: #fff;
   text-align: center;
-  padding: 60px 0 76px;
   position: relative;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -2713,7 +2683,6 @@ body {
 
 @media (min-width: 765px) {
   .triple-doukonhinn__heading {
-    padding: 60px 0 76px;
     font-size: 58px;
   }
 }
@@ -2752,14 +2721,6 @@ body {
 }
 .triple-feature__desc {
   margin-top: 46px;
-}
-.triple-feature__fixedbg {
-  padding: 135px 0;
-}
-.triple-feature__fixedbg .fixed-space {
-  display: block;
-  width: 100%;
-  height: 160px;
 }
 .triple-feature__image {
   padding-bottom: 16px;

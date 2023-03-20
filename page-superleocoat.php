@@ -14,6 +14,7 @@
     <!-- inner -->
   </div>
   <!-- triple-mv -->
+  <div class="fixed-bg --leo"></div>
 
   <section class="triple-reason page-reason--common bg-white">
     <div class="inner">
@@ -107,16 +108,9 @@
     <!-- inner -->
   </section>
 
-  <div class="fixed-bg --doukonhin">
-    <h2 class="triple-doukonhinn__heading">同梱品</h2>
-    <div class="fixed-bg__attachment">
-      <div class="fixed-bg__attachment__clip">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/leo-bg.jpg" alt="">
-      </div>
-    </div>
-  </div>
-  <!-- /fixed-bg -->
-  
+  <h2 class="triple-doukonhinn__heading gutter --leo">同梱品</h2>
+  <div class="fixed-bg --l-car"></div>
+
   <section class="triple-doukonhinn bg-white">
     <div class="inner">
 
@@ -189,14 +183,7 @@
     </section>
     <!-- triple-feature__wrap -->
 
-    <div class="fixed-bg --l-car noto-sans">
-      <div class="fixed-bg__attachment">
-        <div class="fixed-bg__attachment__clip">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/triple/doukonhinn-bg-2.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    <!-- /fixed-bg -->
+    <div class="gutter --l-car"></div>
 
     <section class="triple-feature__wrap">
       <div class="triple-feature__cont inner">

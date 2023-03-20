@@ -159,7 +159,9 @@
     </section>
     <!-- compare -->
 
-    <section class="keepclean">
+    <div class="fixed-bg --xl-car"></div>
+
+    <section class="keepclean bg-white">
       <div class="inner">
         <div class="keepclean__cont">
           <div class="keepclean__left">
@@ -181,16 +183,9 @@
     </section>
     <!-- keepclean -->
 
-    <div class="fixed-bg --blue-car noto-sans">
-      <div class="fixed-bg__attachment">
-        <div class="fixed-bg__attachment__clip">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/maintenance/fixedbg.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    <!-- /fixed-bg -->
+    <div class="gutter --xl-car"></div>
 
-    <section class="coating">
+    <section class="coating bg-white">
       <div class="inner">
         <div class="maintenance__heading-wrap">
           <h2 class="page__sec-heading">汚れは静電気が引き寄せます</h2>
@@ -277,7 +272,7 @@
     </section>
     <!-- houden -->
 
-    <section class="maintenance-kodawari">
+    <section class="maintenance-kodawari bg-white">
       <div class="inner">
         <div class="maintenance__heading-wrap">
           <h2 class="kodawari__heading page__sec-heading">ポリマーコートのこだわり</h2>
@@ -314,7 +309,7 @@
     </section>
     <!-- kodawari -->
   
-    <section class="detail">
+    <section class="detail bg-white">
       <div class="inner">
         <div class="maintenance__heading-wrap">
           <h2 class="page__sec-heading">さらに詳しく</h2>

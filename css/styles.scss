@@ -2975,89 +2975,14 @@ body {
 /* -------------------------------------------- */
 /* fixed-bg */
 /* -------------------------------------------- */
-.fixed-bg{
-  padding: 15px 0;
-  position: relative;
-  text-align: center;
-  color: #fff;
-
-  // &.--doukonhin{
-  //   background: linear-gradient(rgba(79, 73, 67,0.8),rgba(79, 73, 67,0.8));
-  // }
-
-  // &.--l-car{
-  //   padding: 215px 0;
-  // }
-  
-  // &.--blue-car{
-  //   padding: 260px 0;
-  //   background: linear-gradient(rgba(0,140,255,.4),rgba(0,140,255,.4));
-  // }
-  
-  &.--footer{
-    // background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
-  }
-
-  &__attachment{
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    border: 4px solid #fc2;
-  
-    &__clip{
-      position: relative;
-      clip-path: inset(0 0 0 0);
-      height: 100%;
-      // background: url(../images/footer_bg.jpg) center/cover;
-    }
-
-    img{
-      position: fixed;
-      width: 100%;
-      min-height: 100vh;
-      height: auto;
-      left: 0;
-      top: 0;
-      pointer-events: none;
-      z-index: -1;
-    }
-  }
-
-  &__title{
-    line-height: 1;
-    font-size: calc( 1.91rem + (3.6 - 1.91) * ((100vw - 20rem)/(48 - 20)));
-    font-weight: 700;
-    letter-spacing: -0.05em;
-  }
-  
-  &__subtitle{
-    font-weight: 300;
-    margin-top: 16px;
-    padding-bottom: 16px;
-    letter-spacing: -0.05em;
-    line-height: 1.3;
-    font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem)/(48 - 20)));
-  }
-}
-
-
 #aaa,
 #bbb,
 #ccc {
-  // height: 100vh;
+  height: 100vh;
   background-color: #ff0;
 }
 
-.gutter {
-  height: 30vh;
-}
-
-.back-img-a,
-.back-img-b {
+.fixed-bg{
   display: block;
   position: sticky;
   top: 0;
@@ -3065,43 +2990,53 @@ body {
   height: 0;
   max-height: 0;
   overflow: visible;
+
+  &::after{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: cover;
+  }
+
+  &.--leo::after{
+    background-image: linear-gradient(rgba(79, 73, 67, 0.8),rgba(79, 73, 67, 0.8)),url(../images/leo-bg.jpg);
+  }
+
+  &.--l-car::after{
+    background-image: url(../images/triple/doukonhinn-bg-2.jpg);
+  }
+
+  &.--xl-car::after{
+    background-image: linear-gradient(rgba(0, 140, 255, 0.3),rgba(0, 140, 255, 0.3)),url(../images/maintenance/fixedbg.jpg);
+    background-position: 42%;
+  }
 }
 
-.back-img-a::after,
-.back-img-b::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: cover;
-}
+//固定背景余白
+.gutter {
 
-.back-img-a::after {
-  background-image: url(../images/leo-bg.jpg);
-}
+  &.--leo{
+    padding: 60px 0 76px;
+  }
 
-.back-img-b::after {
-  background-image: url(../images/gentei-image-pc.png);
-}
+  &.--l-car{
+    height: 500px;
+  }
 
+  &.--xl-car{
+    height: 500px;
+  }
+}
 
 @media (min-width: 765px) {
-  .fixed-bg{
   
-    &__title{
-      font-size: 3.6rem;
-    }
-    
-    &__subtitle{
-      font-size: 1.4rem;
-    }
-  }
 
 }
 
@@ -3112,9 +3047,32 @@ body {
   color:#fff;
   background: #000;
 
-
   &__wrap{
     padding: 30px 0 120px;
+  }
+
+  &-bg{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/footer_bg.jpg) center/cover;
+    text-align: center;
+    padding: 15px 0;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    &__title{
+      line-height: 1;
+      font-size: calc( 1.91rem + (3.6 - 1.91) * ((100vw - 20rem)/(48 - 20)));
+      font-weight: 700;
+      letter-spacing: -0.05em;
+    }
+    
+    &__subtitle{
+      font-weight: 300;
+      margin-top: 16px;
+      padding-bottom: 16px;
+      letter-spacing: -0.05em;
+      line-height: 1.3;
+      font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem)/(48 - 20)));
+    }
   }
 
   &__copyright{
@@ -3136,6 +3094,20 @@ body {
     padding: 0 1rem 1rem;
     font-size: 1.2rem;
   }
+}
+
+@media (min-width: 765px) {
+  .footer-bg{
+    
+    &__title{
+      font-size: 3.6rem;
+    }
+    
+    &__subtitle{
+      font-size: 1.4rem;
+    }
+  }
+
 }
 
 /* -------------------------------------------- */
@@ -3214,17 +3186,6 @@ body {
 
   &__right{
     margin-top: 64px;
-  }
-}
-
-.maintenance__fixedbg{
-  padding: 135px 0;
-  background-position: 43%;
-
-  .fixed-space{
-    display: block;
-    width: 100%;
-    height: 160px;
   }
 }
 
@@ -3489,7 +3450,6 @@ body {
   &__heading{
     color: #fff;
     text-align: center;
-    padding: 60px 0 76px;
     position: relative;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
@@ -3505,7 +3465,6 @@ body {
   .triple-doukonhinn{
   
     &__heading{
-      padding: 60px 0 76px;
       font-size: 58px;
     }
   }
@@ -3559,16 +3518,6 @@ body {
 
   &__desc{
     margin-top: 46px;
-  }
-
-  &__fixedbg{
-    padding: 135px 0;
-    
-    .fixed-space{
-      display: block;
-      width: 100%;
-      height: 160px;
-    }
   }
 
   &__image{
