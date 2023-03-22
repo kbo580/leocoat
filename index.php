@@ -513,27 +513,27 @@
       <div class="container ">
         <div class="swiper instaSwiper">
           <div class="swiper-wrapper">
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-01.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-01.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-02.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-02.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-03.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-03.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-04.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-04.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-05.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-05.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-06.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-06.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-07.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-07.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-08.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-08.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-09.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-09.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-10.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-10.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-11.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-11.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-12.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-12.jpg" alt="instgramの投稿画像"></a>
-            <a href="i<?php echo get_template_directory_uri(); ?>/mages/slide/slide-13.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-13.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-14.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-14.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-15.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-15.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-16.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-16.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-17.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-17.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-18.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-18.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-19.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-19.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-20.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-20.jpg" alt="instgramの投稿画像"></a>
-            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-21.jpg" data-fancybox="instgram" data-caption="instgramの投稿画像" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-21.jpg" alt="instgramの投稿画像"></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-01.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-01.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-02.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-02.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-03.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-03.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-04.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-04.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-05.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-05.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-06.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-06.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-07.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-07.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-08.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-08.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-09.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-09.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-10.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-10.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-11.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-11.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-12.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-12.jpg" alt=""></a>
+            <a href="i<?php echo get_template_directory_uri(); ?>/mages/slide/slide-13.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-13.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-14.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-14.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-15.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-15.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-16.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-16.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-17.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-17.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-18.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-18.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-19.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-19.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-20.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-20.jpg" alt=""></a>
+            <a href="<?php echo get_template_directory_uri(); ?>/images/slide/slide-21.jpg" data-fancybox="instgram" data-caption="" class="swiper-slide modal-open"><img src="<?php echo get_template_directory_uri(); ?>/images/slide/slide-21.jpg" alt=""></a>
           </div>
           <!-- /swiper-wrapper -->
           
@@ -1053,40 +1053,6 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/pc-qa-q.png" alt="">
               </div>
   
-              <p class="question__body">もっとガラスコーティングについて知りたいです</p>
-            </div>
-            <!-- /question__wrap top-qaa__cont -->
-
-          </div>
-          <!-- /question -->
-
-          <div class="answer">
-
-            <div class="answer__wrap top-qaa__common">
-              <div class="top-qaa__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/pc-qa-a.png" alt="">
-              </div>
-  
-              <div class="answer__body">
-                <p class="answer__body-text">ガラスコーティングの真実 愛車をキレイに保つハンドブックを<a href="https://leocoat.com/hlp.html" target="_blank" class="top-qaa__link">無料でプレゼント</a>しております。<br>コーティングの正しい知識を、詳しくまとめました。<br>ガラスコーティングの基礎から、プロショップの施工法、お勧めのポリッシャー、ヘッドライトリペアまで網羅しています。是非ご一読下さいませ。</p> 
-              </div>
-              <!-- /answer__body -->
-            </div>
-            <!-- /answer__wrap top-qaa__common-->
-
-          </div>
-          <!-- /answer -->
-        </div>
-        <!-- /top-qaa__body -->
-
-        <div class="top-qaa__body">
-          <div class="question">
-
-            <div class="question__wrap top-qaa__common">
-              <div class="top-qaa__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/pc-qa-q.png" alt="">
-              </div>
-  
               <p class="question__body">なぜセットで販売しているのですか？</p>
             </div>
             <!-- /question__wrap top-qaa__cont -->
@@ -1141,7 +1107,7 @@
 
                 <p class="answer__body-text">ポリマーが流れ落ちると、ガラスコーティングの層が露出するので、撥水性や帯電防止効果も無くなり、汚れが吸着しやすくなってしまいます。<br>（塗装面が平滑な状態なので、未施工と比較すると汚れは落としやすい状態です。）</p>
 
-                <p class="answer__body-text">ポリマーを定期的にメンテナンスとして施工することで、ポリマー層が成長し、鉄粉やブレーキダスト等も付きにくくなります。<br>ポリマーコーティングの施工の目安は、ボディの手触りが引っかかる・撥水しない、といった状態です。<br>洗車後にポリマーコーティングスプレーでケアをすることによって、愛車のキレイな状態を長持ちさせる事ができます。<br>また、<a href="https://store.leocoat.com/" target="_blank" class="top-qaa__link">公式ストア</a>でお得な定期便もご用意しております。</p>
+                <p class="answer__body-text">ポリマーを定期的にメンテナンスとして施工することで、ポリマー層が成長し、鉄粉やブレーキダスト等も付きにくくなります。<br>ポリマーコーティングの施工の目安は、ボディの手触りが引っかかる・撥水しない、といった状態です。<br>洗車後にポリマーコーティングスプレーでケアをすることによって、愛車のキレイな状態を長持ちさせる事ができます。</p>
               </div>
               <!-- /answer__body -->
             </div>
